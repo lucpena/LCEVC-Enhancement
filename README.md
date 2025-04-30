@@ -5,6 +5,6 @@ meu trabalho de conclusão de curso.
 
 ### Objetivo
 
-Analisar diferentes configurações de codificação de vídeo utilizando LCEVC e seus
+Analisar diferentes configurações de codificação de vídeo utilizando [LCEVC](https://www.lcevc.org/) e seus
 impactos em qualidade, analisando visualmente e através de testes como PSNR e [VMAF](https://github.com/Netflix/vmaf)
 (Netflix).
