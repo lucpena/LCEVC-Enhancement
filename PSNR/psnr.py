@@ -38,7 +38,7 @@ for csv_file in csv_files:
 
     # === Gráfico 2: Enhancement Ratio vs PSNR ===
     plt.figure(figsize=(10, 6))
-    plt.plot(df['enhancement_ratio'], df['psnr_avg'], marker='s', color='green')
+    plt.plot(df['enhancement_ratio'], df['psnr_avg'], marker='s', color='green', linestyle='none')
     plt.xlabel('Enhancement Ratio (%)')
     plt.ylabel('PSNR (dB)')
     plt.title(f'Enhancement Ratio x PSNR - {base_name}')
