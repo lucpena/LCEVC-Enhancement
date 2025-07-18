@@ -42,8 +42,6 @@ for csv_path in csv_files:
     resample_plotted = False
     labels_plotted = set()
 
-    # ...
-
     for qp in qps:
         subset = df[df["qp"] == qp]
         for _, row in subset.iterrows():
@@ -52,8 +50,8 @@ for csv_path in csv_files:
 
             # Escolha do marcador, cor e tamanho
             marker = 'X' if is_reference else ('^' if is_resample else 'o')
-            edge_color = 'black'
-            face_color = 'none' if is_reference else colors[qp]
+            edge_color = "black" if is_reference else 'black'
+            face_color = 'red' if is_reference else colors[qp]
             size = 80 if (is_reference or is_resample) else 60
 
             # Define o texto da legenda
@@ -99,7 +97,8 @@ for csv_path in csv_files:
                 yoffset = -0.1
 
             if is_reference:
-                xoffset = -1600
+                xoffset = -200
+                yoffset = -0.2
             elif is_resample:
                 xoffset = -100
                 yoffset = -100
