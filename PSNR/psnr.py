@@ -119,7 +119,7 @@ for csv_path in csv_files:
                 yoffset -= 0.3
 
             if row["sw2"] == 1750:
-                xoffset -= 50
+                xoffset -= 300
                 yoffset += 0.25
 
             if row["sw2"] == 2250:
