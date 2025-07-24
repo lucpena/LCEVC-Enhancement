@@ -95,20 +95,45 @@ for csv_path in csv_files:
             if row["sw2"] != 264 and row["sw2"] != 265:
                 if row["qp"] == 37:
                     text_label += f" SW2={row['sw2']}"
-                    xoffset = 200
-                    yoffset = -0.5
+                    xoffset = 500
+                    yoffset = -0.15
                 pass
 
             if is_reference:
-                xoffset = -1500
-                yoffset = 0.25
+                xoffset = -2200
+                yoffset = -0.3
             elif is_resample:
                 xoffset = -100
                 yoffset = -100
-            
+
             if row["sw2"] == 1250:
-                xoffset = -2000
-                yoffset = -0.8
+                xoffset -= 350
+                yoffset -= 0.15
+            
+            if row["sw2"] == 3250:
+                xoffset -= 200
+                yoffset -= 0.35
+
+            if row["sw2"] == 2750:
+                xoffset -= 500
+                yoffset -= 0.3
+
+            if row["sw2"] == 1750:
+                xoffset -= 50
+                yoffset += 0.25
+
+            if row["sw2"] == 2250:
+                xoffset -= 200
+                yoffset -= 0.15
+
+            # if row["sw2"] == 250:
+            #     xoffset -= 0
+            #     yoffset -= 0.15
+
+            if row["sw2"] == 750:
+                xoffset -= 3000
+                yoffset -= 0.6
+
 
 
             plt.text(
