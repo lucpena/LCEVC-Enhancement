@@ -97,8 +97,8 @@ for csv_path in csv_files:
                 yoffset = -0.1
 
             if is_reference:
-                xoffset = -200
-                yoffset = -0.2
+                xoffset = -8000
+                yoffset = -0.15
             elif is_resample:
                 xoffset = -100
                 yoffset = -100
@@ -122,7 +122,7 @@ for csv_path in csv_files:
     plt.legend()
     plt.tight_layout()
 
-    graph_path = os.path.join(output_folder, f"{name_no_ext}_bitrate_vs_psnr.png")
+    graph_path = os.path.join(output_folder, f"{name_no_ext}.png")
     plt.savefig(graph_path, dpi=300)
     plt.close()
 
