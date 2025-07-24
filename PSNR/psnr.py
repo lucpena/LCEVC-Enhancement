@@ -92,16 +92,24 @@ for csv_path in csv_files:
             xoffset = -1000
             yoffset = -0.1
 
-            if row["qp"] == 22 and row["sw2"] == 250:
-                xoffset = -18000
-                yoffset = -0.1
+            if row["sw2"] != 264 and row["sw2"] != 265:
+                if row["qp"] == 37:
+                    text_label += f" SW2={row['sw2']}"
+                    xoffset = 200
+                    yoffset = -0.5
+                pass
 
             if is_reference:
-                xoffset = -2700
-                yoffset = -0.35
+                xoffset = -1500
+                yoffset = 0.25
             elif is_resample:
                 xoffset = -100
                 yoffset = -100
+            
+            if row["sw2"] == 1250:
+                xoffset = -2000
+                yoffset = -0.8
+
 
             plt.text(
                 row["bitrate_kbps"] + xoffset,
