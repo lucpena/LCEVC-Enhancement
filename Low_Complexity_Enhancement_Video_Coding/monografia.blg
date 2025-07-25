@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: monografia.aux
+The style file: babunsrt.bst
+Database file #1: bibliografia.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty language in uvg_dataset
+You've used 11 entries,
+            2465 wiz_defined-function locations,
+            657 strings with 7969 characters,
+and the built_in function-call counts, 3012 in all, are:
+= -- 208
+> -- 95
+< -- 3
++ -- 38
+- -- 27
+* -- 375
+:= -- 391
+add.period$ -- 27
+call.type$ -- 11
+change.case$ -- 12
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 189
+empty$ -- 362
+format.name$ -- 73
+if$ -- 656
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 10
+newline$ -- 64
+num.names$ -- 11
+pop$ -- 63
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 71
+stack$ -- 0
+substring$ -- 55
+swap$ -- 87
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 14
+width$ -- 13
+write$ -- 129
+(There was 1 warning)

@@ -1,0 +1,308 @@
+\glsdefs@newdocentry{LCEVC}%
+{%
+name={\acronymfont {\glsentryshort {LCEVC}}},%
+sort={LCEVC},%
+type={acronym},%
+first={LCEVC},%
+firstplural={LCEVCs},%
+text={LCEVC},%
+plural={LCEVCs},%
+description={Low Complexity Enhancement Video Coding},%
+descriptionplural={Low Complexity Enhancement Video Coding},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Low Complexity Enhancement Video Coding},%
+longplural={Low Complexity Enhancement Video Codings},%
+short={LCEVC},%
+shortplural={LCEVCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{MPEG}%
+{%
+name={\acronymfont {\glsentryshort {MPEG}}},%
+sort={MPEG},%
+type={acronym},%
+first={MPEG},%
+firstplural={MPEGs},%
+text={MPEG},%
+plural={MPEGs},%
+description={Moving Picture Experts Group},%
+descriptionplural={Moving Picture Experts Group},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Moving Picture Experts Group},%
+longplural={Moving Picture Experts Groups},%
+short={MPEG},%
+shortplural={MPEGs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{AVC}%
+{%
+name={\acronymfont {\glsentryshort {AVC}}},%
+sort={AVC},%
+type={acronym},%
+first={AVC},%
+firstplural={AVCs},%
+text={AVC},%
+plural={AVCs},%
+description={Advanced Video Coding / H.264},%
+descriptionplural={Advanced Video Coding / H.264},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Advanced Video Coding / H.264},%
+longplural={Advanced Video Coding / H.264s},%
+short={AVC},%
+shortplural={AVCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{VVC}%
+{%
+name={\acronymfont {\glsentryshort {VVC}}},%
+sort={VVC},%
+type={acronym},%
+first={VVC},%
+firstplural={VVCs},%
+text={VVC},%
+plural={VVCs},%
+description={Versatile Video Coding / H.266},%
+descriptionplural={Versatile Video Coding / H.266},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Versatile Video Coding / H.266},%
+longplural={Versatile Video Coding / H.266s},%
+short={VVC},%
+shortplural={VVCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{HEVC}%
+{%
+name={\acronymfont {\glsentryshort {HEVC}}},%
+sort={HEVC},%
+type={acronym},%
+first={HEVC},%
+firstplural={HEVCs},%
+text={HEVC},%
+plural={HEVCs},%
+description={High Efficiency Video Coding / H.265},%
+descriptionplural={High Efficiency Video Coding / H.265},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={High Efficiency Video Coding / H.265},%
+longplural={High Efficiency Video Coding / H.265s},%
+short={HEVC},%
+shortplural={HEVCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{EVC}%
+{%
+name={\acronymfont {\glsentryshort {EVC}}},%
+sort={EVC},%
+type={acronym},%
+first={EVC},%
+firstplural={EVCs},%
+text={EVC},%
+plural={EVCs},%
+description={Essential Video Coding},%
+descriptionplural={Essential Video Coding},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Essential Video Coding},%
+longplural={Essential Video Codings},%
+short={EVC},%
+shortplural={EVCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{QP}%
+{%
+name={\acronymfont {\glsentryshort {QP}}},%
+sort={QP},%
+type={acronym},%
+first={QP},%
+firstplural={QPs},%
+text={QP},%
+plural={QPs},%
+description={Quantization Parameter},%
+descriptionplural={Quantization Parameter},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Quantization Parameter},%
+longplural={Quantization Parameters},%
+short={QP},%
+shortplural={QPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{AV1}%
+{%
+name={\acronymfont {\glsentryshort {AV1}}},%
+sort={AV1},%
+type={acronym},%
+first={AV1},%
+firstplural={AV1s},%
+text={AV1},%
+plural={AV1s},%
+description={AOMedia Video 1},%
+descriptionplural={AOMedia Video 1},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={AOMedia Video 1},%
+longplural={AOMedia Video 1s},%
+short={AV1},%
+shortplural={AV1s},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{PSNR}%
+{%
+name={\acronymfont {\glsentryshort {PSNR}}},%
+sort={PSNR},%
+type={acronym},%
+first={PSNR},%
+firstplural={PSNRs},%
+text={PSNR},%
+plural={PSNRs},%
+description={Peak Signal-to-Noise Ratio},%
+descriptionplural={Peak Signal-to-Noise Ratio},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Peak Signal-to-Noise Ratio},%
+longplural={Peak Signal-to-Noise Ratios},%
+short={PSNR},%
+shortplural={PSNRs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ITU}%
+{%
+name={\acronymfont {\glsentryshort {ITU}}},%
+sort={ITU},%
+type={acronym},%
+first={ITU},%
+firstplural={ITUs},%
+text={ITU},%
+plural={ITUs},%
+description={Telecommunication Standardization Sector},%
+descriptionplural={Telecommunication Standardization Sector},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Telecommunication Standardization Sector},%
+longplural={Telecommunication Standardization Sectors},%
+short={ITU},%
+shortplural={ITUs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{JVET}%
+{%
+name={\acronymfont {\glsentryshort {JVET}}},%
+sort={JVET},%
+type={acronym},%
+first={JVET},%
+firstplural={JVETs},%
+text={JVET},%
+plural={JVETs},%
+description={Joint Video Experts Team},%
+descriptionplural={Joint Video Experts Team},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Joint Video Experts Team},%
+longplural={Joint Video Experts Teams},%
+short={JVET},%
+shortplural={JVETs},%
+counter={page},%
+parent={},%
+%
+}%
+

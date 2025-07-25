@@ -1,0 +1,230 @@
+\section{Codificadores de vídeo}%
+
+Quando se cria um vídeo para ser utilizado como mídia em alguma plataforma, é esperado
+que ele seja recebido e consumido com a melhor qualidade possível. Isso é um desafio
+que estas plataforma enfrentam há muitos anos. Por exemplo, quando se grava um filme,
+as filmagens são geradas em um formato bruto que ainda sofreu nenhum tipo de edição
+ou compressão. Este formato gera vídeos de tamanhos gigantescos com a melhor qualidade
+possível \cite{what_is_raw_footage}. Quando um filme está pronto para ser distribuído,
+é preciso fazer com que ele caiba em uma mídia física, como um DVD ou Blu-Ray, ou tenha
+um tamanho aceitável para ser transferido via streaming. Para que isso pudesse ser
+realizado, criou-se o padrão MPEG-2, que é capaz de codificar vídeos a taxas aproximadas
+de 4 a 9 Mbit/s \cite{mpeg2}. Esses algoritmos visam diminuir o tamanho de um vídeo,
+mas manter a melhor qualidade possível.
+
+Com o passar do tempo, esses algoritmos foram sendo aprimorados e novos algoritmos
+foram sendo criados. Existem inúmeros algoritmos para compressão de áudio e vídeo,
+onde o foco agora serão os padrões \acrfull{AVC} e \acrfull{VVC}, que serão utilizados
+neste trabalho.
+
+\section{Advanced Video Coding / H.264 (AVC)}
+
+O \acrshort{AVC} é um padrão para compressão de vídeo baseado no MPEG-4 Parte 10,
+desenvolvido pela \acrfull{ITU} em conjunto com a \acrshort{MPEG}. É um dos
+codificadores mais utilizados no mundo, devido a sua alta eficiência de compressão
+e boa qualidade de imagem, além da ampla compatibilidade.
+
+O \acrshort{AVC} é um codificador híbrido baseado em blocos, ou seja, ele divide
+o frame de um vídeo em pequenos blocos, onde nesses blocos são aplicadas as técnicas de
+compressão. Isso permite que o processamento seja segmentado facilitando a previsão,
+transformação e codificação. Ele realiza técnicas de compressão de movimento, transformada discreta do 
+cosseno, quantização escalável e codificação de entropia. Ele possui um modelo de 
+compressão temporal e compressão espacial. Estas características permitem a redução 
+da taxa de bits sem degradação perceptível. Ele define uma arquitetura modular com 
+níveis e perfis, para permitir sua aplicação em diferentes contextos, como streaming 
+ou conteúdo de alta definição.
+
+Este codificador se destaca em relação aos seus predecessores, como o MPEG-2, em
+eficiência de compressão. Essa característica for essencial para que ele se tornasse
+um dos codificadores mais utilizados. \cite{h264_white_paper}
+
+\section{Versatile Video Coding / H.266 (VVC)}
+
+O \acrshort{VVC} também é um padrão de codificação de vídeo desenvolvido pela \acrfull{JVET},
+que é uma colaboração entre o \acrfull{ITU} e o \acrfull{MPEG}. Seu objetivo era
+dobrar a eficiência de compressão do codificador \acrshort{HEVC}, mas mantendo a 
+mesma qualidade visual. O \acrshort{VVC} também é um codificar híbrido baseado
+em blocos, porém com diversas inovações que o tornam mais eficiente. Entre suas 
+principais técnicas estão a unidade quadricomposta com partições adaptativas, melhorias
+no \textit{intra-prediction}, maior sofisticação na compensação de movimento e filtros de
+interpolação, introdução de novos modos de transformadas e aprimoramento nas técnicas de
+codificação entropia. 
+
+Este codificador possui um amplo uso como vídeos com resoluções altas (como 8k), com realidade
+virtual, streaming e vídeo conferências em redes móveis. Possui suporte para HDR e um amplo
+espaço de cores. Porém, este alto desempenho vem como uma alta complexidade computacional,
+ainda maior que outros codificadores, especialmente na codificação, o que demanda otimizações
+específicas e o uso de aceleração por hardware, ou seja, o uso de placas de vídeo. \cite{vvc_paper}
+
+\section{Bitrate e Peak Signal-to-Noise Ratio (PSNR)}
+
+Para que fosse possível estudar, analisar e comprar se sequências geradas, é necessário
+ter alguma métrica para poder compará-los. Para este caso, foi escolhido gerar um
+gráfico relacionando o \textit{Bitrate} e o \acrshort{PSNR} de cada vídeo gerado
+dentro de um determinado parâmetro em comum.
+
+\subsection{Bitrate}
+
+\textit{Bitrate} pode ser definido como o número de \textit{bits} que é transferido
+ou processado por alguma unidade de tempo \cite{gupta2006data}. Este valor dá uma
+da quantidade de recursos que serão necessários para transmitir e decodificar cada
+vídeo. Quanto maior este valor, maior foi o tempo necessário para a codificação,
+maior é o tamanho do arquivo, que acarreta em uma quantidade maior de dados sendo
+transferidos, caso for utilizado para streaming, e maior é a computação necessária
+para que o vídeo seja reconstruído pelo de codificador. Então, este valor nos ajuda
+a determinar se um determinado ponto é ou não viável. Pode-se calcular o 
+\textit{bitrate} com a seguinte fórmula:
+
+\[
+\text{Bitrate} = \frac{\text{Tamanho (em bits)}}{\text{Duração (em segundos)}}
+\]
+
+\subsection{Peak Signal-to-Noise Ratio (PSNR)}
+
+\textit{Signal-to-Noise Ratio}, ou Relação Sinal-Ruído é uma medida que compara a força
+de um sinal desejado coma força do ruído de fundo. É uma métrica utilizada para avaliar
+a qualidade e a confiabilidade de um sinal \cite{gupta2006data}. Para utilizar esta
+métrica na análise de vídeos, costuma-se usar o \acrshort{PSNR}, que é a relação entre 
+a máxima energia de um sinal e o ruído que afeta sua representação. Por muitos sinais
+terem sua amplitude dinâmica, o \acrshort{PSNR} é normalmente expressa por uma escala
+logarítmica em decibéis.
+
+\[
+\text{PSNR} = 10 \cdot \log_{10} \left( \frac{MAX^2}{\text{MSE}} \right)
+\]
+
+Onde:
+\begin{itemize}
+    \item  PSNR: Peak Signal-to-Noise Ratio (em decibéis, dB);
+    \item MAX: valor máximo possível de um pixel (por exemplo, 255 em 8 bits);
+    \item MSE: erro quadrático médio entre os quadros original e comprimido;
+\end{itemize}
+
+Para este estudo, o importante é saber interpretar quanto cada valor representa
+na qualidade final do vídeo. Para isso, esta tabela demonstra a interpretação
+básica destes valores:
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        PSNR > 33 dB  & Qualidade Excelente\\
+        \hline
+        33 dB > PSNR > 30 dB  & Qualidade Aceitável\\
+        \hline
+        PSNR < 30 dB  & Qualidade Ruim\\
+        \hline
+    \end{tabular}
+    \caption{Interpretação dos valores de PSNR. \cite{Syahbana2011APSNR}}
+    \label{tab:psnr}
+\end{table}
+
+% Com o aumento significativo do tráfego de dados em redes digitais e a popularização
+% de serviços como streaming e videoconferências, a compressão eficiente de vídeo
+% se tornou um fator crucial para garantir a qualidade destes serviços ao usuário
+% final e também sua viabilidade técnica e econômica para os provedores destes
+% serviços.
+
+% Apesar dos avanços destes \textit{codecs}, os ganhos de compressão têm vindo com o
+% aumento significativo da complexidade computacional, o que dificulta o seu uso em
+% dispositivos com recursos limitados, como \textit{smartphones}, receptores de TV ou
+% plataformas web.
+
+% Segundo a Globo \cite{globo_panorama}, serviços e aplicações envolvendo o uso de sinais
+% de vídeo mantêm usa tendência de crescimento ao longo dos anos, onde o tráfego de
+% vídeo responde por 80\% do tráfego presente na Internet. Durante a pandemia, esse cenário
+% incrementou sensivelmente, a ponto de alguns Governos Nacionais cogitaram a redução da oferta 
+% de sinais de vídeo de alguns serviços de streaming receando um possível colapso na
+% infraestrutura de internet. Entende-se como uma necessidade que os codificadores
+% mais eficientes é mais do que nunca uma forte demanda do mercado, oferecendo excelentes
+% oportunidades.
+
+
+\section{Low Complexity Enhancement Video Coding}
+
+O \acrshort{LCEVC} é uma tecnologia de codificação em múltiplas camadas desenvolvida para atuar
+como uma camada de aprimoramento sobre os codificadores já existentes, como os que foram
+mencionados anteriormente.
+
+Por \acrshort{LCEVC} ser um codificador de vídeo, o \acrshort{LCEVC} possui o processo de
+codificação e decodificação do vídeo, onde o decodificador é responsável por reconstruir o vídeo.
+
+\subsection{Codificação}
+
+\figuraBib{LCEVC-Encoder}{Processo de codificação do \acrshort{LCEVC}}{MPEG2022LCEVC}{latexvsword}{width=1.0\textwidth}%
+
+\subsubsection{Camada Base}
+
+Primeiro, a sequência de entrada possui sua resolução reduzida por um processo chamado de
+\textit{downscaling}. Ela passa por dois processos de \textit{downscaling} que utilizam
+o parâmetro de modo de escalonamento (\textit{scaling mode}) definido. Com o vídeo
+reduzido, é então chamado o codificador responsável por codificar a camada base de acordo
+com o modo escolhido, que pode ser \acrshort{AVC}, \acrshort{VVC}, \acrshort{HEVC} ou
+\acrshort{EVC}. O bitstream gerado pode ser incluído diretamente no fluxo LCEVC. 
+\cite{MPEG2022LCEVC, overview_lcevc}
+
+\subsubsection{Subcamada de Aprimoramento 1 (L-1)}
+
+A imagem reconstruída da camada base é reamostrada à resolução original e subtraída da
+versão redimensionada da sequência original. Essa diferença forma o \textit{resíduo L-1}. 
+Este é processado por ferramentas de codificação específicas (transformada, quantização e 
+codificação de entropia), gerando coeficientes quantizados codificados. 
+Esses dados compõem a primeira subcamada da camada de aprimoramento. \cite{MPEG2022LCEVC,
+overview_lcevc}
+
+\subsubsection{Subcamada de Aprimoramento 2 (L-2)}
+
+A reconstrução da subcamada L-1 é decodificada internamente e, dependendo do modo de escalonamento, 
+reamostrada novamente. A subtração da sequência de entrada original com essa reconstrução gera o 
+\textit{resíduo L-2}, que também é transformado e quantizado. Nesta etapa, é possível aplicar 
+predição temporal aos coeficientes transformados, aumentando a eficiência de codificação. Os dados 
+gerados, incluindo a informação de predição temporal por bloco, são inseridos no bitstream final. 
+\cite{MPEG2022LCEVC, overview_lcevc}
+
+\subsection{Decodificação}
+
+\figuraBib{LCEVC-Decoder}{Processo de decodificação do \acrshort{LCEVC}}{MPEG2022LCEVC}{latexvsword}{width=1.0\textwidth}%
+
+O processo de decodificação de um vídeo com o \acrshort{LCEVC} é composto por três etapas principais: 
+decodificação da camada base, reconstrução da subcamada de aprimoramento 1 (L-1) e aplicação da subcamada 
+de aprimoramento 2 (L-2). Abaixo, descrevemos cada uma dessas etapas.
+
+\subsubsection{Camada Base}
+
+O decodificador extrai e decodifica o bitstream da camada base utilizando o codec tradicional configurado. 
+A imagem reconstruída, chamada de \textit{Decoded Base Picture}, pode ser reamostrada (upscaling) conforme 
+o modo de escalonamento utilizado na codificação, formando a \textit{Preliminary Intermediate Picture}.
+\cite{MPEG2022LCEVC, overview_lcevc}
+
+\subsubsection{Subcamada de Aprimoramento 1 (L-1)}
+
+Os coeficientes quantizados da subcamada \cite{overview_lcevc}L-1 são decodificados utilizando as ferramentas inversas do processo 
+de codificação (decodificação de entropia, desquantização e transformada inversa). Opcionalmente, é aplicado 
+um filtro L-1 para suavizar as bordas dos blocos transformados. O resultado é somado à \textit{Preliminary 
+Intermediate Picture}, formando a \textit{Combined Intermediate Picture}. Em seguida, pode ser aplicada uma 
+nova etapa de upscaling para obter a \textit{Preliminary Output Picture}. \cite{MPEG2022LCEVC, overview_lcevc}
+
+\subsubsection{Subcamada de Aprimoramento 2 (L-2)}
+
+Por fim, a segunda subcamada de aprimoramento é decodificada. Caso os metadados indiquem o uso de predição
+temporal, os coeficientes são ajustados com base nos resíduos temporais do quadro anterior. Após a decodificação 
+dos coeficientes, o resultado da subcamada L-2 é somado à \textit{Preliminary Output Picture}, produzindo o quadro 
+final decodificado, denominado \textit{Combined Output Picture}. \cite{MPEG2022LCEVC, overview_lcevc}
+
+\section{Motivação}
+
+O \acrshort{LCEVC} é um padrão relativamente recente e possui uma proposta interessante. Existe uma
+quantidade baixa de testes comparativos com o \acrshort{LCEVC}, o que nos motiva a trabalhar com
+este assunto. O \acrshort{LCEVC} foi utilizado pela TV Globo em 2024 para a transmissão das Olimpíadas
+e conseguiu entregar uma transmissão em 2160p com 10 Mbps, onde o sistema que é usado atualmente
+entrega 14 Mbps para uma qualidade de 720p \cite{globo_lcevc}. O uso deste codificador em algo que utilizamos 
+em nosso dia-a-dia o torna uma tecnologia interessante para o estudo.
+
+\section{Objetivo}
+
+Este trabalho tem como objetivo realizar uma análise qualitativa do desempenho do padrão \acrfull{LCEVC}, comparando 
+seus resultados com os obtidos por codecs convencionais utilizados de forma isolada, como o \acrshort{AVC} e o 
+\acrshort{VVC}. Para isso, são realizadas codificações das mesmas sequências de vídeo sob diferentes configurações
+de parâmetros, variando o fator de quantização da camada base e os valores de qualidade da camada de aprimoramento. 
+Com base na relação entre \acrshort{PSNR} e \textit{bitrate}, busca-se identificar em quais cenários o \acrshort{LCEVC}
+apresenta ganhos reais de qualidade e eficiência.

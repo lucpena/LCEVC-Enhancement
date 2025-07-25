@@ -1,0 +1,49 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classe do documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Opções:
+%  - Graduação: bacharelado|engenharia|licenciatura
+%  - Pós-graduação: [qualificacao], mestrado|doutorado, ppca|ppginf
+
+% \documentclass[engenharia]{UnB-CIC}%
+\documentclass[qualificacao,bacharelado]{UnB-CIC}%
+
+\usepackage{pdfpages}% incluir PDFs, usado no apêndice
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Informações do Trabalho
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \prof \dr
+\orientador{\prof Ricardo L. de Queiroz}{CIC/UnB}%
+% \coorientador{\prof \dr José Ralha}{CIC/UnB}
+
+\coordenador{\prof Marcelo Grandi Mandelli}{CIC/UnB}%
+% \diamesano{17}{julho}{2025}%
+\diamesano{\hojeDia}{\hojeMes}{\hojeAno}
+
+\membrobanca{\prof \dr Banca 1}{Stanford University}%
+\membrobanca{\dr Banca 2}{Microsoft Research}%
+
+\autor{Lucas}{Araújo Pena}%
+
+\titulo{UnB-CIC: Análise qualitativa do Low Complexity Enhancement Video Coding (LCEVC)}%
+
+\palavraschave{LaTeX, metodologia científica, trabalho de conclusão de curso, vídeo, streaming de vídeo,
+LCEVC, codecs, TV digital}%
+\keywords{LaTeX, scientific method, thesis, video, video streaming, LCEVC, codecs, Digital TV}%
+
+\newcommand{\unbcic}{\texttt{UnB-CIC}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Texto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%
+    \capitulo{1-Introdução}{Introdução}%
+    \capitulo{2-Desenvolvimento}{Metodologia}%
+    \capitulo{3-Resultados}{Resultados}%
+    \capitulo{4-Conclusão}{Conclusão}%
+
+    % \apendice{Apendice_Fichamento}{Fichamento de Artigo Científico}%
+    % \anexo{Anexo1}{Documentação Original \unbcic\ (parcial)}%
+\end{document}%

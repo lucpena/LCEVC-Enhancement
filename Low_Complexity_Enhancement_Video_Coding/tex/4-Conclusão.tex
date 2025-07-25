@@ -1,0 +1,33 @@
+Este trabalho apresentou um a análise qualitativa do padrão \acrfull{LCEVC},
+investigando seu desempenho quando utilizado como camada de aprimoramento sobre
+codecs tradicionais, como \acrshort{AVC} e \acrshort{VVC}. A proposta do 
+\acrshort{LCEVC} de oferecer melhorias de qualidade com baixa complexidade
+é bastante útil para o contexto atual dos codificadores de vídeo.
+
+Os teste realizados evidenciaram que o desempenho do \acrshort{LCEVC} é 
+fortemente atrelado ao tipo de conteúdo codificado e à parametrização
+aplicada, especialmente os valores de QP para a camada base e o SW2
+para a camada de aprimoramento. De maneira geral, o \acrshort{LCEVC}
+demonstrou resultados positivos em algumas condições específicas,
+particularmente em conteúdos com maior movimentação e complexidade
+temporal, como a sequência "Jockey", onde a camada de aprimoramento
+se mostrou eficaz na preservação da qualidade virtual, com \textit{bitrate}
+eficiente.
+
+Em outras sequências como "Soccer" e "City" os resultados indicam que
+o isolado dos codecs foi mais eficiente. O uso do \acrshort{LCEVC} com
+uma baixa quantização (SW2) resultou em taxas de bits elevadas, sem ganhos
+de \acrshort{PSNR}.
+
+Os resultados indicam que a principal vantagem do \acrshort{LCEVC} está
+na sua flexibilidade de adaptação ao cenário. Quando ele é bem parametrizado,
+ele oferece uma relação qualidade e taxa de bits competitiva, tornando-o uma
+solução atrativa para ambientes com restrições de hardware, banda ou complexidade
+computacional, onde ele permite que seja alcançado níveis satisfatórios de qualidade
+mesmo quando não é viável utilizar codecs mais exigentes. Outro ponto forte é sua
+alta customização de parâmetros, que o torna uma tecnologia com alto nível de
+adaptação a vários cenários. 
+
+Porém, seu uso requer cuidado nas escolhas dos parâmetros, e o ganho em eficiência nem sempre
+é garantido, principalmente quando se utiliza codecs modernos, como observado
+com o \acrshort{VVC}.

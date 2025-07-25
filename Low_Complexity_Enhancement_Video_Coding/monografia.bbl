@@ -1,0 +1,129 @@
+\begin{thebibliography}{10}
+  \providebibliographyfont{name}{}%
+  \providebibliographyfont{lastname}{}%
+  \providebibliographyfont{title}{\emph}%
+  \providebibliographyfont{jtitle}{\btxtitlefont}%
+  \providebibliographyfont{etal}{\emph}%
+  \providebibliographyfont{journal}{}%
+  \providebibliographyfont{volume}{}%
+  \providebibliographyfont{ISBN}{\MakeUppercase}%
+  \providebibliographyfont{ISSN}{\MakeUppercase}%
+  \providebibliographyfont{url}{\url}%
+  \providebibliographyfont{numeral}{}%
+  \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+
+\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {uvg_dataset}
+\btxnamefont {\btxlastnamefont {Mercat}, A.}\btxauthorcolon\ \btxjtitlefont
+  {\btxifchangecase {Uvg dataset: 50/120fps 4k sequences for video codec
+  analysis and development}{UVG dataset: 50/120fps 4K sequences for video codec
+  analysis and development}}.
+\newblock \btxjournalfont {Proc. ACM Multimedia Syst. Conf.},
+  \btxprintmonthyear{.}{June}{2020}{long}.
+
+\bibitem {xiph}
+\btxnamefont {\btxlastnamefont {Xiph.Org}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Xiph.org video test media}{Xiph.org Video Test Media}}.
+\newblock {\latintext \btxurlfont{https://media.xiph.org/video/derf/}}\empty
+  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2025-05-05}}}.
+
+\bibitem {Syahbana2011APSNR}
+\btxnamefont {\btxlastnamefont {Syahbana}, Yoanda\btxfnamespacelong Alim},
+  \btxnamefont {\btxlastnamefont {Herman}}, \btxnamefont
+  {Azizah\btxfnamespacelong Abdul \btxlastnamefont {Rahman}}\btxandcomma {}
+  \btxandlong {}\ \btxnamefont {Kamalrulnizam\btxfnamespacelong Abu
+  \btxlastnamefont {Bakar}}\btxauthorcolon\ \btxtitlefont {\btxifchangecase
+  {Aligned-psnr (apsnr) for objective video quality measurement (vqm) in video
+  stream over wireless and mobile network}{Aligned-PSNR (APSNR) for Objective
+  Video Quality Measurement (VQM) in Video Stream over Wireless and Mobile
+  Network}}.
+\newblock \Btxinlong {}\ \btxtitlefont {2011 World Congress on Information and
+  Communication Technologies (WICT)}, Johor, Malaysia, 2011. \btxpublisherfont
+  {IEEE}.
+\newblock {\latintext
+  \btxurlfont{https://core.ac.uk/download/pdf/228026495.pdf}}.
+
+\bibitem {what_is_raw_footage}
+\btxnamefont {\btxlastnamefont {Miller}, Jeremy}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {What is raw footage and when to use it}{What is Raw
+  Footage and When To use It}}.
+\newblock {\latintext
+  \btxurlfont{https://bxfilms.tv/blog/what-is-raw-footage}}\empty
+  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2022-09-09}}}.
+
+\bibitem {mpeg2}
+\btxnamefont {\btxlastnamefont {Morris}, O.J.}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Mpeg-2: where did it come from and what is it?}{MPEG-2:
+  where did it come from and what is it?}}
+\newblock \Btxinlong {}\ \btxtitlefont {IEE Colloquium on MPEG-2 - What it is
+  and What it isn't}, \btxpageslong {}\ 1/1--1/5, 1995.
+
+\bibitem {h264_white_paper}
+\btxnamefont {\btxlastnamefont {{ITU‑T Study Group 16 (VCEG) and ISO/IEC
+  JTC1/SC29/WG11 (MPEG)}}}\btxauthorcolon\ \btxtitlefont {\btxifchangecase
+  {{ITU‑T Recommendation H.264 | ISO/IEC 14496‑10: Advanced video coding
+  for generic audiovisual services}}{{ITU‑T Recommendation H.264 | ISO/IEC
+  14496‑10: Advanced video coding for generic audiovisual services}}}.
+\newblock \btxifchangecase {Recommendation / international
+  standard}{Recommendation / International Standard}\ H.264 / ISO/IEC
+  14496‑10, {International Telecommunication Union, International
+  Organization for Standardization International Electrotechnical Commission},
+  \btxprintmonthyear{.}{May}{2003}{long}.
+\newblock {\latintext
+  \btxurlfont{https://www.videosurveillance.co.in/H.264.pdf}}, Corrigendum 1
+  added May 7, 2004.
+
+\bibitem {vvc_paper}
+\btxnamefont {\btxlastnamefont {Hamidouche}, Wassim}, \btxnamefont {Thibaud
+  \btxlastnamefont {Biatek}}, \btxnamefont {Mohsen \btxlastnamefont {Abdoli}},
+  \btxnamefont {Edouard \btxlastnamefont {François}}, \btxnamefont {Fernando
+  \btxlastnamefont {Pescador}}, \btxnamefont {Miloš \btxlastnamefont
+  {Radosavljević}}, \btxnamefont {Daniel \btxlastnamefont
+  {Menard}}\btxandcomma {} \btxandlong {}\ \btxnamefont {Mickael
+  \btxlastnamefont {Raulet}}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase
+  {Versatile video coding standard: A review from coding tools to consumers
+  deployment}{Versatile Video Coding Standard: A Review from Coding Tools to
+  Consumers Deployment}}.
+\newblock \btxjournalfont {arXiv preprint},
+  \btxprintmonthyear{.}{Jun}{2021}{long}.
+\newblock {\latintext \btxurlfont{https://arxiv.org/pdf/2106.14245}}, Revised
+  version (v2) submitted on 6 Nov 2021.
+
+\bibitem {gupta2006data}
+\btxnamefont {\btxlastnamefont {Gupta}, Prakash\btxfnamespacelong
+  C.}\btxauthorcolon\ \btxtitlefont {Data Communications and Computer
+  Networks}.
+\newblock \btxpublisherfont {PHI Learning Pvt. Ltd.}, New Delhi, India,
+  2006\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {9788120328464}}}.
+\newblock {\latintext
+  \btxurlfont{https://books.google.com.br/books?id=-kNn_p6WA38C&pg=PA7}}.
+
+\bibitem {MPEG2022LCEVC}
+\btxnamefont {\btxlastnamefont {{ISO/IEC JTC 1/SC 29/WG 11 MPEG-5 Part 2
+  Working Group}}}\btxauthorcolon\ \btxtitlefont {\btxifchangecase {White paper
+  on low complexity enhancement video coding (lcevc)}{White Paper on Low
+  Complexity Enhancement Video Coding (LCEVC)}}.
+\newblock \btxifchangecase {White paper}{White Paper}\ MPEG‑137, LCEVC (Low
+  Complexity Enhancement Video Coding), \btxprintmonthyear{.}{1}{2022}{long}.
+
+\bibitem {overview_lcevc}
+\btxnamefont {\btxlastnamefont {Battista}, Stefano}, \btxnamefont {Guido
+  \btxlastnamefont {Meardi}}, \btxnamefont {Simone \btxlastnamefont {Ferrara}},
+  \btxnamefont {Lorenzo \btxlastnamefont {Ciccarelli}}, \btxnamefont {Florian
+  \btxlastnamefont {Maurer}}, \btxnamefont {Massimo \btxlastnamefont
+  {Conti}}\btxandcomma {} \btxandlong {}\ \btxnamefont {Simone \btxlastnamefont
+  {Orcioni}}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Overview of the
+  low complexity enhancement video coding (lcevc) standard}{Overview of the Low
+  Complexity Enhancement Video Coding (LCEVC) Standard}}.
+\newblock \btxjournalfont {IEEE Transactions on Circuits and Systems for Video
+  Technology}, 32(11):7983--7995, 2022.
+
+\bibitem {globo_lcevc}
+\btxnamefont {\btxlastnamefont {V-Nova}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Brazilian tv giant achieves 10mbps uhd with lcevc
+  enhancement}{Brazilian TV Giant Achieves 10Mbps UHD with LCEVC Enhancement}}.
+\newblock {\latintext
+  \btxurlfont{https://v-nova.com/press-releases/brazilian-tv-giant-achieves-10mbps-uhd-with-lcevc-enhancement/}}\empty
+  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2024-09-05}}}.
+
+\end{thebibliography}
