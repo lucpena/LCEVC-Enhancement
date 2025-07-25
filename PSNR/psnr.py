@@ -100,7 +100,7 @@ for csv_path in csv_files:
                 pass
 
             if is_reference:
-                xoffset = -2200
+                xoffset = -10000
                 yoffset = -0.3
             elif is_resample:
                 xoffset = -100
