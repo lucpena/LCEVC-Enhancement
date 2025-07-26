@@ -375,7 +375,20 @@ Sample Text
     \label{fig:vc-globo-05-VVC}
 \end{figure}
 
-Sample Text
+Os resultados os vídeos gerados com o \acrshort{LCEVC} e \acrshort{VVC} alcançaram
+um desempenho similar, onde há vários pontos na curva de melhor qualidade tanto 
+do \acrshort{LCEVC} quanto do \acrshort{VVC}. Os resultados para valores mais baixos
+de SW2 continuam com uma diferença grande de \textit{bitrate} entre eles.
+
+No ponto QP =25 e SW2 = 1250, o \acrshort{LCEVC} alcançou um \acrshort{PSNR} de 41,81 db
+a 24,7 Mbps, exatamente o mesmo valor do \acrshort{VVC} com QP = 25, porém com um
+\textit{bitrate} maior que o sobro da solução base de somente o \acrshort{VVC}, que
+obteve um \textit{bitrate} de 11,1 Mbps.
+
+O resultados do \acrshort{LCEVC} com QP = 32 e 30, foram ligeiramente superiores
+aos resultados do \acrshort{VVC}, onde o \textit{bitrate} foi menor e o \acrshort{PSNR} foi
+superior. Na prática, esta vantagem é imperceptível, mas demonstra que o \acrshort{LCEVC}
+pode ser vantajoso em alguns casos.
 
 \newpage
 
@@ -390,7 +403,6 @@ Sample Text
     
     \item A vantagem do \acrshort{LCEVC}  se mostra mais evidente em cenários de
     \textit{bitrate} mais restrito, onde o refinamento da imagem se torna crucial;
-
 
     \item Em taxas mais altas, o benefício da camada de aprimoramento tende a diminuir,
     pois a camada base já está oferecendo uma boa qualidade;
