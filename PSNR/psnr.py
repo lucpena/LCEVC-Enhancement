@@ -100,14 +100,14 @@ for csv_path in csv_files:
                 pass
 
             if is_reference:
-                xoffset = -10000
+                xoffset = -4000
                 yoffset = -0.3
             elif is_resample:
                 xoffset = -100
                 yoffset = -100
 
             if row["sw2"] == 1250:
-                xoffset -= 350
+                xoffset -= 7500
                 yoffset -= 0.15
             
             if row["sw2"] == 3250:
