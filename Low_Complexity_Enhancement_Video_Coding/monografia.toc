@@ -39,10 +39,11 @@
 \contentsline {subsection}{\numberline {3.2.3}Jockey}{22}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}City}{23}{subsection.3.2.4}%
 \contentsline {subsection}{\numberline {3.2.5}vc-philips-01}{24}{subsection.3.2.5}%
-\contentsline {section}{\numberline {3.3}Considerações}{25}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Resumo dos resultados}{26}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Conclusão}{27}{chapter.4}%
-\contentsline {chapter}{Refer\^encias}{28}{section*.14}%
+\contentsline {subsection}{\numberline {3.2.6}vc-globo-05}{25}{subsection.3.2.6}%
+\contentsline {section}{\numberline {3.3}Considerações}{26}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Resumo dos resultados}{27}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Conclusão}{28}{chapter.4}%
+\contentsline {chapter}{Refer\^encias}{29}{section*.14}%
 \babel@toc {american}{}\relax 
 \babel@toc {american}{}\relax 
 \babel@toc {brazil}{}\relax 

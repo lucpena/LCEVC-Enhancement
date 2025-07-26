@@ -218,7 +218,21 @@ dos vídeos somente em \acrshort{AVC}.
     \label{fig:vc-philips-01}
 \end{figure}
 
-Sample Text
+A sequência "vc-philips-01" apresentou uma característica interessante: mesmo
+com QPs elevados, os valores de \acrshort{PSNR} se mantiveram altos, indicando
+que o conteúdo possui um baixo nível de ruído e variação espacial, o que
+favorece a compressão.
+
+Nos testes com SW2 = 750, a proporção da camada de aprimoramento variou entre
+84\% e 97\%. Para QP = 30, o \acrshort{LCEVC} atingiu 42,00 db a 15,9 Mbps,
+enquanto o \acrshort{AVC} alcançou 43,51 db com apenas 7,5 Mbps. Para valores 
+como 1250 e 1750 para o SW2, o \textit{bitrate} reduziu drasticamente
+para a maioria dos QPs, mantendo o \acrshort{PSNR} alto.
+
+Esta sequência foi bastante interessante, pois para valores de QPs iguais
+a 27, 25 e 22 para o \acrshort{LCEVC}, os resultados foram eficientes,
+com um \textit{bitrate} semelhante ao do \acrshort{AVC}, onde o \acrshort{LCEVC}
+consegue demonstrar superioridade em alguns casos. 
 
 \newpage
 
@@ -227,11 +241,29 @@ Sample Text
 \begin{figure}[h]
     \centering
     \includegraphics[width=1.0\textwidth]{img/vc-philips-03_120frames-AVC.png}
-    \caption{Resultados para "vc-philips-03"\ em \acrshort{AVC}.}
+    \caption{Resultados para "vc-philips-03" em \acrshort{AVC}.}
     \label{fig:vc-philips-03}
 \end{figure}
 
-Sample Text
+Os resultados obtidos para esta sequência demonstraram um cenário promissor para
+o uso do \acrshort{LCEVC}. Com alguns casos em que ele superou o \acrshort{AVC} puro.
+Houve um grande aumento do \textit{bitrate} para os resultados entre os valores de SW2
+750 e 1250, onde o aumento foi proporcional ao valor do QP da base.
+
+Vale destacar um dos resultados obtidos pela configuração de SW2 = 1250 e QP = 22, onde
+o \acrshort{LCEVC} alcançou um \acrshort{PSNR} de 43,72 db com um \textit{bitrate} 
+de apenas 4,1 Mbps, enquanto o \acrshort{AVC} alcançou 47,59 db a 10,5 Mbps. Mesmo
+com o \acrshort{PSNR} do \acrshort{AVC} sendo superior, a diferença de quase 2,5 vezes
+no \textit{bitrate} pode justificar o uso do \acrshort{LCEVC} em cenários com limitação
+de banda.
+
+Em posições intermediárias de SW2, como 1750 e 2250, o \textit{bitrate}, o \acrshort{LCEVC}
+se aproximou da curva de eficiência do \acrshort{AVC}, para QPs mais baixos, onde para o QP = 22,
+por exemplo, esteve bem próximo do \textit{bitrate} do \acrshort{AVC}.
+
+Para o SW2 = 750, o \textit{bitrate} foi muito alto, onde a camada de aprimoramento
+consumiu boa parte do tamanho do arquivo, acarretando em um \textit{bitrate} elevado para um
+\acrshort{PSNR} relativamente baixo, que não escalou bem com o aumento do QP.
 
 \newpage
 
@@ -306,7 +338,7 @@ válida para casos de uso com vídeos semelhantes.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\textwidth]{img/Jockey-VVC.png}
+    \includegraphics[width=1.0\textwidth]{img/City-VVC.png}
     \caption{Resultados para "City"\ em \acrshort{VVC}. \cite{xiph}}
     \label{fig:City-VVC}
 \end{figure}
@@ -328,6 +360,19 @@ como este vídeo aéreo de Nova York.
     \includegraphics[width=1.0\textwidth]{img/vc-lcevc-01_120frames-VVC.png}
     \caption{Resultados para "vc-philips-01"\ em \acrshort{VVC}.}
     \label{fig:vc-philips-01-VVC}
+\end{figure}
+
+Sample Text
+
+\newpage
+
+\subsection{vc-globo-05}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.0\textwidth]{img/vc-globo-05_120frames-VVC.png}
+    \caption{Resultados para "vc-globo-05"\ em \acrshort{VVC}.}
+    \label{fig:vc-globo-05-VVC}
 \end{figure}
 
 Sample Text
