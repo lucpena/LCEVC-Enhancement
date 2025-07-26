@@ -106,33 +106,33 @@ for csv_path in csv_files:
                 xoffset = -100
                 yoffset = -100
 
-            if row["sw2"] == 1250:
-                xoffset += 0
-                yoffset -= 0.15
+            # if row["sw2"] == 1250:
+            #     xoffset += 0
+            #     yoffset -= 0.15
             
-            if row["sw2"] == 3250:
-                xoffset -= 400
-                yoffset -= 0.35
+            # if row["sw2"] == 3250:
+            #     xoffset -= 400
+            #     yoffset -= 0.35
 
-            if row["sw2"] == 2750:
-                xoffset -= 500
-                yoffset -= 0.3
+            # if row["sw2"] == 2750:
+            #     xoffset -= 500
+            #     yoffset -= 0.3
 
-            if row["sw2"] == 1750:
-                xoffset -= 0
-                yoffset += 0.25
-
-            if row["sw2"] == 2250:
-                xoffset -= 200
-                yoffset -= 0.15
-
-            # if row["sw2"] == 250:
+            # if row["sw2"] == 1750:
             #     xoffset -= 0
+            #     yoffset += 0.25
+
+            # if row["sw2"] == 2250:
+            #     xoffset -= 200
             #     yoffset -= 0.15
 
-            if row["sw2"] == 750:
-                xoffset -= 3000
-                yoffset -= 0.6
+            # # if row["sw2"] == 250:
+            # #     xoffset -= 0
+            # #     yoffset -= 0.15
+
+            # if row["sw2"] == 750:
+            #     xoffset -= 3000
+            #     yoffset -= 0.6
 
 
 
