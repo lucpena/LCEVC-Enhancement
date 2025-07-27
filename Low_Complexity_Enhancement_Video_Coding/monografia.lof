@@ -5,22 +5,23 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Processo de codificação do \acrshort {LCEVC}.}}{4}{figure.1.1}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Processo de decodificação do \acrshort {LCEVC}.}}{5}{figure.1.2}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Exemplo da Fronteira de Pareto. \cite {pareto_img}}}{10}{figure.2.1}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Resultados para "Bosphorus"\ em \acrshort {AVC}. \cite {uvg_dataset}}}{11}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Resultados para "ReadySteadyGo"\ em \acrshort {AVC}. \cite {uvg_dataset}}}{12}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Resultados para "Jockey"\ em \acrshort {AVC}. \cite {uvg_dataset}}}{13}{figure.3.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Resultados para "SOCCER"\ em \acrshort {AVC}. \cite {xiph}}}{14}{figure.3.4}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Resultados para "City"\ em \acrshort {AVC}. \cite {xiph}}}{15}{figure.3.5}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Resultados para "vc-globo-05"\ em \acrshort {AVC}.}}{16}{figure.3.6}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Resultados para "vc-lcevc-01"\ em \acrshort {AVC}.}}{17}{figure.3.7}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Resultados para "vc-philips-01"\ em \acrshort {AVC}.}}{18}{figure.3.8}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Resultados para "vc-philips-03" em \acrshort {AVC}.}}{19}{figure.3.9}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Resultados para "Bosphorus"\ em \acrshort {VVC}. \cite {uvg_dataset}}}{20}{figure.3.10}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Resultados para "SOCCER"\ em \acrshort {VVC}. \cite {xiph}}}{21}{figure.3.11}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Resultados para "Jockey"\ em \acrshort {VVC}. \cite {uvg_dataset}}}{22}{figure.3.12}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Resultados para "City"\ em \acrshort {VVC}. \cite {xiph}}}{23}{figure.3.13}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Resultados para "vc-philips-01"\ em \acrshort {VVC}.}}{24}{figure.3.14}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Resultados para "vc-globo-05"\ em \acrshort {VVC}.}}{25}{figure.3.15}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Resultados para "Bosphorus"\ em \acrshort {AVC}. \cite {uvg_dataset}}}{12}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Resultados para "ReadySteadyGo"\ em \acrshort {AVC}. \cite {uvg_dataset}}}{13}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Resultados para "Jockey"\ em \acrshort {AVC}. \cite {uvg_dataset}}}{14}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Resultados para "SOCCER"\ em \acrshort {AVC}. \cite {xiph}}}{15}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Resultados para "City"\ em \acrshort {AVC}. \cite {xiph}}}{16}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Resultados para "vc-globo-05"\ em \acrshort {AVC}.}}{17}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Resultados para "vc-lcevc-01"\ em \acrshort {AVC}.}}{18}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Resultados para "vc-philips-01"\ em \acrshort {AVC}.}}{19}{figure.3.8}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Resultados para "vc-philips-03" em \acrshort {AVC}.}}{20}{figure.3.9}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Resultados para "Bosphorus"\ em \acrshort {VVC}. \cite {uvg_dataset}}}{21}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Resultados para "SOCCER"\ em \acrshort {VVC}. \cite {xiph}}}{22}{figure.3.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Resultados para "Jockey"\ em \acrshort {VVC}. \cite {uvg_dataset}}}{23}{figure.3.12}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Resultados para "City"\ em \acrshort {VVC}. \cite {xiph}}}{24}{figure.3.13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Resultados para "vc-philips-01"\ em \acrshort {VVC}.}}{25}{figure.3.14}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Resultados para "vc-globo-05"\ em \acrshort {VVC}.}}{26}{figure.3.15}%
 \addvspace {10\p@ }
 \babel@toc {american}{}\relax 
 \babel@toc {american}{}\relax 

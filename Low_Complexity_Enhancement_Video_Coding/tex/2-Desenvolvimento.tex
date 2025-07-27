@@ -58,5 +58,20 @@ seu \textit{bitrate} não é considerado.
 Após cada vídeo ser codificado, o \textit{script} também faz o cálculo de \acrfull{PSNR} do resultado obtido,
 transformado em YUV, arquivo original bruto, que também está em YUV.
 
-Para a esta análise, será considerado a relação \acrshort{PSNR} x \textit{bitrate}. Neste caso, um vídeo com o mesmo valor
-para o \acrshort{PSNR} que possui um \textit{bitrate} menor, é considerado a opção desejada.
+\section{Fronteira de Pareto}
+
+A \textit{Fronteira de Pareto} é uma técnica utilizada para analisar a relação entre dois ou mais
+objetivos, onde é possível identificar quais soluções são eficientes em relação a
+outros objetivos \cite{pareto_definition}. Neste trabalho, a Fronteira de Pareto é utilizada para analisar a relação
+entre a qualidade do vídeo, medida pelo \acrshort{PSNR}, e o tamanho do arquivo, medido pelo \textit{bitrate}.
+A Fronteira de Pareto é representada por um conjunto de pontos que não podem ser melhorados em um
+objetivo sem piorar outro objetivo. Ou seja, se um ponto está na fronteira de Pareto, não é possível
+aumentar a qualidade do vídeo sem aumentar o tamanho do arquivo, ou diminuir o tamanho do arquivo sem
+diminuir a qualidade do vídeo.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/pareto-2.png}
+    \caption{Exemplo da Fronteira de Pareto. \cite{pareto_img}}
+    \label{fig:pareto}
+\end{figure}

@@ -306,3 +306,31 @@ parent={},%
 %
 }%
 
+\glsdefs@newdocentry{DLSS}%
+{%
+name={\acronymfont {\glsentryshort {DLSS}}},%
+sort={DLSS},%
+type={acronym},%
+first={DLSS},%
+firstplural={DLSSs},%
+text={DLSS},%
+plural={DLSSs},%
+description={Deep Learning Super Sampling},%
+descriptionplural={Deep Learning Super Sampling},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Deep Learning Super Sampling},%
+longplural={Deep Learning Super Samplings},%
+short={DLSS},%
+shortplural={DLSSs},%
+counter={page},%
+parent={},%
+%
+}%
+

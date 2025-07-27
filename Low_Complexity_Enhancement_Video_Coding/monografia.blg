@@ -4,46 +4,46 @@ The top-level auxiliary file: monografia.aux
 The style file: babunsrt.bst
 Database file #1: bibliografia.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Warning--empty language in uvg_dataset
-You've used 11 entries,
+Warning--empty language in what_is_raw_footage
+You've used 13 entries,
             2465 wiz_defined-function locations,
-            657 strings with 7969 characters,
-and the built_in function-call counts, 3012 in all, are:
-= -- 208
-> -- 95
+            668 strings with 8347 characters,
+and the built_in function-call counts, 3502 in all, are:
+= -- 238
+> -- 114
 < -- 3
-+ -- 38
-- -- 27
-* -- 375
-:= -- 391
-add.period$ -- 27
-call.type$ -- 11
-change.case$ -- 12
++ -- 45
+- -- 32
+* -- 433
+:= -- 448
+add.period$ -- 31
+call.type$ -- 13
+change.case$ -- 14
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 189
-empty$ -- 362
-format.name$ -- 73
-if$ -- 656
+cite$ -- 14
+duplicate$ -- 217
+empty$ -- 430
+format.name$ -- 88
+if$ -- 768
 int.to.chr$ -- 0
-int.to.str$ -- 11
+int.to.str$ -- 13
 missing$ -- 10
-newline$ -- 64
-num.names$ -- 11
-pop$ -- 63
+newline$ -- 72
+num.names$ -- 13
+pop$ -- 81
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 71
+skip$ -- 86
 stack$ -- 0
 substring$ -- 55
-swap$ -- 87
+swap$ -- 101
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 14
-width$ -- 13
-write$ -- 129
+while$ -- 16
+width$ -- 15
+write$ -- 147
 (There was 1 warning)

@@ -13,36 +13,6 @@
   \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
 
 \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
-\bibitem {uvg_dataset}
-\btxnamefont {\btxlastnamefont {Mercat}, A.}\btxauthorcolon\ \btxjtitlefont
-  {\btxifchangecase {Uvg dataset: 50/120fps 4k sequences for video codec
-  analysis and development}{UVG dataset: 50/120fps 4K sequences for video codec
-  analysis and development}}.
-\newblock \btxjournalfont {Proc. ACM Multimedia Syst. Conf.},
-  \btxprintmonthyear{.}{June}{2020}{long}.
-
-\bibitem {xiph}
-\btxnamefont {\btxlastnamefont {Xiph.Org}}\btxauthorcolon\ \btxtitlefont
-  {\btxifchangecase {Xiph.org video test media}{Xiph.org Video Test Media}}.
-\newblock {\latintext \btxurlfont{https://media.xiph.org/video/derf/}}\empty
-  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2025-05-05}}}.
-
-\bibitem {Syahbana2011APSNR}
-\btxnamefont {\btxlastnamefont {Syahbana}, Yoanda\btxfnamespacelong Alim},
-  \btxnamefont {\btxlastnamefont {Herman}}, \btxnamefont
-  {Azizah\btxfnamespacelong Abdul \btxlastnamefont {Rahman}}\btxandcomma {}
-  \btxandlong {}\ \btxnamefont {Kamalrulnizam\btxfnamespacelong Abu
-  \btxlastnamefont {Bakar}}\btxauthorcolon\ \btxtitlefont {\btxifchangecase
-  {Aligned-psnr (apsnr) for objective video quality measurement (vqm) in video
-  stream over wireless and mobile network}{Aligned-PSNR (APSNR) for Objective
-  Video Quality Measurement (VQM) in Video Stream over Wireless and Mobile
-  Network}}.
-\newblock \Btxinlong {}\ \btxtitlefont {2011 World Congress on Information and
-  Communication Technologies (WICT)}, Johor, Malaysia, 2011. \btxpublisherfont
-  {IEEE}.
-\newblock {\latintext
-  \btxurlfont{https://core.ac.uk/download/pdf/228026495.pdf}}.
-
 \bibitem {what_is_raw_footage}
 \btxnamefont {\btxlastnamefont {Miller}, Jeremy}\btxauthorcolon\ \btxtitlefont
   {\btxifchangecase {What is raw footage and when to use it}{What is Raw
@@ -98,6 +68,22 @@
 \newblock {\latintext
   \btxurlfont{https://books.google.com.br/books?id=-kNn_p6WA38C&pg=PA7}}.
 
+\bibitem {Syahbana2011APSNR}
+\btxnamefont {\btxlastnamefont {Syahbana}, Yoanda\btxfnamespacelong Alim},
+  \btxnamefont {\btxlastnamefont {Herman}}, \btxnamefont
+  {Azizah\btxfnamespacelong Abdul \btxlastnamefont {Rahman}}\btxandcomma {}
+  \btxandlong {}\ \btxnamefont {Kamalrulnizam\btxfnamespacelong Abu
+  \btxlastnamefont {Bakar}}\btxauthorcolon\ \btxtitlefont {\btxifchangecase
+  {Aligned-psnr (apsnr) for objective video quality measurement (vqm) in video
+  stream over wireless and mobile network}{Aligned-PSNR (APSNR) for Objective
+  Video Quality Measurement (VQM) in Video Stream over Wireless and Mobile
+  Network}}.
+\newblock \Btxinlong {}\ \btxtitlefont {2011 World Congress on Information and
+  Communication Technologies (WICT)}, Johor, Malaysia, 2011. \btxpublisherfont
+  {IEEE}.
+\newblock {\latintext
+  \btxurlfont{https://core.ac.uk/download/pdf/228026495.pdf}}.
+
 \bibitem {MPEG2022LCEVC}
 \btxnamefont {\btxlastnamefont {{ISO/IEC JTC 1/SC 29/WG 11 MPEG-5 Part 2
   Working Group}}}\btxauthorcolon\ \btxtitlefont {\btxifchangecase {White paper
@@ -125,5 +111,36 @@
 \newblock {\latintext
   \btxurlfont{https://v-nova.com/press-releases/brazilian-tv-giant-achieves-10mbps-uhd-with-lcevc-enhancement/}}\empty
   \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2024-09-05}}}.
+
+\bibitem {pareto_definition}
+\btxnamefont {\btxlastnamefont {Emmerich}, Michael} \btxandlong {}\
+  \btxnamefont {André \btxlastnamefont {Deutz}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Multicriteria optimization and decision making:
+  Principles, algorithms and case studies}{Multicriteria Optimization and
+  Decision Making: Principles, Algorithms and Case Studies}}, 2025.
+\newblock {\latintext \btxurlfont{https://arxiv.org/abs/2407.00359}}, Página
+  26.
+
+\bibitem {pareto_img}
+\btxnamefont {\btxlastnamefont {Wikipedia}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Pareto efficient frontier}{Pareto Efficient Frontier}}.
+\newblock {\latintext
+  \btxurlfont{https://pt.wikipedia.org/wiki/Efici%C3%AAncia_de_Pareto\#/media/Ficheiro:Pareto_Efficient_Frontier_1024x1024.png}}\empty
+  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2025-07-27}}}.
+
+\bibitem {uvg_dataset}
+\btxnamefont {\btxlastnamefont {Mercat}, A.}, \btxnamefont {M. \btxlastnamefont
+  {Viitanen}}\btxandcomma {} \btxandlong {}\ \btxnamefont {J. \btxlastnamefont
+  {Vanne}}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Uvg dataset:
+  50/120fps 4k sequences for video codec analysis and development}{UVG dataset:
+  50/120fps 4K sequences for video codec analysis and development}}.
+\newblock \btxjournalfont {Proc. ACM Multimedia Syst. Conf.},
+  \btxprintmonthyear{.}{June}{2020}{long}.
+
+\bibitem {xiph}
+\btxnamefont {\btxlastnamefont {Xiph.Org}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Xiph.org video test media}{Xiph.org Video Test Media}}.
+\newblock {\latintext \btxurlfont{https://media.xiph.org/video/derf/}}\empty
+  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2025-05-05}}}.
 
 \end{thebibliography}

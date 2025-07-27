@@ -78,6 +78,11 @@ Desta forma, esta sequência não se beneficiou com o uso do \acrshort{LCEVC}, o
 a relação entre \acrshort{PSNR} e \textit{bitrate} foi mais favorável ao \acrshort{AVC}
 puro.
 
+Vale destacar que o \textit{Resample} do \acrshort{LCEVC} obteve um \acrshort{PSNR}
+relativamente baixo em relação aos resultados obtidos. Isto demonstra, que possivelmente,
+os resíduos que foram perdidos neste processo, foram compensados pela camada de 
+aprimoramento
+
 \newpage
 \subsection{Jockey}
 
@@ -139,7 +144,10 @@ o \acrshort{AVC}.
 
 Já em SW2 com valores maiores, a camada de aprimoramento se tornou irrelevante, resultando em
 desempenho próximo ao da camada base \acrshort{AVC}, porém ainda inferior ao \acrshort{AVC} puro
-em termos de \acrshort{PSNR}. 
+em termos de \acrshort{PSNR}.
+
+O \textit{Resample} do \acrshort{LCEVC} também não demonstrou resultados significativos, com 
+\acrshort{PSNR} muito abaixo da maioria dos resultados obtidos. 
 
 Assim, o \acrshort{LCEVC} não demonstrou um benefício em ser utilizado nesta sequência.
 
@@ -166,6 +174,10 @@ Para valores maiores de SW2, o \acrshort{LCEVC} demonstrou um ganho de qualidade
 um ganho que não acompanhou o ganho em qualidade do \acrshort{AVC} puro, além do aumento
 do tamanho da camada de aprimoramento, que acarretou no aumentos do \textit{bitrate}.
 
+O \textit{Resample} do \acrshort{LCEVC} nesta sequência também não demonstrou um resultado
+como esperado, ficando com o \acrshort{PSNR} semelhando ao QP35 do \acrshort{AVC} puro,
+onde este ponto deveria possui um \acrshort{PSNR} superior aos valores obtidos para o \acrshort{AVC}.
+
 \newpage
 \subsection{vc-globo-05}
 
@@ -181,9 +193,17 @@ foram acima da média em comparação com outros resultados. A curva que resulta
 de SW2 para cada QP com o \acrshort{LCEVC} está mais elevada, demonstrando que houve uma perda
 menor de \acrshort{PSNR} e que a qualidade está próxima dos vídeos com somente \acrshort{AVC}.
 
+Para SW2 = 1250, os resultados possuem um \textit{bitrate} bastante elevado em comparação com 
+a curva dos vídeos de referência. O que representa que o tamanho do arquivo gerado foi superior
+a todos os pontos à esquerda.
+
 Os valores 3250 e 2750 de SW2 resultaram em valores de \acrshort{PSNR} que estão acima da curva
-dos vídeos de referência, demonstrando mais uma vez que o \acrshort{LCEVC} consegue obter
-uma qualidade relativamente melhor utilizando um \textit{bitrate} reduzido.
+dos vídeos de referência, mostrando que o \acrshort{LCEVC} conseguiu gerar resultados mais
+eficientes do que os vídeos que usaram somente o \acrshort{AVC}.
+
+Outro ponto a se observar é que o \textit{Resample} do \acrshort{LCEVC} obteve um valor de 
+\acrshort{PSNR} bastante próximo ao valor obtido pelo QP = 22 do \acrshort{AVC}.
+
 
 \newpage
 
@@ -303,12 +323,18 @@ praticamente iguais aos do \acrshort{VVC}.
 Os resultados demonstram que neste caso houve uma vantagem para o uso de
 somente o \acrshort{VVC}, com desempenho superior na maioria das configurações
 avaliadas, principalmente em eficiência na relação qualidade e taxa.
-
 Aqui a eficiência do \acrshort{LCEVC} foi abaixo do esperado, onde manteve
 uma relação alta muita das vezes, indicando baixa eficiência na codificação
 da camada base.
 
-Neste caso, o \acrshort{LCEVC} não apresentou vantagens, e muitas vezes
+Nota-se que para valores de SW2 = 1250, os resultados demonstram um \textit{bitrate}
+maior que o QP=22 do \acrshort{VVC} e um \acrshort{PSNR} muito inferior, tornando
+estes resultados ineficientes.
+
+O \textit{Resample} desta sequência também demonstrou um resultado ruim, atingindo
+\acrshort{PSNR} menos que o QP=32 do \acrshort{VVC}.
+
+Nesta sequência, o \acrshort{LCEVC} não apresentou vantagens, e muitas vezes
 resultou no que seria uma perda de banda, sem ganhos significativos no
 \acrshort{PSNR}.
 
@@ -327,6 +353,10 @@ A sequência "Jockey" apresentou resultados bastante equilibrados entre o uso do
 obtidos, observa-se que o desempenho do \acrshort{LCEVC} e \textit{bitrate} revela
 que o desempenho do \acrshort{LCEVC}, neste caso, se aproxima consideravelmente do
 \acrshort{VVC} isolado, e até melhor em alguns casos.
+
+Para os resultados do \acrshort{LCEVC} com QPs iguais a 22 e 25, observou-se um 
+comportamento incomum, onde o \textit{bitrate} destes pontos cresceram muito 
+acima do esperado, saindo bastante da reta formada pelos pontos com o mesmo SW2.
 
 Nesta sequência, a qualidade do \acrshort{LCEVC} se manteve consistente e próxima
 dos valores obtidos por somente o uso do \acrshort{VVC}. Isso torna o uso do 
@@ -347,9 +377,18 @@ Na comparação \acrshort{VVC} puro e \acrshort{LCEVC} + \acrshort{VVC}, o desem
 do \acrshort{VVC} isolado se mostrou eficiente. Esta sequência demonstra que o uso do
 \acrshort{VVC} puro se mantém mais eficiente em praticamente todos os cenários testados.
 
+Para o SW2 = 1750, os resultados do \acrshort{LCEVC} apresentaram um valor elevado para o
+\textit{bitrate}. Todos os estes resultados estão acima de 2000 kbps de \textit{bitrate},
+tornando estes resultados ineficientes em relação aos resto dos valores.
+
+
 O \acrshort{LCEVC} não trouxe ganhos práticos para esta sequência, onde somente o
 \acrshort{VVC} por si só foi mais eficiente e apropriado para codificação de sequências
-como este vídeo aéreo de Nova York.
+como este vídeo aéreo de Nova York. 
+
+Outro ponto interessante deste resultado é que o \textit{Resample} do \acrshort{LCEVC} obteve
+uma qualidade inferior a vários pontos do \acrshort{VVC} puro e do \acrshort{LCEVC} + \acrshort{VVC}.
+
 
 \newpage
 
@@ -357,12 +396,27 @@ como este vídeo aéreo de Nova York.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\textwidth]{img/vc-lcevc-01_120frames-VVC.png}
+    \includegraphics[width=0.5\textwidth]{img/vc-philips-01_120frames-VVC.png}
     \caption{Resultados para "vc-philips-01"\ em \acrshort{VVC}.}
     \label{fig:vc-philips-01-VVC}
 \end{figure}
 
-Sample Text
+Nesta sequência, o SW2 = 750 obteve um \textit{bitrate} bem alto em relação ao
+SW2 = 1250, onde também houve uma distância relativamente maior entre os valores de
+QP dentro do SW2 = 750.
+
+Em SW1= 1250, os pontos começaram a se aproximar da curva de eficiência, mas ainda 
+assim com os valores abaixo da curva. O resto dos resultados para valores de SW2 menores
+ficaram bem próximos e tendendo ao formato da curva do \acrshort{VVC}.
+
+Conforme o valor de QP da base do \acrshort{LCEVC} foi diminuindo, mais próximos os 
+resultados para tal QP foram ficando. Os resultados de QP igual a 22, 25 e 27, ficaram
+muito próximos na maioria dos valores de SW2. Como as proporções da camada de aprimoramento
+destes valores ficaram entre 0,2\% e 3,2\%, isto afetou a eficiência do \acrshort{LCEVC}, que
+ficou mais perceptível em uma sequência em 4K.
+
+O \acrshort{LCEVC} conseguiu alcançar ótimos resultados, onde vários pontos estiveram
+acima da curva de eficiência do \acrshort{VVC}, entrando para a fronteira de Pareto.
 
 \newpage
 
@@ -419,10 +473,13 @@ pode ser vantajoso em alguns casos.
 \end{itemize}
 
 \newpage
-\section{Resumo dos resultados}
+\section{Visão geral dos resultados}
 
-As tabelas demonstram um breve resumo da conclusão de cada gráfico para uma análise 
-geral.
+Após a análise de cada sequência, foi feito uma interpretação dos resultados e definido
+qual deles se saiu melhor no geral. Vale ressaltar que mesmo que um tipo de codificação
+tenha se saído melhor, como a maioria dos resultados foram muito próximos, pode não haver
+uma diferença significativa na qualidade visual ou tamanho. Foram considerados somente os
+pontos que estão próximos da curva de eficiência (Fronteira de Pareto).
 
 \begin{table}[h]
     \centering
@@ -467,9 +524,11 @@ geral.
         \hline
         City (704x576, VVC) & Empate\\
         \hline
-        vc-globo-05 (3840x2160, VVC) & TBA\\
+        vc-globo-05 (3840x2160, VVC) & Leve vantagem para o LCEVC\\
         \hline
-        vc-lcevc-01 (3840x2160, VVC) & Empate\\
+        vc-lcevc-01 (3840x2160, VVC) & Vantagem VVC\\
+        \hline
+        vc-philips-01 (3840x2160, VVC) & Leve vantagem para o LCEVC\\
         \hline
     \end{tabular}
     \caption{Compilado dos resultados finais do VVC.}

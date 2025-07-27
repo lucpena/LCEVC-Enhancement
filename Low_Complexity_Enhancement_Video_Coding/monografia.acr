@@ -3,20 +3,24 @@
 \glsgroupheading{A}\relax \glsresetentrylist %
 \glossentry{AVC}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{iii\delimN iv}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{vii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{1}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{4}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{6}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{10\delimR 19}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{26}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{28}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{11\delimR 20}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{27}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{29}}}\glsgroupskip
+\glsgroupheading{D}\relax \glsresetentrylist %
+\glossentry{DLSS}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{30}}}\glsgroupskip
 \glsgroupheading{E}\relax \glsresetentrylist %
 \glossentry{EVC}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{4}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{4}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{30}}}\glsgroupskip
 \glsgroupheading{H}\relax \glsresetentrylist %
 \glossentry{HEVC}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{2}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{4}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{4}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{30}}}\glsgroupskip
 \glsgroupheading{I}\relax \glsresetentrylist %
 \glossentry{ITU}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{1\delimN 2}}}\glsgroupskip
@@ -26,11 +30,10 @@
 \glsgroupheading{L}\relax \glsresetentrylist %
 \glossentry{LCEVC}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{iii\delimN iv}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{vii}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{4\delimR 16}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{18\delimR 23}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{26}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{28}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{4\delimR 9}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{11\delimR 17}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{19\delimR 27}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{29\delimN 30}}}\glsgroupskip
 \glsgroupheading{M}\relax \glsresetentrylist %
 \glossentry{MPEG}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{iii\delimN iv}\delimN 
@@ -40,18 +43,18 @@
 		\setentrycounter[]{page}\glsnumberformat{iii\delimN iv}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{2\delimN 3}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{9\delimR 19}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{21}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{26}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{28}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{9}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{11\delimR 20}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{22}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{26\delimN 27}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{29}}}\glsgroupskip
 \glsgroupheading{V}\relax \glsresetentrylist %
 \glossentry{VVC}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{iii\delimN iv}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{vii}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{1\delimN 2}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{4}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{6}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{10}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{20\delimR 26}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{28}}}%
+		\setentrycounter[]{page}\glsnumberformat{11}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{21\delimR 27}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{29}}}%
 \end{theglossary}\glossarypostamble
