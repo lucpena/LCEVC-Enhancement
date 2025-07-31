@@ -1,0 +1,51 @@
+Todos os códigos criados para este trabalho estão disponíveis no GitHub \cite{my_scripts}.
+Recomenda-se o GitHub para a análise do código, devido a organização dos arquivos.
+Para garantir a preservação destes códigos, eles serão anexados abaixo.
+
+Os scripts foram divididos em duas baterias de codificação diferentes. Uma para 
+\acrshort{AVC} e uma para \acrshort{VVC}. Cada um possui seu \textit{main} que
+irá chamar todos os códigos necessários de maneira paralela, para agilizar a 
+geração dos resultados. Entretanto, este script foi executado em um processador
+com vários núcleos que se beneficia com a paralelização. Caso for executar este
+script em um processador com menos recursos, recomenda-se a alteração do script
+para que ele seja executado sequencialmente, ou diminuir a quantidade de processos
+criados.
+
+O script cria uma pasta chamada \textit{avc\_only}, onde é necessário colar nesta
+pasta o \textit{encoder.cfg} do codificar \acrshort{AVC}. Também é possível alterar
+o script e passar o endereço do \textit{encoder.cfg}.
+
+Coloque todos estes arquivos na mesma pasta.
+
+% \subsubsection{}
+% \begin{lstlisting}
+
+% \end{lstlisting}
+
+\section{AVC}
+
+\subsubsection{main-avc.sh}
+\lstinputlisting{code/main-avc.sh}
+
+\subsubsection{avc\_only\_template.sh}
+\lstinputlisting{code/avc_only_template.sh}
+
+\subsubsection{avc\_template.sh}
+\lstinputlisting{code/avc_template.sh}
+
+\section{VVC}
+\subsubsection{main-vvc.sh}
+\lstinputlisting{code/main-vvc.sh}
+
+\subsubsection{vvc\_only\_template.sh}
+\lstinputlisting{code/vvc_only_template.sh}
+
+\subsubsection{vvc\_template.sh}
+\lstinputlisting{code/vvc_template.sh}
+
+\section{Resample}
+
+O script para \textit{Resample} é o mesmo para os dois \textit{mains}.
+
+\subsubsection{resample\_template.sh}
+\lstinputlisting{code/resample_template.sh}

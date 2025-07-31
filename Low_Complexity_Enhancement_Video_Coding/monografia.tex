@@ -9,7 +9,34 @@
 % \documentclass[engenharia]{UnB-CIC}%
 \documentclass[qualificacao,bacharelado]{UnB-CIC}%
 
+% Pacotes do UNB-CiC
 \usepackage{pdfpages}% incluir PDFs, usado no apêndice
+
+% Meus pacotes
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\lstdefinelanguage{bash}{
+  sensitive=true,
+  alsoletter={-},
+  morekeywords={sudo,echo,cat,cd,ls,mkdir,rm,cp,mv,export},
+}
+
+\lstset{
+  language=bash,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{orange},
+  showstringspaces=false,
+  columns=fullflexible,
+  keepspaces=true,
+  breaklines=true,
+  breakautoindent=true,
+  frame=single,
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,17 +49,16 @@
 % \diamesano{17}{julho}{2025}%
 \diamesano{\hojeDia}{\hojeMes}{\hojeAno}
 
-\membrobanca{\prof Camilo Chang Dórea}{CIC/UnB}%
 \membrobanca{\prof Eduardo Peixoto Fernandes da Silva}{ENE/UnB}%
+\membrobanca{\prof Camilo Chang Dórea}{CIC/UnB}%
 \membrobanca{\prof Edson Mintsu Hung}{ENE/UnB}%
 
 \autor{Lucas}{Araújo Pena}%
 
-\titulo{UnB-CIC: Análise de qualidade do Low Complexity Enhancement Video Coding (LCEVC) baseado em AVC e VVC}%
+\titulo{Análise de qualidade do Low Complexity Enhancement Video Coding (LCEVC) baseado em AVC e VVC}%
 
-\palavraschave{LaTeX, metodologia científica, trabalho de conclusão de curso, vídeo, streaming de vídeo,
-LCEVC, codecs, TV digital}%
-\keywords{LaTeX, scientific method, thesis, video, video streaming, LCEVC, codecs, Digital TV}%
+\palavraschave{LCEVC, AVC, VVC, compressão de vídeo, PSNR, análise de qualidade, TV Digital Brasileira}%
+\keywords{LCEVC, AVC, VVC, video compression, PSNR, quality analysis, Brazilian Digital TV}%
 
 \newcommand{\unbcic}{\texttt{UnB-CIC}}%
 
@@ -46,5 +72,5 @@ LCEVC, codecs, TV digital}%
     \capitulo{4-Conclusão}{Conclusão}%
 
     % \apendice{Apendice_Fichamento}{Fichamento de Artigo Científico}%
-    % \anexo{Anexo1}{Documentação Original \unbcic\ (parcial)}%
+    \anexo{Anexo1}{Scripts}%
 \end{document}%

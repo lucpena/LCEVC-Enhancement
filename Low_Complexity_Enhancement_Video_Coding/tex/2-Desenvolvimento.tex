@@ -1,11 +1,11 @@
 \section{Codificando Vídeos}
 
-Para codificar os vídeos para o \acrshort{LCEVC}, foi usando um codificador chamado
+Para codificar os vídeos para o \acrshort{LCEVC}, foi usado o codificador
 LTM Model Encoder e Decoder, obtido através do Git da MPEG. Para codificar um vídeo utilizando
 este codificador, são passados os parâmetros pela linha de comando, ou
 através de um arquivo de configuração que possui os valores padrões do
 codificador. Como mencionado anteriormente, o \acrshort{LCEVC} é constituído por
-duas camadas, a camada base contendo o um vídeo com a metade da resolução
+duas camadas, a camada base contendo um vídeo com a metade da resolução
 do vídeo original, e uma camada de aprimoramento, que possui as informações
 para que o \acrshort{LCEVC} possa realizar um upscaling no vídeo para que ele fique
 o mais parecido com o vídeo original possível. A camada base pode estar
@@ -14,7 +14,7 @@ duas subcamadas, onde uma é opcional e a outra é obrigatória, contendo
 os principais dados.
 
 Para este trabalho, foi alterado o parâmetro que determina
-a quantidade da qualidade que será destinada para esta subcamada. Este
+o nível da qualidade que será destinada para esta subcamada. Este
 valor determina a quantização desta camada, onde o quanto menor o valor,
 melhor a qualidade que esta camada possuirá, consequentemente aumentando
 o tamanho que a camada do \acrshort{LCEVC} terá em relação ao arquivo final. Este
@@ -26,14 +26,14 @@ de valores fixos para o \textit{SW2}, para que fosse possível comparar a
 relação que estes valores iriam influenciar na qualidade e tamanho final
 do arquivo.
  
-\section{Testes}
+\section{Análise dos Vídeos}
 
 Neste trabalho, será analisado o resultado de várias codificações utilizando o
 \acrshort{LCEVC}, para tentar demonstrar qual seriam os melhores parâmetros para o seu uso,
 levando em consideração os seus casos de uso. O programa utilizado foi compilado
 para Linux e sempre utilizado em uma distribuição Linux com base em Ubuntu.
 
-Foi desenvolvido um \textit{script} \textit{Bash} para Linux que executa o programa codificador
+Foi desenvolvido um \textit{script} \textit{Bash} para Linux \cite{my_scripts} que executa o programa codificador
 paralelamente para cada valor de \textit{QP} utilizado. O \textit{script} cria uma execução por
 \textit{QP} e processa sequencialmente por valor de \textit{SW2}. Os valores utilizados
 foram:
@@ -53,25 +53,92 @@ base e adicionados no comando de execução da codificação sem o \acrshort{LCE
 Por fim, também é realizado uma codificação usando somente o algoritmo base de \textit{Downsampling}
 e \textit{Upsampling} que o codificador \acrshort{LCEVC} utiliza. Porém, não há interferência de nenhum padrão
 de compressão neste estágio, onde ele transforma um YUV, um formato bruto de vídeo, em outro YUV. Por isso
-seu \textit{bitrate} não é considerado.
+sua taxa de bits não é considerada.
 
 Após cada vídeo ser codificado, o \textit{script} também faz o cálculo de \acrfull{PSNR} do resultado obtido,
-transformado em YUV, arquivo original bruto, que também está em YUV.
+convertido para o formato YUV, assim como o arquivo original.
 
 \section{Fronteira de Pareto}
 
 A \textit{Fronteira de Pareto} é uma técnica utilizada para analisar a relação entre dois ou mais
 objetivos, onde é possível identificar quais soluções são eficientes em relação a
 outros objetivos \cite{pareto_definition}. Neste trabalho, a Fronteira de Pareto é utilizada para analisar a relação
-entre a qualidade do vídeo, medida pelo \acrshort{PSNR}, e o tamanho do arquivo, medido pelo \textit{bitrate}.
+entre a qualidade do vídeo, medida pelo \acrshort{PSNR}, e o tamanho do arquivo, medido pela taxa de bits.
 A Fronteira de Pareto é representada por um conjunto de pontos que não podem ser melhorados em um
 objetivo sem piorar outro objetivo. Ou seja, se um ponto está na fronteira de Pareto, não é possível
 aumentar a qualidade do vídeo sem aumentar o tamanho do arquivo, ou diminuir o tamanho do arquivo sem
 diminuir a qualidade do vídeo.
 
-\begin{figure}[h]
+\begin{figure}[t]
     \centering
     \includegraphics[width=0.5\textwidth]{img/pareto-2.png}
     \caption{Exemplo da Fronteira de Pareto. \cite{pareto_img}}
     \label{fig:pareto}
 \end{figure}
+
+\section{Sequências}
+
+As sequências utilizadas para os testes deste trabalho foram obtidas em diversos locais diferentes,
+como: Ultra Video Group \cite{uvg_dataset}, Xiph.org \cite{xiph} e vídeos que foram utilizados para
+testes da TV Digital, fornecidos pelo Laboratório de Engenharia Elétrica da UnB. A seguir uma breve
+descrição do conteúdo de cada sequência.
+
+\begin{itemize}
+    \item Bosphorus: Um barco navegando pelo Estreito de Bósforo;
+    \item Jockey: Um jóquei montado em seu cavalo correndo em um hipódromo. A câmera está com zoom e 
+    seguindo o cavalo.
+    \item ReadySteadyGo: Uma largada de corrida de cavalos.
+    \item vc-globo-05: Trecho de uma transmissão de futebol da Seleção Brasileira pela TV Globo.
+    \item vc-lcevc-01: Um vídeo mostrando o horizonte e uma tabela fixa na tela.
+    \item vc-philips-01: Um campo em um dia claro. Plantas ao vento próximo da câmera.
+    \item vc-philips-03: Um vídeo de um canal em uma cidade.
+    \item City: Uma visão aérea de Nova Iorque, focando em um prédio.
+    \item SOCCER: Um trecho de um treinamento de futebol.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \includegraphics[width=0.28\textwidth]{img/Bosphorus_1920x1080_120fps_420_8bit_frame1.png} &
+        \includegraphics[width=0.28\textwidth]{img/Jockey_1920x1080_120fps_420_8bit_frame1.png} &
+        \includegraphics[width=0.28\textwidth]{img/ReadySteadyGo_1920x1080_120fps_420_8bit_frame1.png} \\
+        \small Bosphorus & \small Jockey & \small ReadySteadyGo \\
+        \hline
+        \includegraphics[width=0.28\textwidth]{img/vc-globo-05_120frames_420p_frame1.png} &
+        \includegraphics[width=0.28\textwidth]{img/vc-lcevc-01_120frames_420p_frame120.png} &
+        \includegraphics[width=0.28\textwidth]{img/vc-philips-01_120frames_420p_frame1.png} \\
+        \small vc-globo-05 & \small vc-lcevc-01 & \small vc-philips-01 \\
+        \hline
+        \includegraphics[width=0.28\textwidth]{img/vc-philips-03_120frames_420p_frame1.png} &
+        \includegraphics[width=0.28\textwidth]{img/city_704x576_yuv420p_60fps_600frames_frame1.png} &
+        \includegraphics[width=0.28\textwidth]{img/SOCCER_352x288_30_orig_02_frame1.png} \\
+        \small vc-philips-03 & \small City & \small SOCCER \\
+        \hline
+    \end{tabular}
+    \caption{Frames representativos das sequências de vídeo utilizadas.}
+    \label{fig:video_frames_grid}
+\end{figure}
+
+\section{Programas Usados}
+
+Como mencionado previamente, o codificador e decodificador principal é o \textit{"Test Model of Low 
+Complexity Enhancement Video Coding"} LTM \cite{ltm_git}. Quando é realizado a codificação do LCEVC com o formato
+escolhido da base, o LTM chama outro programa para codificar ou decodificar o arquivo. No case deste
+trabalho, ao escolher o \acrshort{AVC}, o LTM chama o JM, e no caso do \acrshort{VVC}, o VTM é acionado.
+As versões utilizados estão na \ref{tab:program_versions}.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Programa} & \textbf{Versão} \\
+        \hline
+        LTM (LCEVC Test Model) & 7.0 \\
+        JM (AVC Reference Software) & 19.0 \\
+        VTM (VVC Test Model) & 12.0 \\
+        \hline
+    \end{tabular}
+    \caption{Versões dos programas utilizados para codificação e decodificação.}
+    \label{tab:program_versions}
+\end{table}

@@ -4,36 +4,47 @@
 \backcite {uvg_dataset}{{vii}{(document)}{Doc-Start}}
 \backcite {xiph}{{vii}{(document)}{Doc-Start}}
 \backcite {xiph}{{vii}{(document)}{Doc-Start}}
+\backcite {globo_video_uhd}{{vii}{(document)}{Doc-Start}}
 \backcite {uvg_dataset}{{vii}{(document)}{Doc-Start}}
 \backcite {xiph}{{vii}{(document)}{Doc-Start}}
 \backcite {uvg_dataset}{{vii}{(document)}{Doc-Start}}
 \backcite {xiph}{{vii}{(document)}{Doc-Start}}
+\backcite {globo_video_uhd}{{vii}{(document)}{Doc-Start}}
 \backcite {Syahbana2011APSNR}{{viii}{(document)}{Doc-Start}}
-\backcite {what_is_raw_footage}{{1}{1.1}{section.1.1}}
-\backcite {mpeg2}{{1}{1.1}{section.1.1}}
-\backcite {h264_white_paper}{{2}{1.2}{section.1.2}}
-\backcite {vvc_paper}{{2}{1.3}{section.1.3}}
-\backcite {gupta2006data}{{3}{1.4.1}{subsection.1.4.1}}
-\backcite {gupta2006data}{{3}{1.4.2}{subsection.1.4.2}}
-\backcite {Syahbana2011APSNR}{{3}{1.1}{table.1.1}}
-\backcite {MPEG2022LCEVC}{{4}{1.1}{figure.1.1}}
-\backcite {MPEG2022LCEVC, overview_lcevc}{{4}{1.5.1}{section*.8}}
-\backcite {MPEG2022LCEVC, overview_lcevc}{{5}{1.5.1}{section*.9}}
-\backcite {MPEG2022LCEVC, overview_lcevc}{{5}{1.5.1}{section*.10}}
-\backcite {MPEG2022LCEVC}{{5}{1.2}{figure.1.2}}
-\backcite {MPEG2022LCEVC, overview_lcevc}{{6}{1.5.2}{section*.11}}
-\backcite {overview_lcevc}{{6}{1.5.2}{section*.12}}
-\backcite {MPEG2022LCEVC, overview_lcevc}{{6}{1.5.2}{section*.12}}
-\backcite {MPEG2022LCEVC, overview_lcevc}{{6}{1.5.2}{section*.13}}
-\backcite {globo_lcevc}{{6}{1.6}{section.1.6}}
+\backcite {tv_25}{{1}{1.1}{section.1.1}}
+\backcite {lcevc_tvdigital, globo_lcevc}{{1}{1.1}{section.1.1}}
+\backcite {what_is_raw_footage}{{2}{1.3}{section.1.3}}
+\backcite {mpeg2}{{2}{1.3}{section.1.3}}
+\backcite {globo_panorama}{{2}{1.3}{section.1.3}}
+\backcite {h264_white_paper}{{3}{1.4}{section.1.4}}
+\backcite {vvc_paper}{{3}{1.5}{section.1.5}}
+\backcite {gupta2006data}{{4}{1.6.1}{subsection.1.6.1}}
+\backcite {gupta2006data}{{4}{1.6.2}{subsection.1.6.2}}
+\backcite {Syahbana2011APSNR}{{5}{1.1}{table.1.1}}
+\backcite {MPEG2022LCEVC}{{5}{1.1}{figure.1.1}}
+\backcite {MPEG2022LCEVC, overview_lcevc}{{6}{1.7.1}{section*.8}}
+\backcite {MPEG2022LCEVC, overview_lcevc}{{6}{1.7.1}{section*.9}}
+\backcite {MPEG2022LCEVC, overview_lcevc}{{6}{1.7.1}{section*.10}}
+\backcite {MPEG2022LCEVC}{{6}{1.2}{figure.1.2}}
+\backcite {MPEG2022LCEVC, overview_lcevc}{{7}{1.7.2}{section*.11}}
+\backcite {overview_lcevc}{{7}{1.7.2}{section*.12}}
+\backcite {MPEG2022LCEVC, overview_lcevc}{{7}{1.7.2}{section*.12}}
+\backcite {MPEG2022LCEVC, overview_lcevc}{{7}{1.7.2}{section*.13}}
+\backcite {my_scripts}{{9}{2.2}{section.2.2}}
 \backcite {pareto_definition}{{9}{2.3}{section.2.3}}
 \backcite {pareto_img}{{10}{2.1}{figure.2.1}}
-\backcite {uvg_dataset}{{12}{3.1}{figure.3.1}}
-\backcite {uvg_dataset}{{13}{3.2}{figure.3.2}}
-\backcite {uvg_dataset}{{14}{3.3}{figure.3.3}}
-\backcite {xiph}{{15}{3.4}{figure.3.4}}
-\backcite {xiph}{{16}{3.5}{figure.3.5}}
-\backcite {uvg_dataset}{{21}{3.10}{figure.3.10}}
-\backcite {xiph}{{22}{3.11}{figure.3.11}}
-\backcite {uvg_dataset}{{23}{3.12}{figure.3.12}}
-\backcite {xiph}{{24}{3.13}{figure.3.13}}
+\backcite {uvg_dataset}{{10}{2.4}{section.2.4}}
+\backcite {xiph}{{10}{2.4}{section.2.4}}
+\backcite {ltm_git}{{11}{2.5}{section.2.5}}
+\backcite {uvg_dataset}{{13}{3.1}{figure.3.1}}
+\backcite {uvg_dataset}{{14}{3.2}{figure.3.2}}
+\backcite {uvg_dataset}{{15}{3.3}{figure.3.3}}
+\backcite {xiph}{{16}{3.4}{figure.3.4}}
+\backcite {xiph}{{17}{3.5}{figure.3.5}}
+\backcite {globo_video_uhd}{{18}{3.6}{figure.3.6}}
+\backcite {uvg_dataset}{{22}{3.10}{figure.3.10}}
+\backcite {xiph}{{23}{3.11}{figure.3.11}}
+\backcite {uvg_dataset}{{24}{3.12}{figure.3.12}}
+\backcite {xiph}{{25}{3.13}{figure.3.13}}
+\backcite {globo_video_uhd}{{27}{3.15}{figure.3.15}}
+\backcite {my_scripts}{{34}{I}{appendix.A}}

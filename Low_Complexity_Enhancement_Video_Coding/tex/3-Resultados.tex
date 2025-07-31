@@ -1,18 +1,18 @@
-Após a execução do Script de codificação, os dados obtidos são armazenado
+Após a execução do Script de codificação, os dados obtidos são armazenados
 em um arquivo CSV. Com os resultados finais, outro script em \textit{Python} é
 executado, onde ele cria um gráfico com estes dados. Abaixo estão os resultados
 obtidos.
 
 A análise dos gráficos gerados para as sequências testadas permite observar o comportamento 
-do \acrshort{LCEVC} em diferentes condições de codificação. Foram analisadas dois
+do \acrshort{LCEVC} em diferentes condições de codificação. Foram analisados dois
 codificadores: \acrshort{AVC} e \acrshort{VVC}, com e sem o uso do \acrshort{LCEVC} 
 como camada de aprimoramento.
 
-No geral, os gráficos \acrshort{PSNR} x \textit{Bitrate} permitem avaliar a eficiência da
+No geral, os gráficos \acrshort{PSNR} x Taxa de bits permitem avaliar a eficiência da
 compressão, considerando que uma melhor relação é obtida quando se atinge maior qualidade
-(\acrshort{PSNR}) com menor taxa de bits (\textit{bitrate}). A seguir, apresenta-se uma
+(\acrshort{PSNR}) com menor taxa de bits. A seguir, apresenta-se uma
 análise detalhada por cenário. Para alguns resultados, se um vídeo em \acrshort{LCEVC} 
-resultou em um valor muito alto para o \textit{bitrate}, onde fique distante dos valores
+resultou em uma taxa de bits muito alta, ficando distante dos valores
 do codificador base, eles foram omitidos para melhor análise e visualização nos gráficos.
 
 Além disso, para que o gráfico pudesse ficar legível, só foi rotulado o valor de SW2 para
@@ -33,7 +33,7 @@ Para a sequência Bosphorus, os resultados revelam que o uso do \acrshort{LCEVC}
 ser vantajoso em determinados cenários, dependendo dos parâmetros utilizados.
 
 Nos testes com valores baixos de SW2, observou-se que, embora o \acrshort{PSNR} 
-alcançado seja alto, os arquivos resultantes apresentam um \textit{bitrate}
+alcançado seja alto, os arquivos resultantes apresentam uma taxa de bits
 superior ao necessário para atingir uma qualidade semelhante utilizando
 somente o \acrshort{AVC}. 
 
@@ -61,12 +61,12 @@ configurações pouco vantajosas.
 Em geral, os resultados para esta sequência não demonstraram superioridade clara
 em comparação com o \acrshort{AVC} puro.
 
-Nos testes com o SW2 = 1250, os resultados demonstram \textit{bitrates} 
+Nos testes com o SW2 = 1250, os resultados demonstram taxas de bit
 significativamente mais altos, com ganhos pequenos ou mesmo nulos em \acrshort{PSNR}.
-Mesmo em configurações com um QP menor, o \acrshort{LCEVC} demonstrou um \textit{bitrate}
+Mesmo em configurações com um QP menor, o \acrshort{LCEVC} demonstrou uma taxa de bit
 muito alto, sem nenhuma melhoria de qualidade.
 
-Para valores intermediários de SW2, houve uma redução no \textit{bitrate}, mas
+Para valores intermediários de SW2, houve uma redução na taxa de bit, mas
 também houve uma queda no \acrshort{PSNR}.
 
 Em valores maiores de SW2, a camada de aprimoramento passou a ter pouca ou nenhuma
@@ -75,7 +75,7 @@ desempenho da camada base, com valores baixos de \acrshort{PSNR}, acarretando
 em uma perda significativa de qualidade.
 
 Desta forma, esta sequência não se beneficiou com o uso do \acrshort{LCEVC}, onde
-a relação entre \acrshort{PSNR} e \textit{bitrate} foi mais favorável ao \acrshort{AVC}
+a relação entre \acrshort{PSNR} e taxa de bits foi mais favorável ao \acrshort{AVC}
 puro.
 
 Vale destacar que o \textit{Resample} do \acrshort{LCEVC} obteve um \acrshort{PSNR}
@@ -95,7 +95,7 @@ aprimoramento
 
 Para a sequência \textit{Jockey}, o \acrshort{LCEVC} alcançou ótimos resultados
 em relação às sequências de referência, onde há casos em que o \acrshort{LCEVC}
-demonstrou um \acrshort{PSNR} superior com um \textit{bitrate} menor. Percebe-se
+demonstrou um \acrshort{PSNR} superior com uma taxa de bits menor. Percebe-se
 este comportamento em vários pontos antes do QP27 das sequências de referência.
 A partir desse ponto, o valores testados para o \acrshort{LCEVC} decaem e não
 são mais os melhores valores. Entretanto, considerando os resultados obtidos,
@@ -104,10 +104,10 @@ se sai melhor.
 
 Aqui, vemos um caso em que o \acrshort{LCEVC} se destacou e demonstrou vantagens
 em comparação ao \acrshort{AVC} exclusivo, especialmente em configurações de 
-\textit{bitrate} intermediários.
+taxas de bits intermediárias.
 
 Em valores mais baixos, o \acrshort{LCEVC} alcançou \acrshort{PSNR} elevados
-com \textit{bitrates} competitivos. Apesar do \textit{bitrate} mais alto,
+com taxas de bits competitivas. Apesar da taxa mais alta,
 a relação qualidade-tamanho mostra que o \acrshort{LCEVC} pode ser viável
 para aplicações que priorizam a qualidade visual.
 
@@ -120,7 +120,7 @@ com ganhos moderados de \acrshort{PSNR}.
 
 Dessa maneira, o \acrshort{LCEVC} é particularmente eficaz para conteúdos
 dinâmicos como "Jockey", onde a camada de aprimoramento compensa perdas da
-compressão base sem aumentas excessivamente o \textit{bitrate}.
+compressão base sem aumentar excessivamente a taxa de bit.
 
 \subsection{SOCCER}
 
@@ -134,11 +134,11 @@ compressão base sem aumentas excessivamente o \textit{bitrate}.
 Os resultados indicam que o \acrshort{LCEVC} não apresentou vantagem clara em relação
 a somente o \acrshort{AVC} na maioria das configurações testadas.
 
-Em valores mais baixo, o \acrshort{LCEVC} gerou arquivos com \textit{bitrates} altos
+Em valores mais baixo, o \acrshort{LCEVC} gerou arquivos com taxas de bits altas
 para pouco ganho em \acrshort{PSNR}, enquanto o \acrshort{AVC} puro atingiu qualidade
 similar com taxas de bits muito menores.
 
-Nas faixas intermediárias de SW2, o \acrshort{LCEVC} reduziu o \textit{bitrate}, mas
+Nas faixas intermediárias de SW2, o \acrshort{LCEVC} reduziu a taxa de bit, mas
 com perda acentuada de \acrshort{PSNR}, ficando abaixo da curva de eficiência de somente
 o \acrshort{AVC}.
 
@@ -163,16 +163,16 @@ Assim, o \acrshort{LCEVC} não demonstrou um benefício em ser utilizado nesta s
 
 Para esta sequência, os valores intermediários de SW2 proporcionam os resultados mais equilibrados.
 Nesses casos, o \acrshort{LCEVC} foi capaz de gerar reconstruções visuais com ganhos notáveis
-em qualidade em relação ao \acrshort{AVC}, porém com um ganho notável em \textit{bitrate}.
+em qualidade em relação ao \acrshort{AVC}, porém com um ganho notável na taxa de bits.
 
 Percebe-se que para valores iniciais de SW2, que é 250, os valores
 obtidos estão aproximadamente na curva que representa os melhores valores, porém, considerando
-o valor para \acrshort{AVC} com QP37, ele possui o mesmo \textit{bitrate} de todos os pontos
+o valor para \acrshort{AVC} com QP37, ele possui a mesma taxa de bits de todos os pontos
 iniciais do \acrshort{LCEVC}, porém com um \acrshort{PSNR} superior.
 
 Para valores maiores de SW2, o \acrshort{LCEVC} demonstrou um ganho de qualidade, mas foi
 um ganho que não acompanhou o ganho em qualidade do \acrshort{AVC} puro, além do aumento
-do tamanho da camada de aprimoramento, que acarretou no aumentos do \textit{bitrate}.
+do tamanho da camada de aprimoramento, que acarretou no aumento da taxa de bits.
 
 O \textit{Resample} do \acrshort{LCEVC} nesta sequência também não demonstrou um resultado
 como esperado, ficando com o \acrshort{PSNR} semelhando ao QP35 do \acrshort{AVC} puro,
@@ -184,7 +184,7 @@ onde este ponto deveria possui um \acrshort{PSNR} superior aos valores obtidos p
 \begin{figure}[h]
     \centering
     \includegraphics[width=1.0\textwidth]{img/vc-globo-05_120frames-AVC.png}
-    \caption{Resultados para "vc-globo-05"\ em \acrshort{AVC}.}
+    \caption{Resultados para "vc-globo-05"\ em \acrshort{AVC}. \cite{globo_video_uhd}}
     \label{fig:vc-globo-05}
 \end{figure}
 
@@ -193,7 +193,7 @@ foram acima da média em comparação com outros resultados. A curva que resulta
 de SW2 para cada QP com o \acrshort{LCEVC} está mais elevada, demonstrando que houve uma perda
 menor de \acrshort{PSNR} e que a qualidade está próxima dos vídeos com somente \acrshort{AVC}.
 
-Para SW2 = 1250, os resultados possuem um \textit{bitrate} bastante elevado em comparação com 
+Para SW2 = 1250, os resultados possuem uma taxa de bits bastante elevada em comparação com 
 a curva dos vídeos de referência. O que representa que o tamanho do arquivo gerado foi superior
 a todos os pontos à esquerda.
 
@@ -218,12 +218,12 @@ Outro ponto a se observar é que o \textit{Resample} do \acrshort{LCEVC} obteve 
 
 Aqui, com o SW2 = 1250, os dados mostraram que a camada de aprimoramento foi fortemente
 utilizada, com uma proporção de aprimoramento superior a 90\% em todos os casos, resultando
-em um \textit{bitrate} elevado. Reduzindo para o valor 1750, houve uma melhora na eficiência.
+em uma taxa de bits elevada. Reduzindo para o valor 1750, houve uma melhora na eficiência.
 
 Nos valores para SW2 iguais a 1750 e 2250, os resultados foram se aproximando da curva dos
 vídeos referência.
 
-Agora, para SW2 com valores de 2750 e 3250, houve uma redução no valor do \textit{bitrate}.
+Agora, para SW2 com valores de 2750 e 3250, houve uma redução na taxa de bits.
 Nestes valores, os resultados foram próximos e até superior aos valores de \acrshort{PSNR}
 dos vídeos somente em \acrshort{AVC}.
 
@@ -244,14 +244,14 @@ que o conteúdo possui um baixo nível de ruído e variação espacial, o que
 favorece a compressão.
 
 Nos testes com SW2 = 750, a proporção da camada de aprimoramento variou entre
-84\% e 97\%. Para QP = 30, o \acrshort{LCEVC} atingiu 42,00 db a 15,9 Mbps,
-enquanto o \acrshort{AVC} alcançou 43,51 db com apenas 7,5 Mbps. Para valores 
-como 1250 e 1750 para o SW2, o \textit{bitrate} reduziu drasticamente
+84\% e 97\%. Para QP = 30, o \acrshort{LCEVC} atingiu 42,00 dB a 15,9 Mbps,
+enquanto o \acrshort{AVC} alcançou 43,51 dB com apenas 7,5 Mbps. Para valores 
+como 1250 e 1750 para o SW2, a taxa de bits reduziu drasticamente
 para a maioria dos QPs, mantendo o \acrshort{PSNR} alto.
 
 Esta sequência foi bastante interessante, pois para valores de QPs iguais
 a 27, 25 e 22 para o \acrshort{LCEVC}, os resultados foram eficientes,
-com um \textit{bitrate} semelhante ao do \acrshort{AVC}, onde o \acrshort{LCEVC}
+com uma taxa de bits semelhante ao do \acrshort{AVC}, onde o \acrshort{LCEVC}
 consegue demonstrar superioridade em alguns casos. 
 
 \newpage
@@ -267,22 +267,22 @@ consegue demonstrar superioridade em alguns casos.
 
 Os resultados obtidos para esta sequência demonstraram um cenário promissor para
 o uso do \acrshort{LCEVC}. Com alguns casos em que ele superou o \acrshort{AVC} puro.
-Houve um grande aumento do \textit{bitrate} para os resultados entre os valores de SW2
+Houve um grande aumento da taxa de bits para os resultados entre os valores de SW2
 750 e 1250, onde o aumento foi proporcional ao valor do QP da base.
 
 Vale destacar um dos resultados obtidos pela configuração de SW2 = 1250 e QP = 22, onde
-o \acrshort{LCEVC} alcançou um \acrshort{PSNR} de 43,72 db com um \textit{bitrate} 
-de apenas 4,1 Mbps, enquanto o \acrshort{AVC} alcançou 47,59 db a 10,5 Mbps. Mesmo
+o \acrshort{LCEVC} alcançou um \acrshort{PSNR} de 43,72 dB com uma taxa de bits
+de apenas 4,1 Mbps, enquanto o \acrshort{AVC} alcançou 47,59 dB a 10,5 Mbps. Mesmo
 com o \acrshort{PSNR} do \acrshort{AVC} sendo superior, a diferença de quase 2,5 vezes
-no \textit{bitrate} pode justificar o uso do \acrshort{LCEVC} em cenários com limitação
+na taxa de bits pode justificar o uso do \acrshort{LCEVC} em cenários com limitação
 de banda.
 
-Em posições intermediárias de SW2, como 1750 e 2250, o \textit{bitrate}, o \acrshort{LCEVC}
-se aproximou da curva de eficiência do \acrshort{AVC}, para QPs mais baixos, onde para o QP = 22,
-por exemplo, esteve bem próximo do \textit{bitrate} do \acrshort{AVC}.
+Em posições intermediárias de SW2, como 1750 e 2250, em QPs mais baixos, o \acrshort{LCEVC}
+se aproximou da curva de eficiência do \acrshort{AVC}, onde para o QP = 22,
+por exemplo, esteve bem próximo da taxa de bits do \acrshort{AVC}.
 
-Para o SW2 = 750, o \textit{bitrate} foi muito alto, onde a camada de aprimoramento
-consumiu boa parte do tamanho do arquivo, acarretando em um \textit{bitrate} elevado para um
+Para o SW2 = 750, a taxa de bits foi muito alta, onde a camada de aprimoramento
+consumiu boa parte do tamanho do arquivo, acarretando em uma taxa de bits elevado para um
 \acrshort{PSNR} relativamente baixo, que não escalou bem com o aumento do QP.
 
 \newpage
@@ -299,8 +299,8 @@ consumiu boa parte do tamanho do arquivo, acarretando em um \textit{bitrate} ele
 \end{figure}
 
 Com valores baixos de SW2, a camada de aprimoramento possui peso expressivo no tamanho final
-do arquivo, acarretando em um \textit{bitrate} elevado. Embora o ganho de qualidade seja pequeno, 
-o aumento de \textit{bitrate} é significativo, tornando estes resultados poucos eficientes.
+do arquivo, acarretando em uma taxa de bits elevado. Embora o ganho de qualidade seja pequeno, 
+o aumento da taxa de bits é significativo, tornando estes resultados poucos eficientes.
 
 Para valores intermediários, os valores começam a ter um equilíbrio melhor, se aproximando dos
 valores de somente \acrshort{VVC}.
@@ -327,7 +327,7 @@ Aqui a eficiência do \acrshort{LCEVC} foi abaixo do esperado, onde manteve
 uma relação alta muita das vezes, indicando baixa eficiência na codificação
 da camada base.
 
-Nota-se que para valores de SW2 = 1250, os resultados demonstram um \textit{bitrate}
+Nota-se que para valores de SW2 = 1250, os resultados demonstram uma taxa de bits
 maior que o QP=22 do \acrshort{VVC} e um \acrshort{PSNR} muito inferior, tornando
 estes resultados ineficientes.
 
@@ -350,12 +350,12 @@ resultou no que seria uma perda de banda, sem ganhos significativos no
 
 A sequência "Jockey" apresentou resultados bastante equilibrados entre o uso do 
 \acrshort{VVC} puro e o uso combinado do \acrshort{LCEVC}. Avaliando os  resultados
-obtidos, observa-se que o desempenho do \acrshort{LCEVC} e \textit{bitrate} revela
+obtidos, observa-se que o desempenho do \acrshort{LCEVC} e da taxa de bits revela
 que o desempenho do \acrshort{LCEVC}, neste caso, se aproxima consideravelmente do
 \acrshort{VVC} isolado, e até melhor em alguns casos.
 
 Para os resultados do \acrshort{LCEVC} com QPs iguais a 22 e 25, observou-se um 
-comportamento incomum, onde o \textit{bitrate} destes pontos cresceram muito 
+comportamento incomum, onde a taxa de bits destes pontos cresceu muito 
 acima do esperado, saindo bastante da reta formada pelos pontos com o mesmo SW2.
 
 Nesta sequência, a qualidade do \acrshort{LCEVC} se manteve consistente e próxima
@@ -377,8 +377,8 @@ Na comparação \acrshort{VVC} puro e \acrshort{LCEVC} + \acrshort{VVC}, o desem
 do \acrshort{VVC} isolado se mostrou eficiente. Esta sequência demonstra que o uso do
 \acrshort{VVC} puro se mantém mais eficiente em praticamente todos os cenários testados.
 
-Para o SW2 = 1750, os resultados do \acrshort{LCEVC} apresentaram um valor elevado para o
-\textit{bitrate}. Todos os estes resultados estão acima de 2000 kbps de \textit{bitrate},
+Para o SW2 = 1750, os resultados do \acrshort{LCEVC} apresentaram um valor elevado para a 
+taxa de bits. Todos os estes resultados estão acima de uma taxa de bits de 2000 kbps,
 tornando estes resultados ineficientes em relação aos resto dos valores.
 
 
@@ -401,7 +401,7 @@ uma qualidade inferior a vários pontos do \acrshort{VVC} puro e do \acrshort{LC
     \label{fig:vc-philips-01-VVC}
 \end{figure}
 
-Nesta sequência, o SW2 = 750 obteve um \textit{bitrate} bem alto em relação ao
+Nesta sequência, o SW2 = 750 obteve uma taxa de bits bem alto em relação ao
 SW2 = 1250, onde também houve uma distância relativamente maior entre os valores de
 QP dentro do SW2 = 750.
 
@@ -425,22 +425,22 @@ acima da curva de eficiência do \acrshort{VVC}, entrando para a fronteira de Pa
 \begin{figure}[h]
     \centering
     \includegraphics[width=1.0\textwidth]{img/vc-globo-05_120frames-VVC.png}
-    \caption{Resultados para "vc-globo-05"\ em \acrshort{VVC}.}
+    \caption{Resultados para "vc-globo-05" em \acrshort{VVC} \cite{globo_video_uhd}.}
     \label{fig:vc-globo-05-VVC}
 \end{figure}
 
 Os resultados os vídeos gerados com o \acrshort{LCEVC} e \acrshort{VVC} alcançaram
 um desempenho similar, onde há vários pontos na curva de melhor qualidade tanto 
 do \acrshort{LCEVC} quanto do \acrshort{VVC}. Os resultados para valores mais baixos
-de SW2 continuam com uma diferença grande de \textit{bitrate} entre eles.
+de SW2 continuam com uma diferença grande na taxa de bits entre eles.
 
-No ponto QP =25 e SW2 = 1250, o \acrshort{LCEVC} alcançou um \acrshort{PSNR} de 41,81 db
-a 24,7 Mbps, exatamente o mesmo valor do \acrshort{VVC} com QP = 25, porém com um
-\textit{bitrate} maior que o sobro da solução base de somente o \acrshort{VVC}, que
-obteve um \textit{bitrate} de 11,1 Mbps.
+No ponto QP =25 e SW2 = 1250, o \acrshort{LCEVC} alcançou um \acrshort{PSNR} de 41,81 dB
+a 24,7 Mbps, exatamente o mesmo valor do \acrshort{VVC} com QP = 25, porém com uma Taxa
+de bits maior que o sobro da solução base de somente o \acrshort{VVC}, que
+obteve uma taxa de bits de 11,1 Mbps.
 
 O resultados do \acrshort{LCEVC} com QP = 32 e 30, foram ligeiramente superiores
-aos resultados do \acrshort{VVC}, onde o \textit{bitrate} foi menor e o \acrshort{PSNR} foi
+aos resultados do \acrshort{VVC}, onde a taxa de bits foi menor e o \acrshort{PSNR} foi
 superior. Na prática, esta vantagem é imperceptível, mas demonstra que o \acrshort{LCEVC}
 pode ser vantajoso em alguns casos.
 
@@ -455,8 +455,8 @@ pode ser vantajoso em alguns casos.
     \item O \acrshort{LCEVC} demonstrou um desempenho superior em sequências que
     envolvam mais movimentação de câmera e detalhes, como no caso da sequência "Jockey";
     
-    \item A vantagem do \acrshort{LCEVC}  se mostra mais evidente em cenários de
-    \textit{bitrate} mais restrito, onde o refinamento da imagem se torna crucial;
+    \item A vantagem do \acrshort{LCEVC}  se mostra mais evidente em cenários com
+    a taxa de bits mais restrita, onde o refinamento da imagem se torna crucial;
 
     \item Em taxas mais altas, o benefício da camada de aprimoramento tende a diminuir,
     pois a camada base já está oferecendo uma boa qualidade;
@@ -468,7 +468,7 @@ pode ser vantajoso em alguns casos.
 
     \item Nos testes realizados, foi possível observar que mesmo quando há uma proporção
     bem alta para a camada de aprimoramento, o ganho de \acrshort{PSNR} não é direto, onde
-    muitos casos o \textit{bitrate} do \acrshort{LCEVC} é muito maior que um vídeo utilizando
+    muitos casos a taxa de bits do \acrshort{LCEVC} é muito maior que um vídeo utilizando
     somente o codificador base, e a qualidade aferida pelo \acrshort{PSNR} é muito menor.
 \end{itemize}
 

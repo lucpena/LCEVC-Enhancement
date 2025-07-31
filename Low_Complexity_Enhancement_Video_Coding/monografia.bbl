@@ -13,60 +13,34 @@
   \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
 
 \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
-\bibitem {what_is_raw_footage}
-\btxnamefont {\btxlastnamefont {Miller}, Jeremy}\btxauthorcolon\ \btxtitlefont
-  {\btxifchangecase {What is raw footage and when to use it}{What is Raw
-  Footage and When To use It}}.
+\bibitem {pareto_img}
+\btxnamefont {\btxlastnamefont {{Wikipedia}}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Pareto efficient frontier}{Pareto Efficient Frontier}}.
 \newblock {\latintext
-  \btxurlfont{https://bxfilms.tv/blog/what-is-raw-footage}}\empty
-  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2022-09-09}}}.
+  \btxurlfont{https://en.wikipedia.org/wiki/Pareto_front}}\empty
+  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2025-07-27}}}.
 
-\bibitem {mpeg2}
-\btxnamefont {\btxlastnamefont {Morris}, O.J.}\btxauthorcolon\ \btxtitlefont
-  {\btxifchangecase {Mpeg-2: where did it come from and what is it?}{MPEG-2:
-  where did it come from and what is it?}}
-\newblock \Btxinlong {}\ \btxtitlefont {IEE Colloquium on MPEG-2 - What it is
-  and What it isn't}, \btxpageslong {}\ 1/1--1/5, 1995.
+\bibitem {uvg_dataset}
+\btxnamefont {\btxlastnamefont {Mercat}, A.}, \btxnamefont {M. \btxlastnamefont
+  {Viitanen}}\btxandcomma {} \btxandlong {}\ \btxnamefont {J. \btxlastnamefont
+  {Vanne}}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Uvg dataset:
+  50/120fps 4k sequences for video codec analysis and development}{UVG dataset:
+  50/120fps 4K sequences for video codec analysis and development}}.
+\newblock \btxjournalfont {Proc. ACM Multimedia Syst. Conf.},
+  \btxprintmonthyear{.}{June}{2020}{long}.
 
-\bibitem {h264_white_paper}
-\btxnamefont {\btxlastnamefont {{ITU‑T Study Group 16 (VCEG) and ISO/IEC
-  JTC1/SC29/WG11 (MPEG)}}}\btxauthorcolon\ \btxtitlefont {\btxifchangecase
-  {{ITU‑T Recommendation H.264 | ISO/IEC 14496‑10: Advanced video coding
-  for generic audiovisual services}}{{ITU‑T Recommendation H.264 | ISO/IEC
-  14496‑10: Advanced video coding for generic audiovisual services}}}.
-\newblock \btxifchangecase {Recommendation / international
-  standard}{Recommendation / International Standard}\ H.264 / ISO/IEC
-  14496‑10, {International Telecommunication Union, International
-  Organization for Standardization International Electrotechnical Commission},
-  \btxprintmonthyear{.}{May}{2003}{long}.
-\newblock {\latintext
-  \btxurlfont{https://www.videosurveillance.co.in/H.264.pdf}}, Corrigendum 1
-  added May 7, 2004.
+\bibitem {xiph}
+\btxnamefont {\btxlastnamefont {Xiph.Org}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Xiph.org video test media}{Xiph.org Video Test Media}}.
+\newblock {\latintext \btxurlfont{https://media.xiph.org/video/derf/}}\empty
+  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2025-05-05}}}.
 
-\bibitem {vvc_paper}
-\btxnamefont {\btxlastnamefont {Hamidouche}, Wassim}, \btxnamefont {Thibaud
-  \btxlastnamefont {Biatek}}, \btxnamefont {Mohsen \btxlastnamefont {Abdoli}},
-  \btxnamefont {Edouard \btxlastnamefont {François}}, \btxnamefont {Fernando
-  \btxlastnamefont {Pescador}}, \btxnamefont {Miloš \btxlastnamefont
-  {Radosavljević}}, \btxnamefont {Daniel \btxlastnamefont
-  {Menard}}\btxandcomma {} \btxandlong {}\ \btxnamefont {Mickael
-  \btxlastnamefont {Raulet}}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase
-  {Versatile video coding standard: A review from coding tools to consumers
-  deployment}{Versatile Video Coding Standard: A Review from Coding Tools to
-  Consumers Deployment}}.
-\newblock \btxjournalfont {arXiv preprint},
-  \btxprintmonthyear{.}{Jun}{2021}{long}.
-\newblock {\latintext \btxurlfont{https://arxiv.org/pdf/2106.14245}}, Revised
-  version (v2) submitted on 6 Nov 2021.
-
-\bibitem {gupta2006data}
-\btxnamefont {\btxlastnamefont {Gupta}, Prakash\btxfnamespacelong
-  C.}\btxauthorcolon\ \btxtitlefont {Data Communications and Computer
-  Networks}.
-\newblock \btxpublisherfont {PHI Learning Pvt. Ltd.}, New Delhi, India,
-  2006\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {9788120328464}}}.
-\newblock {\latintext
-  \btxurlfont{https://books.google.com.br/books?id=-kNn_p6WA38C&pg=PA7}}.
+\bibitem {globo_video_uhd}
+\btxnamefont {\btxlastnamefont {{TV Globo}}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Trecho de vídeo da tv globo em formato raw/mov}{Trecho de
+  vídeo da TV Globo em formato RAW/MOV}}, 2024.
+\newblock Conteúdo obtido para testes de compressão. Sem distribuição
+  pública.
 
 \bibitem {Syahbana2011APSNR}
 \btxnamefont {\btxlastnamefont {Syahbana}, Yoanda\btxfnamespacelong Alim},
@@ -84,12 +58,100 @@
 \newblock {\latintext
   \btxurlfont{https://core.ac.uk/download/pdf/228026495.pdf}}.
 
+\bibitem {tv_25}
+\btxnamefont {\btxlastnamefont {{SBTVD}}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Resultados da avaliação subjetiva da qualidade da
+  codificação de vídeo em tempo real para tv 2.5}{Resultados da avaliação
+  subjetiva da qualidade da codificação de vídeo em tempo real para TV
+  2.5}}.
+
+\bibitem {lcevc_tvdigital}
+\btxnamefont {\btxlastnamefont {{Carlos Eduardo Cosme
+  Ribeiro}}}\btxauthorcolon\ \btxtitlefont {\btxifchangecase {Gt tv 3.0:
+  Funcionalidades do mpeg-5, low complexity enhancement video coding
+  (lcevc)}{GT TV 3.0: Funcionalidades do MPEG-5, Low Complexity Enhancement
+  Video Coding (LCEVC)}}.
+\newblock
+  https://set.org.br/news-revista-da-set/revista/gt-tv-3-0-funcionalidades-do-mpeg-5-low-complexity-enhancement-video-coding-lcevc/.
+
+\bibitem {globo_lcevc}
+\btxnamefont {\btxlastnamefont {V-Nova}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Brazilian tv giant achieves 10mbps uhd with lcevc
+  enhancement}{Brazilian TV Giant Achieves 10Mbps UHD with LCEVC Enhancement}}.
+\newblock {\latintext
+  \btxurlfont{https://v-nova.com/press-releases/brazilian-tv-giant-achieves-10mbps-uhd-with-lcevc-enhancement/}}\empty
+  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2024-09-05}}}.
+
+\bibitem {what_is_raw_footage}
+\btxnamefont {\btxlastnamefont {Miller}, Jeremy}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {What is raw footage and when to use it}{What is Raw
+  Footage and When To use It}}.
+\newblock {\latintext
+  \btxurlfont{https://bxfilms.tv/blog/what-is-raw-footage}}\empty
+  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2022-09-09}}}.
+
+\bibitem {mpeg2}
+\btxnamefont {\btxlastnamefont {Morris}, O.J.}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Mpeg-2: where did it come from and what is it?}{MPEG-2:
+  where did it come from and what is it?}}
+\newblock \Btxinlong {}\ \btxtitlefont {IEE Colloquium on MPEG-2 - What it is
+  and What it isn't}, \btxpageslong {}\ 1/1--1/5, 1995.
+
+\bibitem {globo_panorama}
+\btxnamefont {\btxlastnamefont {{Carlos Eduardo Cosme Ribeiro}}} \btxandlong
+  {}\ \btxnamefont {\btxlastnamefont {{Globo}}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Panorama dos codificadores de vídeos}{Panorama dos
+  codificadores de vídeos}}.
+\newblock {\latintext
+  \btxurlfont{https://globotech.globo.com/blog/noticia/panorama-dos-codificadores-de-videos.ghtml}}\empty
+  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2024-08-13}}}.
+
+\bibitem {h264_white_paper}
+\btxnamefont {\btxlastnamefont {{ITU‑T Study Group 16 (VCEG) and ISO/IEC
+  JTC1/SC29/WG11 (MPEG)}}}\btxauthorcolon\ \btxtitlefont {\btxifchangecase
+  {{ITU‑T Recommendation H.264 | ISO/IEC 14496‑10: Advanced video coding
+  for generic audiovisual services}}{{ITU‑T Recommendation H.264 | ISO/IEC
+  14496‑10: Advanced video coding for generic audiovisual services}}}.
+\newblock \btxifchangecase {Recommendation / international
+  standard}{Recommendation / International Standard}\ H.264 / ISO/IEC
+  14496‑10, {International Telecommunication Union, International
+  Organization for Standardization International Electrotechnical Commission},
+  \btxprintmonthyear{.}{5}{2003}{long}.
+\newblock {\latintext
+  \btxurlfont{https://www.videosurveillance.co.in/H.264.pdf}}, Corrigendum 1
+  added May 7, 2004.
+
+\bibitem {vvc_paper}
+\btxnamefont {\btxlastnamefont {Hamidouche}, Wassim}, \btxnamefont {Thibaud
+  \btxlastnamefont {Biatek}}, \btxnamefont {Mohsen \btxlastnamefont {Abdoli}},
+  \btxnamefont {Edouard \btxlastnamefont {François}}, \btxnamefont {Fernando
+  \btxlastnamefont {Pescador}}, \btxnamefont {Miloš \btxlastnamefont
+  {Radosavljević}}, \btxnamefont {Daniel \btxlastnamefont
+  {Menard}}\btxandcomma {} \btxandlong {}\ \btxnamefont {Mickael
+  \btxlastnamefont {Raulet}}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase
+  {Versatile video coding standard: A review from coding tools to consumers
+  deployment}{Versatile Video Coding Standard: A Review from Coding Tools to
+  Consumers Deployment}}.
+\newblock \btxjournalfont {arXiv preprint},
+  \btxprintmonthyear{.}{6}{2021}{long}.
+\newblock {\latintext \btxurlfont{https://arxiv.org/pdf/2106.14245}}, Revised
+  version (v2) submitted on 6 Nov 2021.
+
+\bibitem {gupta2006data}
+\btxnamefont {\btxlastnamefont {Gupta}, Prakash\btxfnamespacelong
+  C.}\btxauthorcolon\ \btxtitlefont {Data Communications and Computer
+  Networks}.
+\newblock \btxpublisherfont {PHI Learning Pvt. Ltd.}, New Delhi, India,
+  2006\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {9788120328464}}}.
+\newblock {\latintext
+  \btxurlfont{https://books.google.com.br/books?id=-kNn_p6WA38C&pg=PA7}}.
+
 \bibitem {MPEG2022LCEVC}
 \btxnamefont {\btxlastnamefont {{ISO/IEC JTC 1/SC 29/WG 11 MPEG-5 Part 2
   Working Group}}}\btxauthorcolon\ \btxtitlefont {\btxifchangecase {White paper
   on low complexity enhancement video coding (lcevc)}{White Paper on Low
   Complexity Enhancement Video Coding (LCEVC)}}.
-\newblock \btxifchangecase {White paper}{White Paper}\ MPEG‑137, LCEVC (Low
+\newblock \btxifchangecase {White paper}{White Paper}\ MPEG-137, LCEVC (Low
   Complexity Enhancement Video Coding), \btxprintmonthyear{.}{1}{2022}{long}.
 
 \bibitem {overview_lcevc}
@@ -104,13 +166,12 @@
 \newblock \btxjournalfont {IEEE Transactions on Circuits and Systems for Video
   Technology}, 32(11):7983--7995, 2022.
 
-\bibitem {globo_lcevc}
-\btxnamefont {\btxlastnamefont {V-Nova}}\btxauthorcolon\ \btxtitlefont
-  {\btxifchangecase {Brazilian tv giant achieves 10mbps uhd with lcevc
-  enhancement}{Brazilian TV Giant Achieves 10Mbps UHD with LCEVC Enhancement}}.
+\bibitem {my_scripts}
+\btxnamefont {\btxlastnamefont {{Lucas Pena}}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Lcevc-enhancement}{LCEVC-Enhancement}}.
 \newblock {\latintext
-  \btxurlfont{https://v-nova.com/press-releases/brazilian-tv-giant-achieves-10mbps-uhd-with-lcevc-enhancement/}}\empty
-  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2024-09-05}}}.
+  \btxurlfont{https://github.com/lucpena/LCEVC-Enhancement/tree/main/Low_Complexity_Enhancement_Video_Coding}}\empty
+  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2025-07-27}}}.
 
 \bibitem {pareto_definition}
 \btxnamefont {\btxlastnamefont {Emmerich}, Michael} \btxandlong {}\
@@ -121,26 +182,10 @@
 \newblock {\latintext \btxurlfont{https://arxiv.org/abs/2407.00359}}, Página
   26.
 
-\bibitem {pareto_img}
-\btxnamefont {\btxlastnamefont {Wikipedia}}\btxauthorcolon\ \btxtitlefont
-  {\btxifchangecase {Pareto efficient frontier}{Pareto Efficient Frontier}}.
+\bibitem {ltm_git}
+\btxtitlefont {\btxifchangecase {{LTM Git (requer uma conta MPEG)}}{{LTM Git
+  (requer uma conta MPEG)}}}.
 \newblock {\latintext
-  \btxurlfont{https://pt.wikipedia.org/wiki/Efici%C3%AAncia_de_Pareto\#/media/Ficheiro:Pareto_Efficient_Frontier_1024x1024.png}}\empty
-  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2025-07-27}}}.
-
-\bibitem {uvg_dataset}
-\btxnamefont {\btxlastnamefont {Mercat}, A.}, \btxnamefont {M. \btxlastnamefont
-  {Viitanen}}\btxandcomma {} \btxandlong {}\ \btxnamefont {J. \btxlastnamefont
-  {Vanne}}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Uvg dataset:
-  50/120fps 4k sequences for video codec analysis and development}{UVG dataset:
-  50/120fps 4K sequences for video codec analysis and development}}.
-\newblock \btxjournalfont {Proc. ACM Multimedia Syst. Conf.},
-  \btxprintmonthyear{.}{June}{2020}{long}.
-
-\bibitem {xiph}
-\btxnamefont {\btxlastnamefont {Xiph.Org}}\btxauthorcolon\ \btxtitlefont
-  {\btxifchangecase {Xiph.org video test media}{Xiph.org Video Test Media}}.
-\newblock {\latintext \btxurlfont{https://media.xiph.org/video/derf/}}\empty
-  \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2025-05-05}}}.
+  \btxurlfont{https://git.mpeg.expert/MPEG/Video/LCEVC/LTM}}.
 
 \end{thebibliography}

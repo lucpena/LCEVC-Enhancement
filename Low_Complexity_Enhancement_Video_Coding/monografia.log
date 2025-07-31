@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  27 JUL 2025 13:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  30 JUL 2025 18:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -713,7 +713,34 @@ File: pppdftex.def 2025/07/23 v0.6g Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count386
 \AM@templatesizebox=\box65
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 42
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count387
+\lst@gtempboxa=\box66
+\lst@token=\toks41
+\lst@length=\count388
+\lst@currlwidth=\dimen260
+\lst@column=\count389
+\lst@pos=\count390
+\lst@lostspace=\dimen261
+\lst@width=\dimen262
+\lst@newlines=\count391
+\lst@lineno=\count392
+\lst@maxwidth=\dimen263
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count393
+\lst@skipnumbers=\count394
+\lst@framebox=\box67
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 68
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
@@ -721,7 +748,7 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count387
+\l__color_backend_stack_int=\count395
 )
 (./monografia.aux
 Package babel Info: 'brazil' activates 'portuges' shorthands.
@@ -733,24 +760,24 @@ LaTeX Warning: Label `latexvsword' multiply defined.
 )
 \openout1 = `monografia.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
 
 babelbib: Set bibliography fall-back language to american
 babelbib: english.bdf loaded because language english defined.
@@ -769,17 +796,17 @@ babelbib: Load BibTeX extensions \bibsamerican for american
 babelbib: Set language for keywords in the bibliography fixed to american
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count388
-\scratchdimen=\dimen260
-\scratchbox=\box66
-\nofMPsegments=\count389
-\nofMParguments=\count390
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count391
-\MPscratchDim=\dimen261
-\MPnumerator=\count392
-\makeMPintoPDFobject=\count393
-\everyMPtoPDFconversion=\toks42
+\scratchcounter=\count396
+\scratchdimen=\dimen264
+\scratchbox=\box68
+\nofMPsegments=\count397
+\nofMParguments=\count398
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count399
+\MPscratchDim=\dimen265
+\MPnumerator=\count400
+\makeMPintoPDFobject=\count401
+\everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -823,7 +850,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 42.
+Package hyperref Info: Link coloring OFF on input line 68.
 (./monografia.out) (./monografia.out)
 \@outlinefile=\write6
 \openout6 = `monografia.out'.
@@ -838,26 +865,26 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 \len@brasiliaw=\skip71
 \len@uadesch=\skip72
 \len@uacaph=\skip73
-LaTeX Font Info:    Trying to load font information for T1+ua1 on input line 42
+LaTeX Font Info:    Trying to load font information for T1+ua1 on input line 68
 .
-LaTeX Font Info:    No file T1ua1.fd. on input line 42.
+LaTeX Font Info:    No file T1ua1.fd. on input line 68.
 
 
 LaTeX Font Warning: Font shape `T1/ua1/b/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 42.
+(Font)              using `T1/cmr/m/n' instead on input line 68.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 42.
+(Font)              size <20.74> substituted on input line 68.
 
 
 LaTeX Font Warning: Font shape `T1/ua1/b/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 42.
+(Font)              size <20.74> substituted on input line 68.
 
-<img/positivo_cor.pdf, id=168, 119.44624pt x 60.225pt>
+<img/positivo_cor.pdf, id=196, 119.44624pt x 60.225pt>
 File: img/positivo_cor.pdf Graphic file (type pdf)
 <use img/positivo_cor.pdf>
-Package pdftex.def Info: img/positivo_cor.pdf  used on input line 42.
+Package pdftex.def Info: img/positivo_cor.pdf  used on input line 68.
 (pdftex.def)             Requested size: 61.76747pt x 31.14256pt.
 \len@lskipoffset=\skip74
 \len@lskipoffset=\skip75
@@ -878,39 +905,39 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local
 \len@uacaph=\skip78
 File: img/positivo_cor.pdf Graphic file (type pdf)
 <use img/positivo_cor.pdf>
-Package pdftex.def Info: img/positivo_cor.pdf  used on input line 42.
+Package pdftex.def Info: img/positivo_cor.pdf  used on input line 68.
 (pdftex.def)             Requested size: 61.76747pt x 31.14256pt.
 \len@lskipoffset=\skip79
 \len@lskipoffset=\skip80
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
-2.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6
+8.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
-2.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
+8.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-42.
+68.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-42.
+68.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 42.
+(Font)              <12> on input line 68.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 42.
+(Font)              <8> on input line 68.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 42.
+(Font)              <6> on input line 68.
 
 
 [2
@@ -924,7 +951,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (/usr/local/texlive/2025/texmf-dist/tex/generic/babel/locale/en/babel-english.t
 ex)
 Package babel Info: Importing data for english
-(babel)             from babel-en.ini. Reported on input line 42.
+(babel)             from babel-en.ini. Reported on input line 68.
  (./tex/abstract.tex)
 babelbib: Set language for keywords in the bibliography fixed to brazil
 
@@ -942,11 +969,7 @@ babelbib: Set language for keywords in the bibliography fixed to brazil
 
 
 
-[6] (./monografia.lof
-
-LaTeX Warning: Citation `pareto_img' on page vii undefined on input line 8.
-
-)
+[6] (./monografia.lof)
 \tf@lof=\write8
 \openout8 = `monografia.lof'.
 
@@ -983,6 +1006,8 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
+\c@lstlisting=\count402
+
 Cap\'{\i }tulo 1.
 (./tex/1-IntroduÃ§Ã£o.tex
 
@@ -992,35 +1017,44 @@ Cap\'{\i }tulo 1.
 ]
 
 [2]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
-8.
+Overfull \hbox (5.8227pt too wide) in paragraph at lines 104--104
+[]\T1/lmr/bx/n/17.28 Taxa de bits e Peak Signal-to-Noise Ra-tio (PSNR) 
+ []
+
+
+
+[3]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+43.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
-[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
 25/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2025/texmf-d
 ist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/
 enc/dvips/lm/lm-ts1.enc}]
-<img/LCEVC-Encoder.png, id=413, 752.0597pt x 402.75468pt>
+<img/LCEVC-Encoder.png, id=494, 752.0597pt x 402.75468pt>
 File: img/LCEVC-Encoder.png Graphic file (type png)
 <use img/LCEVC-Encoder.png>
-Package pdftex.def Info: img/LCEVC-Encoder.png  used on input line 154.
+Package pdftex.def Info: img/LCEVC-Encoder.png  used on input line 178.
 (pdftex.def)             Requested size: 455.24411pt x 243.8056pt.
 
 
-[4 <./img/LCEVC-Encoder.png>]
-<img/LCEVC-Decoder.png, id=436, 763.35187pt x 373.395pt>
+[5 <./img/LCEVC-Encoder.png>]
+<img/LCEVC-Decoder.png, id=515, 763.35187pt x 373.395pt>
 File: img/LCEVC-Decoder.png Graphic file (type png)
 <use img/LCEVC-Decoder.png>
-Package pdftex.def Info: img/LCEVC-Decoder.png  used on input line 186.
+Package pdftex.def Info: img/LCEVC-Decoder.png  used on input line 210.
 (pdftex.def)             Requested size: 455.24411pt x 222.68271pt.
 
 
-[5 <./img/LCEVC-Decoder.png>])
-
-[6]
+[6 <./img/LCEVC-Decoder.png>])
 
 [7]
 Cap\'{\i }tulo 2.
@@ -1035,68 +1069,136 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [8
 
 ]
-<img/pareto-2.png, id=497, 331.2375pt x 331.2375pt>
+<img/pareto-2.png, id=563, 331.2375pt x 331.2375pt>
 File: img/pareto-2.png Graphic file (type png)
 <use img/pareto-2.png>
 Package pdftex.def Info: img/pareto-2.png  used on input line 74.
 (pdftex.def)             Requested size: 227.62206pt x 227.61906pt.
 
 
-LaTeX Warning: Citation `pareto_img' on page 9 undefined on input line 75.
+[9]
+<img/Bosphorus_1920x1080_120fps_420_8bit_frame1.png, id=575, 1927.2pt x 1084.05
+pt>
+File: img/Bosphorus_1920x1080_120fps_420_8bit_frame1.png Graphic file (type png
+)
+<use img/Bosphorus_1920x1080_120fps_420_8bit_frame1.png>
+Package pdftex.def Info: img/Bosphorus_1920x1080_120fps_420_8bit_frame1.png  us
+ed on input line 103.
+(pdftex.def)             Requested size: 127.46779pt x 71.68977pt.
+<img/Jockey_1920x1080_120fps_420_8bit_frame1.png, id=576, 1927.2pt x 1084.05pt>
+
+File: img/Jockey_1920x1080_120fps_420_8bit_frame1.png Graphic file (type png)
+<use img/Jockey_1920x1080_120fps_420_8bit_frame1.png>
+Package pdftex.def Info: img/Jockey_1920x1080_120fps_420_8bit_frame1.png  used 
+on input line 104.
+(pdftex.def)             Requested size: 127.46779pt x 71.68977pt.
+<img/ReadySteadyGo_1920x1080_120fps_420_8bit_frame1.png, id=577, 1927.2pt x 108
+4.05pt>
+File: img/ReadySteadyGo_1920x1080_120fps_420_8bit_frame1.png Graphic file (type
+ png)
+<use img/ReadySteadyGo_1920x1080_120fps_420_8bit_frame1.png>
+Package pdftex.def Info: img/ReadySteadyGo_1920x1080_120fps_420_8bit_frame1.png
+  used on input line 105.
+(pdftex.def)             Requested size: 127.46779pt x 71.68977pt.
+<img/vc-globo-05_120frames_420p_frame1.png, id=578, 3854.4pt x 2168.1pt>
+File: img/vc-globo-05_120frames_420p_frame1.png Graphic file (type png)
+<use img/vc-globo-05_120frames_420p_frame1.png>
+Package pdftex.def Info: img/vc-globo-05_120frames_420p_frame1.png  used on inp
+ut line 108.
+(pdftex.def)             Requested size: 127.46779pt x 71.68977pt.
+<img/vc-lcevc-01_120frames_420p_frame120.png, id=579, 3854.4pt x 2168.1pt>
+File: img/vc-lcevc-01_120frames_420p_frame120.png Graphic file (type png)
+<use img/vc-lcevc-01_120frames_420p_frame120.png>
+Package pdftex.def Info: img/vc-lcevc-01_120frames_420p_frame120.png  used on i
+nput line 109.
+(pdftex.def)             Requested size: 127.46779pt x 71.68977pt.
+<img/vc-philips-01_120frames_420p_frame1.png, id=580, 3854.4pt x 2168.1pt>
+File: img/vc-philips-01_120frames_420p_frame1.png Graphic file (type png)
+<use img/vc-philips-01_120frames_420p_frame1.png>
+Package pdftex.def Info: img/vc-philips-01_120frames_420p_frame1.png  used on i
+nput line 110.
+(pdftex.def)             Requested size: 127.46779pt x 71.68977pt.
+<img/vc-philips-03_120frames_420p_frame1.png, id=581, 3854.4pt x 2168.1pt>
+File: img/vc-philips-03_120frames_420p_frame1.png Graphic file (type png)
+<use img/vc-philips-03_120frames_420p_frame1.png>
+Package pdftex.def Info: img/vc-philips-03_120frames_420p_frame1.png  used on i
+nput line 113.
+(pdftex.def)             Requested size: 127.46779pt x 71.68977pt.
+<img/city_704x576_yuv420p_60fps_600frames_frame1.png, id=582, 706.64pt x 578.16
+pt>
+File: img/city_704x576_yuv420p_60fps_600frames_frame1.png Graphic file (type pn
+g)
+<use img/city_704x576_yuv420p_60fps_600frames_frame1.png>
+Package pdftex.def Info: img/city_704x576_yuv420p_60fps_600frames_frame1.png  u
+sed on input line 114.
+(pdftex.def)             Requested size: 127.46779pt x 104.28485pt.
+<img/SOCCER_352x288_30_orig_02_frame1.png, id=583, 353.32pt x 289.08pt>
+File: img/SOCCER_352x288_30_orig_02_frame1.png Graphic file (type png)
+<use img/SOCCER_352x288_30_orig_02_frame1.png>
+Package pdftex.def Info: img/SOCCER_352x288_30_orig_02_frame1.png  used on inpu
+t line 115.
+(pdftex.def)             Requested size: 127.46779pt x 104.29367pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-)
 
-[9]
 
-[10 <./img/pareto-2.png>]
+[10 <./img/pareto-2.png>])
+
+[11 <./img/Bosphorus_1920x1080_120fps_420_8bit_frame1.png (PNG copy)> <./img/Jo
+ckey_1920x1080_120fps_420_8bit_frame1.png (PNG copy)> <./img/ReadySteadyGo_1920
+x1080_120fps_420_8bit_frame1.png (PNG copy)> <./img/vc-globo-05_120frames_420p_
+frame1.png (PNG copy)> <./img/vc-lcevc-01_120frames_420p_frame120.png (PNG copy
+)> <./img/vc-philips-01_120frames_420p_frame1.png (PNG copy)> <./img/vc-philips
+-03_120frames_420p_frame1.png (PNG copy)> <./img/city_704x576_yuv420p_60fps_600
+frames_frame1.png (PNG copy)> <./img/SOCCER_352x288_30_orig_02_frame1.png (PNG 
+copy)>]
 Cap\'{\i }tulo 3.
 (./tex/3-Resultados.tex
 
-[11
+[12
 
 ]
-<img/Bosphorus-AVC.png, id=520, 722.7pt x 433.62pt>
+<img/Bosphorus-AVC.png, id=610, 722.7pt x 433.62pt>
 File: img/Bosphorus-AVC.png Graphic file (type png)
 <use img/Bosphorus-AVC.png>
 Package pdftex.def Info: img/Bosphorus-AVC.png  used on input line 27.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
-<img/ReadySteadyGo-AVC.png, id=531, 722.7pt x 433.62pt>
+<img/ReadySteadyGo-AVC.png, id=621, 722.7pt x 433.62pt>
 File: img/ReadySteadyGo-AVC.png Graphic file (type png)
 <use img/ReadySteadyGo-AVC.png>
 Package pdftex.def Info: img/ReadySteadyGo-AVC.png  used on input line 56.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[12 <./img/Bosphorus-AVC.png>]
+[13 <./img/Bosphorus-AVC.png>]
 
-[13 <./img/ReadySteadyGo-AVC.png>]
-<img/Jockey-AVC.png, id=555, 722.7pt x 433.62pt>
+[14 <./img/ReadySteadyGo-AVC.png>]
+<img/Jockey-AVC.png, id=644, 722.7pt x 433.62pt>
 File: img/Jockey-AVC.png Graphic file (type png)
 <use img/Jockey-AVC.png>
 Package pdftex.def Info: img/Jockey-AVC.png  used on input line 91.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
-<img/SOCCER-AVC.png, id=573, 722.7pt x 433.62pt>
+<img/SOCCER-AVC.png, id=662, 722.7pt x 433.62pt>
 File: img/SOCCER-AVC.png Graphic file (type png)
 <use img/SOCCER-AVC.png>
 Package pdftex.def Info: img/SOCCER-AVC.png  used on input line 129.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[14 <./img/Jockey-AVC.png>]
+[15 <./img/Jockey-AVC.png>]
 
-[15 <./img/SOCCER-AVC.png>]
-<img/City-AVC.png, id=600, 722.7pt x 433.62pt>
+[16 <./img/SOCCER-AVC.png>]
+<img/City-AVC.png, id=691, 722.7pt x 433.62pt>
 File: img/City-AVC.png Graphic file (type png)
 <use img/City-AVC.png>
 Package pdftex.def Info: img/City-AVC.png  used on input line 159.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[16 <./img/City-AVC.png>]
-<img/vc-globo-05_120frames-AVC.png, id=621, 722.7pt x 433.62pt>
+[17 <./img/City-AVC.png>]
+<img/vc-globo-05_120frames-AVC.png, id=711, 722.7pt x 433.62pt>
 File: img/vc-globo-05_120frames-AVC.png Graphic file (type png)
 <use img/vc-globo-05_120frames-AVC.png>
 Package pdftex.def Info: img/vc-globo-05_120frames-AVC.png  used on input line 
@@ -1104,8 +1206,8 @@ Package pdftex.def Info: img/vc-globo-05_120frames-AVC.png  used on input line
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[17 <./img/vc-globo-05_120frames-AVC.png>]
-<img/vc-lcevc-01_120frames-AVC.png, id=638, 722.7pt x 433.62pt>
+[18 <./img/vc-globo-05_120frames-AVC.png>]
+<img/vc-lcevc-01_120frames-AVC.png, id=729, 722.7pt x 433.62pt>
 File: img/vc-lcevc-01_120frames-AVC.png Graphic file (type png)
 <use img/vc-lcevc-01_120frames-AVC.png>
 Package pdftex.def Info: img/vc-lcevc-01_120frames-AVC.png  used on input line 
@@ -1113,8 +1215,8 @@ Package pdftex.def Info: img/vc-lcevc-01_120frames-AVC.png  used on input line
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[18 <./img/vc-lcevc-01_120frames-AVC.png>]
-<img/vc-philips-01_120frames-AVC.png, id=647, 722.7pt x 433.62pt>
+[19 <./img/vc-lcevc-01_120frames-AVC.png>]
+<img/vc-philips-01_120frames-AVC.png, id=738, 722.7pt x 433.62pt>
 File: img/vc-philips-01_120frames-AVC.png Graphic file (type png)
 <use img/vc-philips-01_120frames-AVC.png>
 Package pdftex.def Info: img/vc-philips-01_120frames-AVC.png  used on input lin
@@ -1122,8 +1224,8 @@ e 236.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[19 <./img/vc-philips-01_120frames-AVC.png>]
-<img/vc-philips-03_120frames-AVC.png, id=662, 722.7pt x 433.62pt>
+[20 <./img/vc-philips-01_120frames-AVC.png>]
+<img/vc-philips-03_120frames-AVC.png, id=752, 722.7pt x 433.62pt>
 File: img/vc-philips-03_120frames-AVC.png Graphic file (type png)
 <use img/vc-philips-03_120frames-AVC.png>
 Package pdftex.def Info: img/vc-philips-03_120frames-AVC.png  used on input lin
@@ -1131,40 +1233,40 @@ e 263.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[20 <./img/vc-philips-03_120frames-AVC.png>]
-<img/Bosphorus-VVC.png, id=681, 722.7pt x 433.62pt>
+[21 <./img/vc-philips-03_120frames-AVC.png>]
+<img/Bosphorus-VVC.png, id=771, 722.7pt x 433.62pt>
 File: img/Bosphorus-VVC.png Graphic file (type png)
 <use img/Bosphorus-VVC.png>
 Package pdftex.def Info: img/Bosphorus-VVC.png  used on input line 296.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[21 <./img/Bosphorus-VVC.png>]
-<img/SOCCER-VVC.png, id=693, 722.7pt x 433.62pt>
+[22 <./img/Bosphorus-VVC.png>]
+<img/SOCCER-VVC.png, id=785, 722.7pt x 433.62pt>
 File: img/SOCCER-VVC.png Graphic file (type png)
 <use img/SOCCER-VVC.png>
 Package pdftex.def Info: img/SOCCER-VVC.png  used on input line 318.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[22 <./img/SOCCER-VVC.png>]
-<img/Jockey-VVC.png, id=710, 722.7pt x 433.62pt>
+[23 <./img/SOCCER-VVC.png>]
+<img/Jockey-VVC.png, id=801, 722.7pt x 433.62pt>
 File: img/Jockey-VVC.png Graphic file (type png)
 <use img/Jockey-VVC.png>
 Package pdftex.def Info: img/Jockey-VVC.png  used on input line 346.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[23 <./img/Jockey-VVC.png>]
-<img/City-VVC.png, id=727, 722.7pt x 433.62pt>
+[24 <./img/Jockey-VVC.png>]
+<img/City-VVC.png, id=818, 722.7pt x 433.62pt>
 File: img/City-VVC.png Graphic file (type png)
 <use img/City-VVC.png>
 Package pdftex.def Info: img/City-VVC.png  used on input line 371.
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[24 <./img/City-VVC.png>]
-<img/vc-philips-01_120frames-VVC.png, id=747, 722.7pt x 433.62pt>
+[25 <./img/City-VVC.png>]
+<img/vc-philips-01_120frames-VVC.png, id=838, 722.7pt x 433.62pt>
 File: img/vc-philips-01_120frames-VVC.png Graphic file (type png)
 <use img/vc-philips-01_120frames-VVC.png>
 Package pdftex.def Info: img/vc-philips-01_120frames-VVC.png  used on input lin
@@ -1172,8 +1274,8 @@ e 399.
 (pdftex.def)             Requested size: 227.62206pt x 136.57117pt.
 
 
-[25 <./img/vc-philips-01_120frames-VVC.png>]
-<img/vc-globo-05_120frames-VVC.png, id=760, 722.7pt x 433.62pt>
+[26 <./img/vc-philips-01_120frames-VVC.png>]
+<img/vc-globo-05_120frames-VVC.png, id=850, 722.7pt x 433.62pt>
 File: img/vc-globo-05_120frames-VVC.png Graphic file (type png)
 <use img/vc-globo-05_120frames-VVC.png>
 Package pdftex.def Info: img/vc-globo-05_120frames-VVC.png  used on input line 
@@ -1181,15 +1283,15 @@ Package pdftex.def Info: img/vc-globo-05_120frames-VVC.png  used on input line
 (pdftex.def)             Requested size: 455.24411pt x 273.14896pt.
 
 
-[26 <./img/vc-globo-05_120frames-VVC.png>]
+[27 <./img/vc-globo-05_120frames-VVC.png>]
 
-[27])
+[28])
 
-[28]
+[29]
 Cap\'{\i }tulo 4.
 (./tex/4-ConclusÃ£o.tex
 
-[29
+[30
 
 ]
 Overfull \hbox (11.93546pt too wide) in paragraph at lines 45--47
@@ -1199,7 +1301,7 @@ cur-sos li-mi-ta-dos, como smartpho-
 
 )
 
-[30] (./monografia.bbl (./monografia.brf)
+[31] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write11
 \openout11 = `monografia.brf'.
 
@@ -1216,41 +1318,151 @@ babelbib: Using the BibTeX style's default font for `ISSN'.
 babelbib: Using the BibTeX style's default font for `url'.
 babelbib: Using the BibTeX style's default font for `numeral'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\T1/lmr/m/n/12 tv-3-0-funcionalidades-do-mpeg-5-low-complexity-enhancement-vide
+o-coding-lcevc/.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
 []\T1/lmr/m/n/12 V-Nova: \T1/lmr/m/it/12 Brazil-ian tv gi-ant achieves 10mbps u
 hd with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
 \T1/lmr/m/it/12 lcevc en-hance-ment\T1/lmr/m/n/12 .  []$\T1/lmtt/m/n/12 https :
  / / v-[]nova . com / press-[]releases /
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 114--114
+Underfull \hbox (badness 1194) in paragraph at lines 84--84
 \T1/lmtt/m/n/12 brazilian-[]tv-[]giant-[]achieves-[]10mbps-[]uhd-[]with-[]lcevc
 -[]enhancement/$[][]\T1/lmr/m/n/12 , acesso
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+[]\T1/lmr/m/n/12 Carlos Ed-uardo Cosme Ribeiro []e []Globo: \T1/lmr/m/it/12 Pan
+orama dos cod-i-fi-
+ []
 
-[31
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+\T1/lmr/m/it/12 cadores de vídeos\T1/lmr/m/n/12 .  []$\T1/lmtt/m/n/12 https : /
+ / globotech . globo . com / blog / noticia /
+ []
+
+
+
+[32
 
 
 ]
-Runaway argument?
- \btxnamefont {\btxlastnamefont {Wikipedia}}\btxauthorcolon \ \btxtitlefont \ET
-C.
-! Paragraph ended before \BR@@bibitem was complete.
-<to be read again> 
-                   \par 
-l.130 
-      
-? 
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+[]\T1/lmr/m/n/12 Lucas Pena: \T1/lmr/m/it/12 Lcevc-enhancement\T1/lmr/m/n/12 . 
+ []$\T1/lmtt/m/n/12 https : / / github . com / lucpena /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
+\T1/lmtt/m/n/12 LCEVC-[]Enhancement / tree / main / Low _ Complexity _ Enhancem
+ent _ Video _ Coding$[][]\T1/lmr/m/n/12 ,
+ []
+
 )
 
-[32] (./monografia.aux)
+[33]
+Anexo I.
+(./tex/Anexo1.tex
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 28.
+ (./code/main-avc.sh
+
+[34
+
+]
+
+[35]
+
+[36]
+
+[37])
+
+[38] (./code/avc_only_template.sh
+
+[39])
+
+[40] (./code/avc_template.sh
+
+[41]
+
+[42]
+
+[43]
+
+! LaTeX Error: Invalid UTF-8 byte sequence (â\lst@EC†\lst@EC’).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121     echo -e "\n\t SW2=${current_sw2} â†’ 
+                                               enhancement_ratio=${enhanceme...
+
+? 
+) (./code/main-vvc.sh
+
+[44]
+
+[45]
+
+[46]
+
+[47]
+
+[48]) (./code/vvc_only_template.sh
+
+[49]
+
+[50]) (./code/vvc_template.sh
+
+[51]
+
+[52]
+
+[53]
+
+[54]
+
+! LaTeX Error: Invalid UTF-8 byte sequence (â\lst@EC†\lst@EC’).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121     echo -e "\n\t SW2=${current_sw2} â†’ 
+                                               enhancement_ratio=${enhanceme...
+
+? 
+) (./code/resample_template.sh
+
+[55]
+
+! LaTeX Error: Invalid UTF-8 byte sequence (â\lst@EC†\lst@EC’).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 echo " Down-Up Sampling â†’ 
+                                 PSNR=${psnr_avg} dB" >> "$STATUS_FILE"
+? 
+
+
+[56]))
+
+[57] (./monografia.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-19>
@@ -1264,37 +1476,36 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: 55D30C70E6488BFA89D86BABAA05E0E8;5271.
+(rerunfilecheck)             Checksum: 9B71C52A2CACFE6E8B04D0C52B1ECFCC;6040.
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: 4447B680E41F86FBDAAACD514C554FA5;2025.
+(rerunfilecheck)             Checksum: 381E6BE2C5038EA4021E054ACFE65938;2576.
  ) 
 Here is how much of TeX's memory you used:
- 22769 strings out of 467816
- 425686 string characters out of 5432258
- 984820 words of memory out of 5000000
- 50852 multiletter control sequences out of 15000+600000
- 675402 words of font info for 67 fonts, out of 8000000 for 9000
+ 25808 strings out of 467816
+ 470367 string characters out of 5432258
+ 1388625 words of memory out of 5000000
+ 53025 multiletter control sequences out of 15000+600000
+ 678711 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 105i,8n,107p,2495b,829s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 105i,12n,107p,2495b,2017s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/tex
-mf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fon
-ts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pub
-lic/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lms
-y10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on monografia.pdf (41 pages, 3489535 bytes).
+mf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fon
+ts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pu
+blic/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri
+12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/202
+5/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/
+texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on monografia.pdf (66 pages, 58652877 bytes).
 PDF statistics:
- 966 PDF objects out of 1000 (max. 8388607)
- 856 compressed objects within 9 object streams
- 140 named destinations out of 1000 (max. 500000)
- 424 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2151 PDF objects out of 2487 (max. 8388607)
+ 1992 compressed objects within 20 object streams
+ 966 named destinations out of 1000 (max. 500000)
+ 525 words of extra memory for PDF output out of 10000 (max. 10000000)
 
