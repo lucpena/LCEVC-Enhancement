@@ -16,7 +16,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 csv_files = glob(os.path.join(current_dir, "*.csv"))
 
 # Paleta de cores para QPs
-color_palette = ['red', 'green', 'blue', 'purple', 'orange', 'cyan', 'magenta', 'yellow']
+color_palette = ['green', 'blue', 'purple', 'orange', 'cyan', 'magenta', 'yellow']
 
 for csv_path in csv_files:
     file_name = os.path.basename(csv_path)
@@ -86,55 +86,56 @@ for csv_path in csv_files:
                 codec_short = "264" if row["sw2"] == 264 else "265"
                 text_label = f" QP{row['qp']}" if row["qp"] != 0 else ""
             elif is_resample:
-                text_label = "Resample"
+                text_label = ""
 
-            # Ajustes finos de posição
-            xoffset = -1000
-            yoffset = -0.1
+            xoffset = 0
+            yoffset = 0
 
             if row["sw2"] != 264 and row["sw2"] != 265:
                 if row["qp"] == 37:
                     text_label += f" SW2={row['sw2']}"
-                    xoffset = 500
+                    xoffset = 100
                     yoffset = -0.15
                 pass
 
             if is_reference:
-                xoffset = -1500
-                yoffset = 0.3
+                xoffset = -1400
+                yoffset = 0
             elif is_resample:
-                xoffset = -100
-                yoffset = -100
+                xoffset = 0
+                yoffset = 0
 
+            # if row["qp"] == 35:
+            #     xoffset += -200
+            #     yoffset += -0.2
+            
             # if row["sw2"] == 1250:
             #     xoffset += 0
             #     yoffset -= 0.15
             
-            # if row["sw2"] == 3250:
-            #     xoffset -= 400
-            #     yoffset -= 0.35
+            if row["sw2"] == 3250:
+                xoffset -= 0
+                yoffset -= 0.35
 
-            # if row["sw2"] == 2750:
-            #     xoffset -= 500
-            #     yoffset -= 0.3
+            if row["sw2"] == 2750:
+                xoffset -= 0
+                yoffset -= 0.3
 
-            # if row["sw2"] == 1750:
+            if row["sw2"] == 1750:
+                xoffset -= 0
+                yoffset -= -0.1
+
+            if row["sw2"] == 2250:
+                xoffset -= 0
+                yoffset -= 0.2
+
+            # if row["sw2"] == 250:
             #     xoffset -= 0
-            #     yoffset += 0.25
-
-            # if row["sw2"] == 2250:
-            #     xoffset -= 200
             #     yoffset -= 0.15
 
-            # # if row["sw2"] == 250:
-            # #     xoffset -= 0
-            # #     yoffset -= 0.15
-
-            # if row["sw2"] == 750:
-            #     xoffset -= 3000
-            #     yoffset -= 0.6
-
-
+            if row["sw2"] == 750:
+                xoffset -= 2600
+                yoffset -= 0.4
 
             plt.text(
                 row["bitrate_kbps"] + xoffset,
@@ -146,6 +147,18 @@ for csv_path in csv_files:
                 fontweight='normal'
             )
 
+    # 🔗 Conecta todos os pontos 'X' (AVC/VVC) em ordem de bitrate
+    ref_points = df[df["sw2"].isin([264, 265])].sort_values(by="bitrate_kbps")
+    if len(ref_points) > 1:
+        plt.plot(
+            ref_points["bitrate_kbps"],
+            ref_points["psnr_avg"],
+            color='red',
+            linestyle='-',
+            linewidth=2,
+            alpha=0.8,
+            label=None  # evita duplicar na legenda
+        )
 
     # Finaliza e salva o gráfico
     plt.xlabel("Bitrate (kbps)")

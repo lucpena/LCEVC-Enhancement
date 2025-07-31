@@ -1,5 +1,4 @@
 file,sw2,qp,lvc_size,base_size,enhance_size,enhancement_ratio,psnr_avg,bitrate_kbps
-vc-philips-01_120frames-Resample,0,0,1492992000,0,0,0%,49.41,0
 vc-philips-01_120frames_LCEVC_AVC_SW2-750_QP35_2025-07-24_11-17-03.lvc,750,35,5405409,250398,5155011,95.3676%,40.88,21621.64
 vc-philips-01_120frames_LCEVC_AVC_SW2-750_QP37_2025-07-24_11-17-08.lvc,750,37,6029336,170763,5858573,97.1678%,40.41,24117.34
 vc-philips-01_120frames_LCEVC_AVC_SW2-750_QP32_2025-07-24_11-17-46.lvc,750,32,4520053,430584,4089469,90.4739%,41.51,18080.21
