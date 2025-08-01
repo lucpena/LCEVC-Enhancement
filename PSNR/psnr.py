@@ -99,7 +99,7 @@ for csv_path in csv_files:
                 pass
 
             if is_reference:
-                xoffset = -1400
+                xoffset = -900
                 yoffset = 0
             elif is_resample:
                 xoffset = 0

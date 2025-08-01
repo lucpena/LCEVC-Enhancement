@@ -29,26 +29,55 @@ o parâmetro de QP37.
     \label{fig:bosphorus}
 \end{figure}
 
-Para a sequência Bosphorus, os resultados revelam que o uso do \acrshort{LCEVC} pode
-ser vantajoso em determinados cenários, dependendo dos parâmetros utilizados.
+Para a sequência Bosphorus, o \acrshort{LCEVC} conseguiu ótimos resultados. Mesmo
+com uma grande dispersão pela tabela e vários resultados ineficientes, certos valores
+de SW2 conseguiram atingir resultados positivos.
 
-Nos testes com valores baixos de SW2, observou-se que, embora o \acrshort{PSNR} 
-alcançado seja alto, os arquivos resultantes apresentam uma taxa de bits
-superior ao necessário para atingir uma qualidade semelhante utilizando
-somente o \acrshort{AVC}. 
+Para o \acrshort{LCEVC}, vemos resultados positivos para QP 30, 27, 25 e 22. Estes
+QPs conseguiram resultados superiores à curva de eficiência dos vídeos de referência.
+Os resultados que apresentaram um resultado superior ao \acrshort{AVC} estão abaixo.
 
-Para valores intermediários de SW2, os resultados foram mais promissores. Nestes
-casos, o \acrshort{LCEVC} foi capaz de alcançar uma boa relação entre qualidade
-e taxa de bits. Nestes casos, embora o \acrshort{PSNR} seja um pouco inferior,
-o \acrshort{LCEVC} pode ser interessante em contextos onde a reconstrução visual
-seja mais importante que o valor do \acrshort{PSNR}.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{QP} & \textbf{Tamanho (b)} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} \\
+        \hline
+        37 & 1047004 & 37.71 & 837.60 \\
+        35 & 1352315 & 38.82 & 1081.85 \\
+        32 & 2005088 & 40.36 & 1604.07 \\
+        30 & 2660081 & 41.41 & 2128.06 \\
+        27 & 4038641 & 42.85 & 3230.91 \\
+        25 & 5455551 & 43.88 & 4364.44 \\
+        22 & 9055951 & 45.29 & 7244.76 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados para Bosphorus em AVC.}
+    \label{tab:bosphorus-avc}
+\end{table}
 
-Para valores mais altos de SW2, como 2250 por exemplo, a camada de aprimoramento
-passou a contribuir muito pouco para a codificação, representando uma proporção
-bem pequena do tamanho total do arquivo. Neste caso, o \acrshort{LCEVC} possui
-sua codificação comprometida pela perda de qualidade e espaço, tornando estas
-configurações pouco vantajosas.
+\begin{table}[h]
+    \centering
+    \label{tab:bosphorus-avc-lcevc}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{SW2} & \textbf{QP} & \textbf{Tamanho (b)} & \textbf{Proporção} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} & \textbf{Superou} \\
+        \hline
+        3250 & 30 & 916195 & 10.03\% & 38.36 & 732.96 & AVC QP37\\
+        3250 & 27 & 1342845 & 2.68\% & 39.74 & 1074.28 & AVC QP35\\
+        2750 & 27 & 1536124 & 14.93\% & 39.76 & 1228.90 & AVC QP35\\
+        3250 & 25 & 1831695 & 2.30\% & 40.64 & 1465.36 & AVC QP32\\
+        2750 & 25 & 1958104 & 8.61\% & 40.65 & 1566.48 & AVC QP32\\
+        3250 & 22 & 3031413 & 1.21\% & 41.98 & 2425.13 & AVC QP30-27\\
+        2750 & 22 & 3083003 & 2.86\% & 41.99 & 2466.40 & AVC QP30-27\\
+        \hline
+    \end{tabular}
+    \caption{Resultados favoráveis do LCEVC para Bosphorus em AVC}
+\end{table}
 
+Estes resultados mostram cenários onde o \acrshort{LCEVC} se mostrou superior ao uso de somente
+\acrshort{AVC} e o respectivo resultado que ele superou.
+ 
 \subsection{ReadySteadyGo}
 
 \begin{figure}[h]
@@ -58,98 +87,89 @@ configurações pouco vantajosas.
     \label{fig:RSG}
 \end{figure}
 
-Em geral, os resultados para esta sequência não demonstraram superioridade clara
-em comparação com o \acrshort{AVC} puro.
+Para esta sequência, o \acrshort{LCEVC} não conseguiu atingir resultados satisfatórios.
+Todos os seus resultados foram abaixo da curva do \acrshort{AVC} e não mostrou resultados
+que justifiquem o seu uso baseado em melhora de qualidade ou taxa. Porém, os resultados
+para um SW2 maior, ficaram relativamente próximos, como é o caso do QP 30 e 27 do \acrshort{LCEVC}.
+Nestes casos, o uso do \acrshort{LCEVC} manteria o \acrshort{PSNR} próximo ao resultado
+obtido para a referência em QP 37 e 35, onde, por exemplo, o uso do \acrshort{LCEVC} para se adequar a 
+um novo padrão não seria perceptível.
 
-Nos testes com o SW2 = 1250, os resultados demonstram taxas de bit
-significativamente mais altos, com ganhos pequenos ou mesmo nulos em \acrshort{PSNR}.
-Mesmo em configurações com um QP menor, o \acrshort{LCEVC} demonstrou uma taxa de bit
-muito alto, sem nenhuma melhoria de qualidade.
 
-Para valores intermediários de SW2, houve uma redução na taxa de bit, mas
-também houve uma queda no \acrshort{PSNR}.
-
-Em valores maiores de SW2, a camada de aprimoramento passou a ter pouca ou nenhuma
-relevância, com taxas abaixo dos 10\%. Com isso, os resultados se aproximam do
-desempenho da camada base, com valores baixos de \acrshort{PSNR}, acarretando
-em uma perda significativa de qualidade.
-
-Desta forma, esta sequência não se beneficiou com o uso do \acrshort{LCEVC}, onde
-a relação entre \acrshort{PSNR} e taxa de bits foi mais favorável ao \acrshort{AVC}
-puro.
-
-Vale destacar que o \textit{Resample} do \acrshort{LCEVC} obteve um \acrshort{PSNR}
-relativamente baixo em relação aos resultados obtidos. Isto demonstra, que possivelmente,
-os resíduos que foram perdidos neste processo, foram compensados pela camada de 
-aprimoramento
-
-\newpage
 \subsection{Jockey}
 
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
     \includegraphics[width=1.0\textwidth]{img/Jockey-AVC.png}
     \caption{Resultados para "Jockey"\ em \acrshort{AVC}. \cite{uvg_dataset}}
     \label{fig:Jockey}
 \end{figure}
 
-Para a sequência \textit{Jockey}, o \acrshort{LCEVC} alcançou ótimos resultados
-em relação às sequências de referência, onde há casos em que o \acrshort{LCEVC}
-demonstrou um \acrshort{PSNR} superior com uma taxa de bits menor. Percebe-se
-este comportamento em vários pontos antes do QP27 das sequências de referência.
-A partir desse ponto, o valores testados para o \acrshort{LCEVC} decaem e não
-são mais os melhores valores. Entretanto, considerando os resultados obtidos,
-é possível que com mais testes, surjam mais valores em que o \acrshort{LCEVC}
-se sai melhor.
+Aqui é outro caso onde o \acrshort{LCEVC} obteve resultados satisfatórios. Vários resultados
+estão acima da curva do \acrshort{AVC}, demonstrando uma ótima performance o \acrshort{LCEVC}
+para os parâmetros escolhidos. Os valores de QP para \acrshort{LCEVC} que se destacaram foram
+32, 30, 27 e 25, que ficaram acima da curva de referência.
+Agora, levando em consideração somente os pontos que estão acima
+dos pontos do \acrshort{AVC}, temos o seguinte resultado.
 
-Aqui, vemos um caso em que o \acrshort{LCEVC} se destacou e demonstrou vantagens
-em comparação ao \acrshort{AVC} exclusivo, especialmente em configurações de 
-taxas de bits intermediárias.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{QP} & \textbf{Tamanho (b)} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} \\
+        \hline
+        37 & 1932479 & 38.48 & 1545.98 \\
+        35 & 2294827 & 39.43 & 1835.86 \\
+        32 & 3132841 & 40.73 & 2506.27 \\
+        30 & 3935452 & 41.48 & 3148.36 \\
+        27 & 5398380 & 42.42 & 4318.70 \\
+        25 & 6743403 & 43.03 & 5394.72 \\
+        22 & 10029224 & 43.84 & 8023.38 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados para Jockey em AVC.}
+    \label{tab:jockey-avc}
+\end{table}
 
-Em valores mais baixos, o \acrshort{LCEVC} alcançou \acrshort{PSNR} elevados
-com taxas de bits competitivas. Apesar da taxa mais alta,
-a relação qualidade-tamanho mostra que o \acrshort{LCEVC} pode ser viável
-para aplicações que priorizam a qualidade visual.
-
-Na faixa média, o \acrshort{LCEVC} equilibrou melhor eficiência e qualidade,
-superando o \acrshort{AVC} puro. 
-
-Para valores mais altos de SW2, a contribuição da camada de aprimoramento
-diminuiu, aproximando-se dos valores de somente \acrshort{AVC}, mas ainda
-com ganhos moderados de \acrshort{PSNR}.
-
-Dessa maneira, o \acrshort{LCEVC} é particularmente eficaz para conteúdos
-dinâmicos como "Jockey", onde a camada de aprimoramento compensa perdas da
-compressão base sem aumentar excessivamente a taxa de bit.
+\begin{table}[h]
+    \centering
+    \label{tab:jockey-avc-lcevc}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{SW2} & \textbf{QP} & \textbf{Tamanho (b)} & \textbf{Proporção} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} & \textbf{Superou} \\
+        \hline
+            2250 & 32 & 1955243 & 45.60\% & 38.53 & 1564.19 & AVC QP37\\
+            3250 & 30 & 1417144 & 4.45\% & 39.10 & 1133.72 & AVC QP37 \\
+            2750 & 30 & 1580745 & 14.34\% & 39.13 & 1264.60 & AVC QP37 \\
+            2250 & 30 & 2019083 & 32.94\% & 39.26 & 1615.27 & AVC QP37 \\
+            3250 & 27 & 1934343 & 1.69\% & 40.23 & 1547.47 & AVC QP35 \\
+            2750 & 27 & 2017641 & 5.75\% & 40.24 & 1614.11 & AVC QP35 \\
+            2250 & 27 & 2298071 & 17.25\% & 40.30 & 1838.46 & AVC QP35 \\
+            3250 & 25 & 2455423 & 1.78\% & 40.91 & 1964.34 & AVC QP32\\
+            2750 & 25 & 2549768 & 5.41\% & 40.92 & 2039.81 & AVC QP32\\
+            2250 & 25 & 3036843 & 20.58\% & 40.96 & 2429.47 & AVC QP32\\
+            3250 & 22 & 3603619 & 1.11\% & 41.92 & 2882.90 & AVC QP30 \\
+            2750 & 22 & 3658403 & 2.59\% & 41.93 & 2926.72 & AVC QP30 \\
+            2250 & 22 & 3923132 & 9.16\% & 41.95 & 3138.51 & AVC QP30 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados favoráveis do LCEVC para Jockey em AVC.}
+\end{table}
 
 \subsection{SOCCER}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\textwidth]{img/SOCCER-AVC.png}
+    \includegraphics[width=0.85\textwidth]{img/SOCCER-AVC.png}
     \caption{Resultados para "SOCCER"\ em \acrshort{AVC}. \cite{xiph}}
     \label{fig:SOCCER}
 \end{figure}
 
 Os resultados indicam que o \acrshort{LCEVC} não apresentou vantagem clara em relação
-a somente o \acrshort{AVC} na maioria das configurações testadas.
-
-Em valores mais baixo, o \acrshort{LCEVC} gerou arquivos com taxas de bits altas
-para pouco ganho em \acrshort{PSNR}, enquanto o \acrshort{AVC} puro atingiu qualidade
-similar com taxas de bits muito menores.
-
-Nas faixas intermediárias de SW2, o \acrshort{LCEVC} reduziu a taxa de bit, mas
-com perda acentuada de \acrshort{PSNR}, ficando abaixo da curva de eficiência de somente
-o \acrshort{AVC}.
-
-Já em SW2 com valores maiores, a camada de aprimoramento se tornou irrelevante, resultando em
-desempenho próximo ao da camada base \acrshort{AVC}, porém ainda inferior ao \acrshort{AVC} puro
-em termos de \acrshort{PSNR}.
-
-O \textit{Resample} do \acrshort{LCEVC} também não demonstrou resultados significativos, com 
-\acrshort{PSNR} muito abaixo da maioria dos resultados obtidos. 
-
-Assim, o \acrshort{LCEVC} não demonstrou um benefício em ser utilizado nesta sequência.
+a somente o \acrshort{AVC} na maioria das configurações testadas. Para esta sequência 
+com uma resolução menor, ele não conseguiu atingir resultados satisfatórios. Assim,
+não houve benefícios em utilizar o \acrshort{LCEVC} com \acrshort{AVC} nesta sequência,
+pois os resultados usando somente o \acrshort{AVC} já obteram o melhor resultado.  
 
 \newpage
 \subsection{City}
@@ -161,22 +181,10 @@ Assim, o \acrshort{LCEVC} não demonstrou um benefício em ser utilizado nesta s
     \label{fig:City}
 \end{figure}
 
-Para esta sequência, os valores intermediários de SW2 proporcionam os resultados mais equilibrados.
-Nesses casos, o \acrshort{LCEVC} foi capaz de gerar reconstruções visuais com ganhos notáveis
-em qualidade em relação ao \acrshort{AVC}, porém com um ganho notável na taxa de bits.
-
-Percebe-se que para valores iniciais de SW2, que é 250, os valores
-obtidos estão aproximadamente na curva que representa os melhores valores, porém, considerando
-o valor para \acrshort{AVC} com QP37, ele possui a mesma taxa de bits de todos os pontos
-iniciais do \acrshort{LCEVC}, porém com um \acrshort{PSNR} superior.
-
-Para valores maiores de SW2, o \acrshort{LCEVC} demonstrou um ganho de qualidade, mas foi
-um ganho que não acompanhou o ganho em qualidade do \acrshort{AVC} puro, além do aumento
-do tamanho da camada de aprimoramento, que acarretou no aumento da taxa de bits.
-
-O \textit{Resample} do \acrshort{LCEVC} nesta sequência também não demonstrou um resultado
-como esperado, ficando com o \acrshort{PSNR} semelhando ao QP35 do \acrshort{AVC} puro,
-onde este ponto deveria possui um \acrshort{PSNR} superior aos valores obtidos para o \acrshort{AVC}.
+Na sequência City, o \acrshort{LCEVC} não demonstrou uma performance satisfatória. Mais 
+uma sequência com uma resolução menor que 1080p que o \acrshort{LCEVC} não obtêm um resultado
+ótimo. Neste caso, o \acrshort{LCEVC} não demonstrou um benefício em seu uso, no caso da relação
+qualidade-tamanho, e não obteve um \acrshort{PSNR} superior à curva de referência em nenhum ponto.
 
 \newpage
 \subsection{vc-globo-05}
@@ -188,25 +196,49 @@ onde este ponto deveria possui um \acrshort{PSNR} superior aos valores obtidos p
     \label{fig:vc-globo-05}
 \end{figure}
 
-Estes resultados mostram que para esta sequência, os resultados obtidos com \acrshort{LCEVC}
-foram acima da média em comparação com outros resultados. A curva que resulta dos valores
-de SW2 para cada QP com o \acrshort{LCEVC} está mais elevada, demonstrando que houve uma perda
-menor de \acrshort{PSNR} e que a qualidade está próxima dos vídeos com somente \acrshort{AVC}.
+Para esta sequência,o \acrshort{LCEVC} conseguiu obter resultados satisfatório acima da curva
+de referência do \acrshort{AVC}. Os QPs que se destacaram para o \acrshort{LCEVC} foram: 30,
+27 e 25. Os resultados obtidos para QP 22 foram muito próximos da curva, onde mesmo não estando
+acima, ainda representa um valor satisfatório, por manter a qualidade que o \acrshort{AVC} obteve.
+Os resultados favoráveis ao \acrshort{LCEVC} estão abaixo.
 
-Para SW2 = 1250, os resultados possuem uma taxa de bits bastante elevada em comparação com 
-a curva dos vídeos de referência. O que representa que o tamanho do arquivo gerado foi superior
-a todos os pontos à esquerda.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{QP} & \textbf{Tamanho (b)} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} \\
+        \hline
+        37 & 1305057 & 37.08 & 5220.23 \\
+        35 & 1575423 & 38.15 & 6301.69 \\
+        32 & 2158588 & 39.68 & 8634.35 \\
+        30 & 2694302 & 40.67 & 10777.21 \\
+        27 & 3828463 & 41.93 & 15313.85 \\
+        25 & 4950018 & 42.73 & 19800.07 \\
+        22 & 7836829 & 43.90 & 31347.32 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados para vc-globo-05 em AVC.}
+    \label{tab:vc-globo-05-avc}
+\end{table}
 
-Os valores 3250 e 2750 de SW2 resultaram em valores de \acrshort{PSNR} que estão acima da curva
-dos vídeos de referência, mostrando que o \acrshort{LCEVC} conseguiu gerar resultados mais
-eficientes do que os vídeos que usaram somente o \acrshort{AVC}.
-
-Outro ponto a se observar é que o \textit{Resample} do \acrshort{LCEVC} obteve um valor de 
-\acrshort{PSNR} bastante próximo ao valor obtido pelo QP = 22 do \acrshort{AVC}.
-
+\begin{table}[h]
+    \centering
+    \label{tab:vc-globo-05-avc-lcevc}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{SW2} & \textbf{QP} & \textbf{Tamanho (b)} & \textbf{Proporção} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} & \textbf{Superou} \\
+        \hline
+            3250 & 30 & 1079936 & 8.22\% & 37.45 & 4319.74 & AVC QP37 \\
+            3250 & 27 & 1480606 & 1.49\% & 38.85 & 5922.42 & AVC QP35 \\
+            2750 & 27 & 1681499 & 13.26\% & 38.88 & 6726.00 & AVC QP35 \\
+            3250 & 25 & 1924885 & 0.68\% & 39.70 & 7699.54 & AVC QP32 \\
+            2750 & 25 & 2021470 & 5.43\% & 39.72 & 8085.88 & AVC QP32 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados favoráveis do LCEVC para vc-globo-05 em AVC.}
+\end{table}
 
 \newpage
-
 \subsection{vc-lcevc-01}
 
 \begin{figure}[h]
@@ -216,46 +248,98 @@ Outro ponto a se observar é que o \textit{Resample} do \acrshort{LCEVC} obteve 
     \label{fig:vc-lcevc-01}
 \end{figure}
 
-Aqui, com o SW2 = 1250, os dados mostraram que a camada de aprimoramento foi fortemente
-utilizada, com uma proporção de aprimoramento superior a 90\% em todos os casos, resultando
-em uma taxa de bits elevada. Reduzindo para o valor 1750, houve uma melhora na eficiência.
+Nesta sequência, o \acrshort{LCEVC} conseguiu resultados relevantes para QP igual
+a 30, 27 e 25. Para o QP de 22, ele não conseguiu alcançar a curva do \acrshort{AVC}.
+Os resultados favoráveis ficaram bem próximos da curva do \acrshort{AVC}. Os 
+resultados são apresentados a seguir.
 
-Nos valores para SW2 iguais a 1750 e 2250, os resultados foram se aproximando da curva dos
-vídeos referência.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{QP} & \textbf{Tamanho (b)} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} \\
+        \hline
+        37 & 398114 & 35.52 & 1592.46 \\
+        35 & 541605 & 36.70 & 2166.42 \\
+        32 & 818304 & 38.70 & 3273.22 \\
+        30 & 1091870 & 40.12 & 4367.48 \\
+        27 & 1639723 & 42.24 & 6558.89 \\
+        25 & 2173840 & 43.55 & 8695.36 \\
+        22 & 3405589 & 45.59 & 13622.36 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados para vc-lcevc-01 em AVC.}
+    \label{tab:vc-lcevc-01-avc}
+\end{table}
 
-Agora, para SW2 com valores de 2750 e 3250, houve uma redução na taxa de bits.
-Nestes valores, os resultados foram próximos e até superior aos valores de \acrshort{PSNR}
-dos vídeos somente em \acrshort{AVC}.
+\begin{table}[h]
+    \centering
+    \label{tab:vc-lcevc-01-avc-lcevc}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{SW2} & \textbf{QP} & \textbf{Tamanho (b)} & \textbf{Proporção} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} & \textbf{Superou} \\
+        \hline
+        3250 & 30 & 373846 & 28.13\% & 35.68 & 1495.38 & AVC QP37 \\
+        3250 & 27 & 480407 & 17.20\% & 36.89 & 1921.63 & AVC QP35 \\
+        2750 & 27 & 600914 & 33.80\% & 37.47 & 2403.66 & AVC QP35 \\
+        3250 & 25 & 608435 & 13.11\% & 37.62 & 2433.74 & AVC QP35 \\
+        2750 & 25 & 715498 & 26.11\% & 38.23 & 2861.99 & AVC QP35 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados favoráveis do LCEVC para vc-lcevc-01 em AVC.}
+\end{table}
 
 \newpage
-
 \subsection{vc-philips-01}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\textwidth]{img/vc-philips-01_120frames-AVC.png}
+    \includegraphics[width=0.79\textwidth]{img/vc-philips-01_120frames-AVC.png}
     \caption{Resultados para "vc-philips-01"\ em \acrshort{AVC}.}
     \label{fig:vc-philips-01}
 \end{figure}
 
-A sequência "vc-philips-01" apresentou uma característica interessante: mesmo
-com QPs elevados, os valores de \acrshort{PSNR} se mantiveram altos, indicando
-que o conteúdo possui um baixo nível de ruído e variação espacial, o que
-favorece a compressão.
+\newpage
+Aqui, o \acrshort{LCEVC} obteve alguns resultados acima da curva do \acrshort{AVC},
+mostrando obter resultados superiores ao \acrshort{AVC} puro. Os QPs que se destacaram
+neste resultado foram 30, 27, e 25. Estes valores conseguiram resultados acima da curva.
 
-Nos testes com SW2 = 750, a proporção da camada de aprimoramento variou entre
-84\% e 97\%. Para QP = 30, o \acrshort{LCEVC} atingiu 42,00 dB a 15,9 Mbps,
-enquanto o \acrshort{AVC} alcançou 43,51 dB com apenas 7,5 Mbps. Para valores 
-como 1250 e 1750 para o SW2, a taxa de bits reduziu drasticamente
-para a maioria dos QPs, mantendo o \acrshort{PSNR} alto.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{QP} & \textbf{Tamanho (b)} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} \\
+        \hline
+        37 & 617900 & 39.52 & 2471.60 \\
+        35 & 850687 & 40.68 & 3402.75 \\
+        32 & 1368899 & 42.38 & 5475.60 \\
+        30 & 1866486 & 43.51 & 7465.94 \\
+        27 & 2872324 & 45.08 & 11489.30 \\
+        25 & 3803303 & 46.14 & 15213.21 \\
+        22 & 5775373 & 47.61 & 23101.49 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados para vc-philips-01 em AVC.}
+    \label{tab:vc-philips-01-avc}
+\end{table}
 
-Esta sequência foi bastante interessante, pois para valores de QPs iguais
-a 27, 25 e 22 para o \acrshort{LCEVC}, os resultados foram eficientes,
-com uma taxa de bits semelhante ao do \acrshort{AVC}, onde o \acrshort{LCEVC}
-consegue demonstrar superioridade em alguns casos. 
+\begin{table}[h]
+    \centering
+    \label{tab:vc-philips-01-avc-philips}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{SW2} & \textbf{QP} & \textbf{Tamanho (b)} & \textbf{Proporção} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} & \textbf{Superou} \\
+        \hline
+        3250 & 30 & 54458 & 8.05\% & 40.26 & 2704.88 & AVC QP37 \\
+        3250 & 27 & 20276 & 1.87\% & 41.73 & 4338.48 & AVC QP37 \\
+        2750 & 27 & 104990 & 8.98\% & 41.80 & 4677.34 & AVC QP35 \\
+        3250 & 25 & 9350 & 0.62\% & 42.76 & 6043.10 & AVC QP32-30 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados favoráveis do LCEVC para vc-philips-01 em AVC.}
+\end{table}
 
 \newpage
-
 \subsection{vc-philips-03}
 
 \begin{figure}[h]
@@ -265,28 +349,48 @@ consegue demonstrar superioridade em alguns casos.
     \label{fig:vc-philips-03}
 \end{figure}
 
-Os resultados obtidos para esta sequência demonstraram um cenário promissor para
-o uso do \acrshort{LCEVC}. Com alguns casos em que ele superou o \acrshort{AVC} puro.
-Houve um grande aumento da taxa de bits para os resultados entre os valores de SW2
-750 e 1250, onde o aumento foi proporcional ao valor do QP da base.
+Para esta sequência, o \acrshort{LCEVC} gerou resultados melhores que o \acrshort{AVC}
+puro. Novamente, os QPs menores se saíram melhor, como esperado, com destaque para os
+valores de QP de 30, 27, 25 e 22.
 
-Vale destacar um dos resultados obtidos pela configuração de SW2 = 1250 e QP = 22, onde
-o \acrshort{LCEVC} alcançou um \acrshort{PSNR} de 43,72 dB com uma taxa de bits
-de apenas 4,1 Mbps, enquanto o \acrshort{AVC} alcançou 47,59 dB a 10,5 Mbps. Mesmo
-com o \acrshort{PSNR} do \acrshort{AVC} sendo superior, a diferença de quase 2,5 vezes
-na taxa de bits pode justificar o uso do \acrshort{LCEVC} em cenários com limitação
-de banda.
-
-Em posições intermediárias de SW2, como 1750 e 2250, em QPs mais baixos, o \acrshort{LCEVC}
-se aproximou da curva de eficiência do \acrshort{AVC}, onde para o QP = 22,
-por exemplo, esteve bem próximo da taxa de bits do \acrshort{AVC}.
-
-Para o SW2 = 750, a taxa de bits foi muito alta, onde a camada de aprimoramento
-consumiu boa parte do tamanho do arquivo, acarretando em uma taxa de bits elevado para um
-\acrshort{PSNR} relativamente baixo, que não escalou bem com o aumento do QP.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{QP} & \textbf{Tamanho (b)} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} \\
+        \hline
+        37 & 261857 & 38.35 & 1047.43 \\
+        35 & 348522 & 39.53 & 1394.09 \\
+        32 & 543963 & 41.49 & 2175.85 \\
+        30 & 736459 & 42.82 & 2945.84 \\
+        27 & 1161656 & 44.72 & 4646.62 \\
+        25 & 1593342 & 45.90 & 6373.37 \\
+        22 & 2633079 & 47.59 & 10532.32 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados para vc-philips-03 em AVC.}
+    \label{tab:vc-philips-03-avc}
+\end{table}
 
 \newpage
+\begin{table}[h]
+    \centering
+    \label{tab:vc-philips-03-avc-philips}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{SW2} & \textbf{QP} & \textbf{Tamanho (b)} & \textbf{Proporção} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} & \textbf{Superou} \\
+        \hline
+        3250 & 30 & 334155 & 31.98\% & 39.57 & 1336.62 & AVC QP35 \\
+        3250 & 27 & 399297 & 9.08\% & 41.16 & 1597.19 & AVC QP35 \\
+        3250 & 25 & 509493 & 2.68\% & 42.20 & 2037.97 & AVC QP32 \\
+        3250 & 22 & 826826 & 0.61\% & 43.72 & 3307.30 & AVC QP30 \\
+        2750 & 22 & 890314 & 7.70\% & 43.72 & 3561.26 & AVC QP30 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados favoráveis do LCEVC para vc-philips-03 em AVC.}
+\end{table}
 
+\newpage
 \section{VVC}
 
 \subsection{Bosphorus}
@@ -298,45 +402,67 @@ consumiu boa parte do tamanho do arquivo, acarretando em uma taxa de bits elevad
     \label{fig:Bosphorus-VVC}
 \end{figure}
 
-Com valores baixos de SW2, a camada de aprimoramento possui peso expressivo no tamanho final
-do arquivo, acarretando em uma taxa de bits elevado. Embora o ganho de qualidade seja pequeno, 
-o aumento da taxa de bits é significativo, tornando estes resultados poucos eficientes.
+Para o Bosphorus em \acrshort{VVC}, o \acrshort{LCEVC} também obteve bons resultados.
+Vários pontos se encontram acima da curva dos vídeos somente em \acrshort{VVC}. Os 
+valores para o QP que alcançaram estes pontos foram 30, 27, 25 e 22. Observa-se
+que se a curva dos vídeos em \acrshort{VVC} mantenham a mesma tendência, haveriam
+mais pontos favoráveis para o \acrshort{LCEVC}.
 
-Para valores intermediários, os valores começam a ter um equilíbrio melhor, se aproximando dos
-valores de somente \acrshort{VVC}.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{QP} & \textbf{Tamanho (b)} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} \\
+        \hline
+        37 & 580476 & 36.72 & 464.38 \\
+        35 & 793851 & 37.54 & 635.08 \\
+        32 & 1239951 & 38.93 & 991.96 \\
+        30 & 1714361 & 39.95 & 1371.49 \\
+        27 & 2738770 & 41.34 & 2191.02 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados para Bosphorus em VVC.}
+    \label{tab:bosphorus-vvc}
+\end{table}
 
-Agora, para valores de SW2 altos, como 3250 e 2750, começam a aparecer resultados que estão
-acima da curva gerada dos vídeos que utilizaram somente o \acrshort{VVC}. Isso demonstra
-que para esta sequência, é possível utilizar o \acrshort{LCEVC} e conseguir resultados
-praticamente iguais aos do \acrshort{VVC}.
+\begin{table}[h]
+    \centering
+    \label{tab:bosphorus-vvc-lcevc}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{SW2} & \textbf{QP} & \textbf{Tamanho (b)} & \textbf{Proporção} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} & \textbf{Superou} \\
+        \hline
+        3250 & 30 & 594855 & 3.25\% & 37.35 & 475.88 & VVC QP37 \\
+        2250 & 30 & 954971 & 39.74\% & 38.12 & 763.98 & VVC QP37 \\
+        2750 & 30 & 621725 & 7.43\% & 37.51 & 497.38 & VVC QP35-32 \\
+        3250 & 27 & 955429 & 1.73\% & 38.51 & 764.34 & VVC QP35-32 \\
+        2750 & 27 & 965637 & 2.77\% & 38.57 & 772.51 & VVC QP35-32 \\
+        2250 & 27 & 1132188 & 17.07\% & 38.99 & 905.75 & VVC QP35-32 \\
+        2750 & 25 & 1373014 & 2.61\% & 39.61 & 1098.41 & VVC QP32-30 \\
+        3250 & 25 & 1367475 & 2.22\% & 39.60 & 1093.98 & VVC QP32-30 \\
+        2250 & 25 & 1487470 & 10.11\% & 39.80 & 1189.98 & VVC QP32-30 \\
+        2750 & 22 & 2264797 & 1.48\% & 40.98 & 1811.84 & VVC QP30-27 \\
+        3250 & 22 & 2261661 & 1.34\% & 40.98 & 1809.33 & VVC QP30-27 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados favoráveis do LCEVC para Bosphorus em VVC.}
+\end{table}
 
 \newpage
 \subsection{SOCCER}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\textwidth]{img/SOCCER-VVC.png}
+    \includegraphics[width=01.0\textwidth]{img/SOCCER-VVC.png}
     \caption{Resultados para "SOCCER"\ em \acrshort{VVC}. \cite{xiph}}
     \label{fig:Soccer-VVC}
 \end{figure}
 
 Os resultados demonstram que neste caso houve uma vantagem para o uso de
-somente o \acrshort{VVC}, com desempenho superior na maioria das configurações
-avaliadas, principalmente em eficiência na relação qualidade e taxa.
-Aqui a eficiência do \acrshort{LCEVC} foi abaixo do esperado, onde manteve
-uma relação alta muita das vezes, indicando baixa eficiência na codificação
-da camada base.
-
-Nota-se que para valores de SW2 = 1250, os resultados demonstram uma taxa de bits
-maior que o QP=22 do \acrshort{VVC} e um \acrshort{PSNR} muito inferior, tornando
-estes resultados ineficientes.
-
-O \textit{Resample} desta sequência também demonstrou um resultado ruim, atingindo
-\acrshort{PSNR} menos que o QP=32 do \acrshort{VVC}.
-
-Nesta sequência, o \acrshort{LCEVC} não apresentou vantagens, e muitas vezes
-resultou no que seria uma perda de banda, sem ganhos significativos no
-\acrshort{PSNR}.
+somente o \acrshort{VVC}, com desempenho superior em todas as configurações testadas.
+O \acrshort{LCEVC} demonstrou que nesta sequência, para os maiores valores de SW2 escolhidos, ele foi
+capaz de chegar próximo a relação de tamanho e qualidade que o \acrshort{VVC} conseguiu,
+porém não conseguiu superá-lo e foi se distanciando dos pontos obtidos pelo \acrshort{VVC}. 
 
 \newpage
 \subsection{Jockey}
@@ -348,20 +474,48 @@ resultou no que seria uma perda de banda, sem ganhos significativos no
     \label{fig:Jockey-VVC}
 \end{figure}
 
-A sequência "Jockey" apresentou resultados bastante equilibrados entre o uso do 
-\acrshort{VVC} puro e o uso combinado do \acrshort{LCEVC}. Avaliando os  resultados
-obtidos, observa-se que o desempenho do \acrshort{LCEVC} e da taxa de bits revela
-que o desempenho do \acrshort{LCEVC}, neste caso, se aproxima consideravelmente do
-\acrshort{VVC} isolado, e até melhor em alguns casos.
+Para esta sequência, o \acrshort{LCEVC} obteve bons resultados acima da curva de eficiência
+obtida pelo \acrshort{VVC} puro. Valores para QPs iguais a 30, 27, 25 se saíram bem e estão
+acima da curva. QP igual a 22 ficou bastante próximo, mostrando ser um resultado com potencial,
+onde a qualidade e o tamanho destes arquivos estão próximos ao QP 27 do \acrshort{VVC}.
 
-Para os resultados do \acrshort{LCEVC} com QPs iguais a 22 e 25, observou-se um 
-comportamento incomum, onde a taxa de bits destes pontos cresceu muito 
-acima do esperado, saindo bastante da reta formada pelos pontos com o mesmo SW2.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{QP} & \textbf{Tamanho (b)} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} \\
+        \hline
+        37 & 704469 & 37.86 & 563.58 \\
+        35 & 891197 & 38.71 & 712.96 \\
+        32 & 1241194 & 39.99 & 992.96 \\
+        30 & 1598336 & 40.70 & 1278.67 \\
+        27 & 2300814 & 41.71 & 1840.65 \\
+        25 & 3111449 & 42.40 & 2489.16 \\
+        22 & 4916006 & 43.08 & 3932.80 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados para Jockey em VVC}
+    \label{tab:jockey-vvc}
+\end{table}
 
-Nesta sequência, a qualidade do \acrshort{LCEVC} se manteve consistente e próxima
-dos valores obtidos por somente o uso do \acrshort{VVC}. Isso torna o uso do 
-\acrshort{LCEVC} nesta sequência uma opção válida e demonstra ser uma alternativa
-válida para casos de uso com vídeos semelhantes.
+\begin{table}[h]
+    \centering
+    \label{tab:jockey-vvc-lcevc}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{SW2} & \textbf{QP} & \textbf{Tamanho (b)} & \textbf{Proporção} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} & \textbf{Superou} \\
+        \hline
+        3250 & 30 & 747523 & 2.48\% & 38.41 & 598.02 & VVC QP37 \\
+        2750 & 30 & 765746 & 4.80\% & 38.43 & 612.60 & VVC QP37 \\
+        3250 & 27 & 1075071 & 1.59\% & 39.69 & 860.06 & VVC QP35-32 \\
+        2750 & 27 & 1083226 & 2.33\% & 39.71 & 866.58 & VVC QP35-32 \\
+        2250 & 27 & 1162481 & 8.99\% & 39.76 & 929.98 & VVC QP35-32 \\
+        3250 & 25 & 1449506 & 2.17\% & 40.53 & 1159.60 & VVC QP32-30 \\
+        2750 & 25 & 1456646 & 2.65\% & 40.55 & 1165.32 & VVC QP32-30 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados favoráveis do LCEVC para Jockey em VVC.}
+\end{table}
 
 \newpage
 \subsection{City}
@@ -373,22 +527,11 @@ válida para casos de uso com vídeos semelhantes.
     \label{fig:City-VVC}
 \end{figure}
 
-Na comparação \acrshort{VVC} puro e \acrshort{LCEVC} + \acrshort{VVC}, o desempenho
-do \acrshort{VVC} isolado se mostrou eficiente. Esta sequência demonstra que o uso do
-\acrshort{VVC} puro se mantém mais eficiente em praticamente todos os cenários testados.
-
-Para o SW2 = 1750, os resultados do \acrshort{LCEVC} apresentaram um valor elevado para a 
-taxa de bits. Todos os estes resultados estão acima de uma taxa de bits de 2000 kbps,
-tornando estes resultados ineficientes em relação aos resto dos valores.
-
-
-O \acrshort{LCEVC} não trouxe ganhos práticos para esta sequência, onde somente o
-\acrshort{VVC} por si só foi mais eficiente e apropriado para codificação de sequências
-como este vídeo aéreo de Nova York. 
-
-Outro ponto interessante deste resultado é que o \textit{Resample} do \acrshort{LCEVC} obteve
-uma qualidade inferior a vários pontos do \acrshort{VVC} puro e do \acrshort{LCEVC} + \acrshort{VVC}.
-
+Em City, o \acrshort{LCEVC} não conseguiu superar os resultados obtidos com o \acrshort{VVC}.
+Os resultados aparentam estar seguindo a mesma tendência que os resultados de referência no
+início, mas começam a decair ao chegarem perto do \acrshort{VVC} QP37. Com ess
+e decaimento, 
+se distanciam cada vez mais e não conseguem um resultado satisfatório.
 
 \newpage
 
@@ -396,30 +539,80 @@ uma qualidade inferior a vários pontos do \acrshort{VVC} puro e do \acrshort{LC
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{img/vc-philips-01_120frames-VVC.png}
+    \includegraphics[width=1.0\textwidth]{img/vc-philips-01_120frames-VVC.png}
     \caption{Resultados para "vc-philips-01"\ em \acrshort{VVC}.}
     \label{fig:vc-philips-01-VVC}
 \end{figure}
 
-Nesta sequência, o SW2 = 750 obteve uma taxa de bits bem alto em relação ao
-SW2 = 1250, onde também houve uma distância relativamente maior entre os valores de
-QP dentro do SW2 = 750.
+Esta sequência obteve uma quantidade considerável de resultados positivos para o \acrshort{LCEVC}, para valores de
+QP iguais 30, 27, 25 e 22. Para o QP 22, observa-se que o \acrshort{LCEVC} obteve
+vários valores em cima da curva de eficiência das sequências de referência, onde
+pela tendência observada, é possível que os resultados para um QP menor que 22 iria
+resultar em resultados abaixo da curva de eficiência.
 
-Em SW1= 1250, os pontos começaram a se aproximar da curva de eficiência, mas ainda 
-assim com os valores abaixo da curva. O resto dos resultados para valores de SW2 menores
-ficaram bem próximos e tendendo ao formato da curva do \acrshort{VVC}.
-
-Conforme o valor de QP da base do \acrshort{LCEVC} foi diminuindo, mais próximos os 
-resultados para tal QP foram ficando. Os resultados de QP igual a 22, 25 e 27, ficaram
-muito próximos na maioria dos valores de SW2. Como as proporções da camada de aprimoramento
-destes valores ficaram entre 0,2\% e 3,2\%, isto afetou a eficiência do \acrshort{LCEVC}, que
-ficou mais perceptível em uma sequência em 4K.
-
-O \acrshort{LCEVC} conseguiu alcançar ótimos resultados, onde vários pontos estiveram
-acima da curva de eficiência do \acrshort{VVC}, entrando para a fronteira de Pareto.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{QP} & \textbf{Tamanho (b)} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} \\
+        \hline
+        37 & 425336 & 38.51 & 1701.34 \\
+        35 & 604903 & 39.48 & 2419.61 \\
+        32 & 966774 & 40.97 & 3867.10 \\
+        30 & 1360536 & 42.30 & 5442.14 \\
+        27 & 2129169 & 43.90 & 8516.68 \\
+        25 & 2905023 & 45.30 & 11620.09 \\
+        22 & 4397908 & 46.80 & 17591.63 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados para vc-philips-01 em VVC.}
+    \label{tab:vc-philips-01-vvc}
+\end{table}
 
 \newpage
+\begin{table}[h]
+    \centering
+    \label{tab:vc-philips-01-vvc-lcevc}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{SW2} & \textbf{QP} & \textbf{Tamanho (b)} & \textbf{Proporção} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} & \textbf{Superou} \\
+        \hline
+        3250 & 30 & 516071 & 5.39\% & 39.39 & 2064.28 & VVC QP37-35 \\
+        2750 & 30 & 613763 & 20.45\% & 39.53 & 2455.05 & VVC QP35 \\
+        3250 & 27 & 842020 & 1.12\% & 40.81 & 3368.08 & VVC QP35-32 \\
+        2750 & 27 & 891745 & 6.63\% & 40.86 & 3566.98 & VVC QP35-32 \\
+        2250 & 27 & 955257 & 12.84\% & 40.93 & 3821.03 & VVC QP35-32 \\
+        1750 & 27 & 971277 & 14.28\% & 40.95 & 3885.11 & VVC QP35-32 \\
+        3250 & 25 & 1205943 & 0.50\% & 42.06 & 4823.77 & VVC QP32-30 \\
+        2750 & 25 & 1234327 & 2.78\% & 42.09 & 4937.31 & VVC QP32-30 \\
+        2250 & 25 & 1286043 & 6.69\% & 42.12 & 5144.17 & VVC QP32-30 \\
+        1750 & 25 & 1295331 & 7.36\% & 42.13 & 5181.32 & VVC QP32-30 \\
+        3250 & 22 & 1922342 & 0.26\% & 43.51 & 7689.37 & VVC QP30-QP27 \\
+        2750 & 22 & 1933946 & 0.86\% & 43.53 & 7735.78 & VVC QP30-QP27 \\
+        2250 & 22 & 1961129 & 2.24\% & 43.55 & 7844.52 & VVC QP30-QP27 \\
+        1250 & 22 & 1982576 & 3.29\% & 43.58 & 7930.30 & VVC QP30-QP27 \\
+        1750 & 22 & 1965174 & 2.44\% & 43.55 & 7860.70 & VVC QP30-QP27 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados favoráveis do LCEVC para vc-philips-01 em VVC.}
+\end{table}
 
+\newpage
+\subsection{vc-lcevc-01}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.0\textwidth]{img/vc-lcevc-01_120frames-VVC.png}
+    \caption{Resultados para "vc-lcevc-01" em \acrshort{VVC}.}
+    \label{fig:vc-lcevc-01-VVC}
+\end{figure}
+
+Para esta sequência, o \acrshort{LCEVC} não obteve resultados acima da curva de eficiência.
+Os resultados para o \acrshort{LCEVC} ficaram relativamente distantes da curva de referência do 
+\acrshort{VVC}. Ela aparenta um mesmo formato de curva, sugerindo que está mantendo a qualidade
+da mesma maneira que o \acrshort{VVC} puro.
+
+\newpage
 \subsection{vc-globo-05}
 
 \begin{figure}[h]
@@ -429,84 +622,82 @@ acima da curva de eficiência do \acrshort{VVC}, entrando para a fronteira de Pa
     \label{fig:vc-globo-05-VVC}
 \end{figure}
 
-Os resultados os vídeos gerados com o \acrshort{LCEVC} e \acrshort{VVC} alcançaram
-um desempenho similar, onde há vários pontos na curva de melhor qualidade tanto 
-do \acrshort{LCEVC} quanto do \acrshort{VVC}. Os resultados para valores mais baixos
-de SW2 continuam com uma diferença grande na taxa de bits entre eles.
+Em \textit{vc-globo-05}, o \acrshort{LCEVC} obteve resultados positivos melhores que
+os resultados obtidos pelo \acrshort{VVC}. Os valores de QP que conseguiram resultados
+acima da curva foram 32, 30, 27 e 25. Para QP igual a 22, os resultados ficaram com o
+valor de \acrshort{PSNR} levemente inferior ao QP 27 do \acrshort{VVC}, com a mesma
+taxa de bits.
 
-No ponto QP =25 e SW2 = 1250, o \acrshort{LCEVC} alcançou um \acrshort{PSNR} de 41,81 dB
-a 24,7 Mbps, exatamente o mesmo valor do \acrshort{VVC} com QP = 25, porém com uma Taxa
-de bits maior que o sobro da solução base de somente o \acrshort{VVC}, que
-obteve uma taxa de bits de 11,1 Mbps.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{QP} & \textbf{Tamanho (b)} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} \\
+        \hline
+        37 & 554404 & 35.90 & 2217.62 \\
+        35 & 715402 & 36.87 & 2861.61 \\
+        32 & 1042958 & 38.40 & 4171.83 \\
+        30 & 1377368 & 39.50 & 5509.47 \\
+        27 & 2063711 & 40.86 & 8254.84 \\
+        25 & 2790684 & 41.81 & 11162.74 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados para vc-globo-05 em VVC.}
+    \label{tab:vc-globo-05-vvc}
+\end{table}
 
-O resultados do \acrshort{LCEVC} com QP = 32 e 30, foram ligeiramente superiores
-aos resultados do \acrshort{VVC}, onde a taxa de bits foi menor e o \acrshort{PSNR} foi
-superior. Na prática, esta vantagem é imperceptível, mas demonstra que o \acrshort{LCEVC}
-pode ser vantajoso em alguns casos.
-
-\newpage
-
-\section{Considerações}
-
-\begin{itemize}
-    \item O comportamento do \acrshort{LCEVC} varia conforme a sequência testada, o
-    que é esperado, já que o padrão atua como uma camada adaptativa;
-
-    \item O \acrshort{LCEVC} demonstrou um desempenho superior em sequências que
-    envolvam mais movimentação de câmera e detalhes, como no caso da sequência "Jockey";
-    
-    \item A vantagem do \acrshort{LCEVC}  se mostra mais evidente em cenários com
-    a taxa de bits mais restrita, onde o refinamento da imagem se torna crucial;
-
-    \item Em taxas mais altas, o benefício da camada de aprimoramento tende a diminuir,
-    pois a camada base já está oferecendo uma boa qualidade;
-
-    \item Também é importante observar que o uso do \acrshort{LCEVC} com codecs mais
-    simples, como o \acrshort{AVC} tende a ser mais vantajoso do que com outros codecs
-    mais avançados, como o \acrshort{VVC}, uma vez que o ganho sobre algo já bem
-    otimizado costuma ser menor;
-
-    \item Nos testes realizados, foi possível observar que mesmo quando há uma proporção
-    bem alta para a camada de aprimoramento, o ganho de \acrshort{PSNR} não é direto, onde
-    muitos casos a taxa de bits do \acrshort{LCEVC} é muito maior que um vídeo utilizando
-    somente o codificador base, e a qualidade aferida pelo \acrshort{PSNR} é muito menor.
-\end{itemize}
+\begin{table}[h]
+    \centering
+    \label{tab:vc-globo-05-vvc-lcevc}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{SW2} & \textbf{QP} & \textbf{Tamanho (b)} & \textbf{Proporção} & \textbf{PSNR (dB)} & \textbf{Taxa (kbps)} & \textbf{Superou} \\
+        \hline
+        3250 & 32 & 495040 & 1.35\% & 36.08 & 1980.16 & VVC QP37 \\
+        2750 & 32 & 561763 & 13.06\% & 36.29 & 2247.05 & VVC QP37 \\
+        3250 & 30 & 660706 & 0.58\% & 37.13 & 2642.82 & VVC QP35 \\
+        2750 & 30 & 689863 & 4.78\% & 37.21 & 2759.45 & VVC QP35 \\
+        3250 & 27 & 1000292 & 0.31\% & 38.51 & 4001.17 & VVC QP32 \\
+        2750 & 27 & 1007875 & 1.06\% & 38.52 & 4031.50 & VVC QP32 \\
+        3250 & 25 & 1356490 & 0.44\% & 39.49 & 5425.96 & VVC QP30 \\
+        2750 & 25 & 1359403 & 0.66\% & 39.49 & 5437.61 & VVC QP30 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados favoráveis do LCEVC para vc-globo-05 em VVC.}
+\end{table}
 
 \newpage
 \section{Visão geral dos resultados}
 
-Após a análise de cada sequência, foi feito uma interpretação dos resultados e definido
-qual deles se saiu melhor no geral. Vale ressaltar que mesmo que um tipo de codificação
-tenha se saído melhor, como a maioria dos resultados foram muito próximos, pode não haver
-uma diferença significativa na qualidade visual ou tamanho. Foram considerados somente os
-pontos que estão próximos da curva de eficiência (Fronteira de Pareto).
+Com os estes resultados obtidos, as tabelas abaixo demonstram a quantidade de pontos
+favoráveis para o \acrshort{LCEVC} para cada sequência.
 
 \begin{table}[h]
     \centering
     \begin{tabular}{|c|c|}
         \hline
-        \textbf{Sequência} & \textbf{Resultado}\\
+        \textbf{Sequência} & \textbf{Pontos favoráveis}\\
         \hline
-        Bosphorus (1920x1080, AVC) & Leve vantagem para o LCEVC\\
+        Bosphorus (1920x1080, AVC) & 7\\
         \hline
-        ReadySteadyGo (1920x1080, AVC) & Vantagem para o AVC\\
+        ReadySteadyGo (1920x1080, AVC) & 0\\
         \hline
-        Jockey (1920x1080, AVC) & Vantagem para o LCEVC\\
+        Jockey (1920x1080, AVC) & 13\\
         \hline
-        SOCCER (352x288, AVC) & Vantagem para o AVC\\
+        SOCCER (352x288, AVC) & 0\\
         \hline
-        City (704x576, AVC) & Vantagem para o AVC\\
+        City (704x576, AVC) & 0\\
         \hline
-        vc-globo-05 (3840x2160, AVC) & Empate\\
+        vc-globo-05 (3840x2160, AVC) & 5\\
         \hline
-        vc-lcevc-01 (3840x2160, AVC) & Empate\\
+        vc-lcevc-01 (3840x2160, AVC) & 5\\
         \hline
-        vc-philips-01 (3840x2160, AVC) & Empate\\
+        vc-philips-01 (3840x2160, AVC) & 4\\
         \hline
-        vc-philips-03 (3840x2160, AVC) & Leve vantagem para o LCEVC\\
+        vc-philips-03 (3840x2160, AVC) & 5\\
         \hline
     \end{tabular}
-    \caption{Compilado dos resultados finais para AVC.}
+    \caption{Quantidade de pontos acima da curva de eficiência para o AVC.}
     \label{tab:results-avc}
 \end{table}
 
@@ -514,23 +705,94 @@ pontos que estão próximos da curva de eficiência (Fronteira de Pareto).
     \centering
     \begin{tabular}{|c|c|}
         \hline
-        \textbf{Sequência} & \textbf{Resultado}\\
+        \textbf{Sequência} & \textbf{Pontos favoráveis}\\
         \hline
-        Bosphorus (1920x1080, VVC) & Empate\\
+        Bosphorus (1920x1080, VVC) & 11\\
         \hline
-        SOCCER (352x288, VVC) & Vantagem para o VVC\\
+        SOCCER (352x288, VVC) & 0\\
         \hline
-        Jockey (1920x1080, VVC) & Empate\\
+        Jockey (1920x1080, VVC) & 7\\
         \hline
-        City (704x576, VVC) & Empate\\
+        City (704x576, VVC) & 0\\
         \hline
-        vc-globo-05 (3840x2160, VVC) & Leve vantagem para o LCEVC\\
+        vc-philips-01 (3840x2160, VVC) & 15\\
         \hline
-        vc-lcevc-01 (3840x2160, VVC) & Vantagem VVC\\
+        vc-lcevc-01 (3840x2160, VVC) & 0\\
         \hline
-        vc-philips-01 (3840x2160, VVC) & Leve vantagem para o LCEVC\\
+        vc-globo-05 (3840x2160, VVC) & 8\\
         \hline
     \end{tabular}
-    \caption{Compilado dos resultados finais do VVC.}
+    \caption{Quantidade de pontos acima da curva de eficiência para o VVC.}
     \label{tab:results-vvc}
+\end{table}
+
+Analisando os resultados obtidos, pode-se observar os seguintes comportamentos:
+
+\begin{itemize}
+    \item O LCEVC apresentou resultados superiores ao codificador base (AVC ou VVC) em diversas sequências, especialmente nas de maior resolução.
+    \item Para sequências de baixa resolução, como SOCCER e City, o LCEVC não demonstrou vantagem significativa em relação ao codificador base.
+    \item Os melhores resultados do LCEVC foram obtidos para valores de QP mais baixos (maior qualidade), onde superou a curva de eficiência dos codificadores de referência.
+    \item Em algumas sequências, o LCEVC manteve a qualidade próxima ao codificador base, mesmo sem superá-lo, indicando potencial para aplicações onde a compatibilidade é importante.
+    \item O número de pontos favoráveis ao LCEVC foi maior nas sequências codificadas com VVC em resoluções UHD (3840x2160).
+    \item O desempenho do LCEVC depende fortemente dos parâmetros escolhidos, especialmente do valor de SW2 e do QP.
+    \item Em geral, o LCEVC se mostrou mais eficiente em cenários de alta qualidade e alta resolução, enquanto em resoluções menores o benefício foi limitado.
+\end{itemize}
+
+Agora, para o parâmetro SW2 do \acrshort{LCEVC}, observou-se que para o intervalo escolhido,
+os maiores valores foram os que mais apareceram dentre os pontos acima da curva de eficiência.
+A quantidade que cada valor de SW2 apareceram dentre estes pontos foram:
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{SW2} & \textbf{Ocorrências} \\
+        \hline
+        1250 & 1 \\
+        1750 & 3 \\
+        2250 & 12 \\
+        2750 & 28 \\
+        3250 & 36 \\
+        \hline
+    \end{tabular}
+    \caption{Quantidade de ocorrências de cada valor de SW2 nos resultados favoráveis ao LCEVC}
+    \label{tab:sw2-contagem}
+\end{table}
+
+Para poder destacar os parâmetros que conseguiram os resultados positivos, a tabela a seguir demonstra
+quantas vezes cada SW2 e QP juntos apareceram como pontos acima da curva de eficiência.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{SW2} & \textbf{QP} & \textbf{Ocorrências} \\
+        \hline
+        3250 & 32 & 1 \\
+        3250 & 30 & 10 \\
+        3250 & 27 & 10 \\
+        3250 & 25 & 10 \\
+        3250 & 22 & 5 \\
+        \hline
+        2750 & 32 & 1 \\
+        2750 & 30 & 5 \\
+        2750 & 27 & 9 \\
+        2750 & 25 & 8 \\
+        2750 & 22 & 5 \\
+        \hline
+        2250 & 32 & 1 \\
+        2250 & 30 & 2 \\
+        2250 & 27 & 4 \\
+        2250 & 25 & 3 \\
+        2250 & 22 & 2 \\
+        \hline
+        1750 & 27 & 1 \\
+        1750 & 25 & 1 \\
+        1750 & 22 & 1 \\
+        \hline
+        1250 & 22 & 1 \\
+        \hline
+    \end{tabular}
+    \caption{Frequência de testes por combinação de SW2 e QP}
+    \label{tab:sw2_qp_freq}
 \end{table}

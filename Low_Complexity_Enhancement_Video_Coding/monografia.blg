@@ -3,11 +3,12 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: monografia.aux
 The style file: babunsrt.bst
 Database file #1: bibliografia.bib
+Warning--I didn't find a database entry for "tab:sw2_qp_freq"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty language in pareto_img
 You've used 19 entries,
             2465 wiz_defined-function locations,
-            692 strings with 9215 characters,
+            693 strings with 9230 characters,
 and the built_in function-call counts, 4626 in all, are:
 = -- 312
 > -- 139
@@ -46,4 +47,4 @@ warning$ -- 1
 while$ -- 21
 width$ -- 21
 write$ -- 193
-(There was 1 warning)
+(There were 2 warnings)

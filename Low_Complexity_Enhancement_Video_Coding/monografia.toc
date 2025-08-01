@@ -12,11 +12,11 @@
 \contentsline {subsection}{\numberline {1.6.2}Peak Signal-to-Noise Ratio (PSNR)}{4}{subsection.1.6.2}%
 \contentsline {section}{\numberline {1.7}Low Complexity Enhancement Video Coding}{5}{section.1.7}%
 \contentsline {subsection}{\numberline {1.7.1}Codificação}{5}{subsection.1.7.1}%
-\contentsline {subsubsection}{Camada Base}{5}{section*.8}%
+\contentsline {subsubsection}{Camada Base}{6}{section*.8}%
 \contentsline {subsubsection}{Subcamada de Aprimoramento 1 (L-1)}{6}{section*.9}%
 \contentsline {subsubsection}{Subcamada de Aprimoramento 2 (L-2)}{6}{section*.10}%
 \contentsline {subsection}{\numberline {1.7.2}Decodificação}{6}{subsection.1.7.2}%
-\contentsline {subsubsection}{Camada Base}{7}{section*.11}%
+\contentsline {subsubsection}{Camada Base}{6}{section*.11}%
 \contentsline {subsubsection}{Subcamada de Aprimoramento 1 (L-1)}{7}{section*.12}%
 \contentsline {subsubsection}{Subcamada de Aprimoramento 2 (L-2)}{7}{section*.13}%
 \contentsline {chapter}{\numberline {2}Metodologia}{8}{chapter.2}%
@@ -35,19 +35,19 @@
 \contentsline {subsection}{\numberline {3.1.6}vc-globo-05}{18}{subsection.3.1.6}%
 \contentsline {subsection}{\numberline {3.1.7}vc-lcevc-01}{19}{subsection.3.1.7}%
 \contentsline {subsection}{\numberline {3.1.8}vc-philips-01}{20}{subsection.3.1.8}%
-\contentsline {subsection}{\numberline {3.1.9}vc-philips-03}{21}{subsection.3.1.9}%
-\contentsline {section}{\numberline {3.2}VVC}{22}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Bosphorus}{22}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}SOCCER}{23}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Jockey}{24}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}City}{25}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}vc-philips-01}{26}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}vc-globo-05}{27}{subsection.3.2.6}%
-\contentsline {section}{\numberline {3.3}Considerações}{28}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Visão geral dos resultados}{29}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Conclusão}{30}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Trabalhos Futuros}{31}{section.4.1}%
-\contentsline {chapter}{Refer\^encias}{32}{section*.14}%
+\contentsline {subsection}{\numberline {3.1.9}vc-philips-03}{22}{subsection.3.1.9}%
+\contentsline {section}{\numberline {3.2}VVC}{24}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Bosphorus}{24}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}SOCCER}{25}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Jockey}{26}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}City}{27}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}vc-philips-01}{28}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}vc-lcevc-01}{30}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}vc-globo-05}{31}{subsection.3.2.7}%
+\contentsline {section}{\numberline {3.3}Visão geral dos resultados}{32}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Conclusão}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Trabalhos Futuros}{36}{section.4.1}%
+\contentsline {chapter}{Refer\^encias}{37}{section*.14}%
 \babel@toc {american}{}\relax 
 \babel@toc {american}{}\relax 
 \babel@toc {brazil}{}\relax 
@@ -64,15 +64,3 @@
 \babel@toc {brazil}{}\relax 
 \babel@toc {american}{}\relax 
 \babel@toc {brazil}{}\relax 
-\contentsline {chapter}{Anexo}{33}{chapter*.15}%
-\contentsline {chapter}{\numberline {I}Scripts}{34}{appendix.A}%
-\contentsline {section}{\numberline {I.\textlinf {1}}AVC}{34}{section.A.1}%
-\contentsline {subsubsection}{main-avc.sh}{34}{section*.16}%
-\contentsline {subsubsection}{avc\_only\_template.sh}{39}{section*.17}%
-\contentsline {subsubsection}{avc\_template.sh}{41}{section*.18}%
-\contentsline {section}{\numberline {I.\textlinf {2}}VVC}{44}{section.A.2}%
-\contentsline {subsubsection}{main-vvc.sh}{44}{section*.19}%
-\contentsline {subsubsection}{vvc\_only\_template.sh}{49}{section*.20}%
-\contentsline {subsubsection}{vvc\_template.sh}{51}{section*.21}%
-\contentsline {section}{\numberline {I.\textlinf {3}}Resample}{55}{section.A.3}%
-\contentsline {subsubsection}{resample\_template.sh}{55}{section*.22}%
