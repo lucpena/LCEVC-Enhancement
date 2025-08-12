@@ -1,11 +1,13 @@
-This work presents a qualitative analysis of the Low Complexity Enhancement Video Coding 
-(\acrfull{LCEVC}) standard, standardized by the \acrfull{MPEG} and developed by V-Nova. 
-\acrshort{LCEVC} operates as an enhancement layer over existing codecs, providing quality 
-improvements with low computational complexity. Tests were conducted with different 
-quantization values for the base layer (\acrfull{AVC} and \acrfull{VVC}) and for the 
-enhancement parameters of \acrshort{LCEVC}. The obtained results, analyzed comparing
-\acrfull{PSNR} and bitrate values, indicate that \acrshort{LCEVC} can offer superior 
-performance in certain scenarios, especially when compared to the isolated use of 
-conventional codecs. The tests were implemented through automated scripts in Linux 
-environments. This study highlights the potential of \acrshort{LCEVC} as an efficient 
-solution for high-quality video transmission with low computational cost.
+\acrfull{LCEVC} operates as an enhancement layer over conventional video encoders, 
+such as \acrfull{AVC} and \acrfull{VVC}, focusing on efficiency and low computational 
+complexity. This work presents a quality analysis of the \acrshort{LCEVC} standard, 
+aiming to identify the most favorable scenarios where \acrshort{LCEVC} can surpass the 
+quality or bitrate of videos encoded solely with the base codecs it enhances. The study 
+also seeks to discover the best parameter configurations for an efficient \acrshort{LCEVC} usage. Experiments 
+were conducted by varying the quantization parameters of the base layer (\acrshort{QP}) 
+and the enhancement layer (\textit{SW2}), using metrics such as \acrfull{PSNR} and bitrate. 
+The results, analyzed through the Pareto Frontier, indicate that \acrshort{LCEVC} performs 
+better in several scenarios, especially for \textit{Full HD} and 4K resolution videos. 
+Moreover, specific \acrshort{QP} and \textit{SW2} combinations were found to yield more 
+efficient encodings, contributing to optimal usage configurations of \acrshort{LCEVC} for 
+high-quality video applications with lower computational costs.

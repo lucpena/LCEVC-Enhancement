@@ -12,13 +12,13 @@
 \contentsline {subsection}{\numberline {1.6.2}Peak Signal-to-Noise Ratio (PSNR)}{4}{subsection.1.6.2}%
 \contentsline {section}{\numberline {1.7}Low Complexity Enhancement Video Coding}{5}{section.1.7}%
 \contentsline {subsection}{\numberline {1.7.1}Codificação}{5}{subsection.1.7.1}%
-\contentsline {subsubsection}{Camada Base}{6}{section*.8}%
-\contentsline {subsubsection}{Subcamada de Aprimoramento 1 (L-1)}{6}{section*.9}%
-\contentsline {subsubsection}{Subcamada de Aprimoramento 2 (L-2)}{6}{section*.10}%
+\contentsline {subsubsection}{Camada Base}{6}{section*.10}%
+\contentsline {subsubsection}{Subcamada de Aprimoramento 1 (L-1)}{6}{section*.11}%
+\contentsline {subsubsection}{Subcamada de Aprimoramento 2 (L-2)}{6}{section*.12}%
 \contentsline {subsection}{\numberline {1.7.2}Decodificação}{6}{subsection.1.7.2}%
-\contentsline {subsubsection}{Camada Base}{6}{section*.11}%
-\contentsline {subsubsection}{Subcamada de Aprimoramento 1 (L-1)}{7}{section*.12}%
-\contentsline {subsubsection}{Subcamada de Aprimoramento 2 (L-2)}{7}{section*.13}%
+\contentsline {subsubsection}{Camada Base}{6}{section*.13}%
+\contentsline {subsubsection}{Subcamada de Aprimoramento 1 (L-1)}{7}{section*.14}%
+\contentsline {subsubsection}{Subcamada de Aprimoramento 2 (L-2)}{7}{section*.15}%
 \contentsline {chapter}{\numberline {2}Metodologia}{8}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Codificando Vídeos}{8}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Análise dos Vídeos}{8}{section.2.2}%
@@ -47,7 +47,7 @@
 \contentsline {section}{\numberline {3.3}Visão geral dos resultados}{32}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Conclusão}{35}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Trabalhos Futuros}{36}{section.4.1}%
-\contentsline {chapter}{Refer\^encias}{37}{section*.14}%
+\contentsline {chapter}{Refer\^encias}{37}{section*.16}%
 \babel@toc {american}{}\relax 
 \babel@toc {american}{}\relax 
 \babel@toc {brazil}{}\relax 
@@ -62,5 +62,21 @@
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
 \babel@toc {american}{}\relax 
 \babel@toc {brazil}{}\relax 
+\contentsline {chapter}{Anexo}{38}{chapter*.17}%
+\contentsline {chapter}{\numberline {I}Scripts}{39}{appendix.A}%
+\contentsline {section}{\numberline {I.\textlinf {1}}AVC}{39}{section.A.1}%
+\contentsline {subsubsection}{main-avc.sh}{39}{section*.18}%
+\contentsline {subsubsection}{avc\_only\_template.sh}{44}{section*.19}%
+\contentsline {subsubsection}{avc\_template.sh}{46}{section*.20}%
+\contentsline {section}{\numberline {I.\textlinf {2}}VVC}{49}{section.A.2}%
+\contentsline {subsubsection}{main-vvc.sh}{49}{section*.21}%
+\contentsline {subsubsection}{vvc\_only\_template.sh}{54}{section*.22}%
+\contentsline {subsubsection}{vvc\_template.sh}{56}{section*.23}%
+\contentsline {section}{\numberline {I.\textlinf {3}}Resample}{60}{section.A.3}%
+\contentsline {subsubsection}{resample\_template.sh}{60}{section*.24}%

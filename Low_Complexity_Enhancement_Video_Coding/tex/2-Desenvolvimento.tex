@@ -49,11 +49,6 @@ ter uma referência da qualidade máxima possível obter sem o \acrshort{LCEVC}.
 os mesmos valores de \textit{QP} e utilizado a resolução final que o vídeo do \acrshort{LCEVC} teria.
 Também foram extraídos os parâmetros que o LCEVC altera para o \textit{downsampling} da camada
 base e adicionados no comando de execução da codificação sem o \acrshort{LCEVC}.
- 
-Por fim, também é realizado uma codificação usando somente o algoritmo base de \textit{Downsampling}
-e \textit{Upsampling} que o codificador \acrshort{LCEVC} utiliza. Porém, não há interferência de nenhum padrão
-de compressão neste estágio, onde ele transforma um YUV, um formato bruto de vídeo, em outro YUV. Por isso
-sua taxa de bits não é considerada.
 
 Após cada vídeo ser codificado, o \textit{script} também faz o cálculo de \acrfull{PSNR} do resultado obtido,
 convertido para o formato YUV, assim como o arquivo original.
@@ -76,6 +71,7 @@ diminuir a qualidade do vídeo.
     \label{fig:pareto}
 \end{figure}
 
+\newpage
 \section{Sequências}
 
 As sequências utilizadas para os testes deste trabalho foram obtidas em diversos locais diferentes,
@@ -99,17 +95,20 @@ descrição do conteúdo de cada sequência.
 \begin{figure}[h]
     \centering
     \begin{tabular}{|c|c|c|}
-        \hline
+        \hline 
+        \  & \ & \ \\
         \includegraphics[width=0.28\textwidth]{img/Bosphorus_1920x1080_120fps_420_8bit_frame1.png} &
         \includegraphics[width=0.28\textwidth]{img/Jockey_1920x1080_120fps_420_8bit_frame1.png} &
         \includegraphics[width=0.28\textwidth]{img/ReadySteadyGo_1920x1080_120fps_420_8bit_frame1.png} \\
         \small Bosphorus & \small Jockey & \small ReadySteadyGo \\
         \hline
+        \  & \ & \ \\
         \includegraphics[width=0.28\textwidth]{img/vc-globo-05_120frames_420p_frame1.png} &
         \includegraphics[width=0.28\textwidth]{img/vc-lcevc-01_120frames_420p_frame120.png} &
         \includegraphics[width=0.28\textwidth]{img/vc-philips-01_120frames_420p_frame1.png} \\
         \small vc-globo-05 & \small vc-lcevc-01 & \small vc-philips-01 \\
         \hline
+        \  & \ & \ \\
         \includegraphics[width=0.28\textwidth]{img/vc-philips-03_120frames_420p_frame1.png} &
         \includegraphics[width=0.28\textwidth]{img/city_704x576_yuv420p_60fps_600frames_frame1.png} &
         \includegraphics[width=0.28\textwidth]{img/SOCCER_352x288_30_orig_02_frame1.png} \\

@@ -1,36 +1,24 @@
-Este trabalho apresentou uma análise qualitativa do padrão \acrfull{LCEVC},
-investigando seu desempenho quando utilizado como camada de aprimoramento sobre
-codecs tradicionais, como \acrshort{AVC} e \acrshort{VVC}. A proposta do 
-\acrshort{LCEVC} de oferecer melhorias de qualidade com baixa complexidade
-é bastante útil para o contexto atual dos codificadores de vídeo.
+Este trabalho apresentou uma análise de qualidade do \acrshort{LCEVC}, comparando seus resultados
+com vídeos que só utilizaram o codificar base utilizado. O \acrshort{LCEVC} demonstrou um resultado
+promissor, onde vários pontos foram superiores aos resultados obtidos pelo codificador da camada base.
+Com a análise dos resultados obtidos, foi possível perceber que o \acrshort{LCEVC} realmente proporciona
+benefícios de qualidade e tamanho, e com uma complexidade reduzida.
 
-Os teste realizados evidenciaram que o desempenho do \acrshort{LCEVC} é 
-fortemente atrelado ao tipo de conteúdo codificado e à parametrização
-aplicada, especialmente os valores de QP para a camada base e o SW2
-para a camada de aprimoramento. De maneira geral, o \acrshort{LCEVC}
-demonstrou resultados positivos em algumas condições específicas,
-particularmente em conteúdos com maior movimentação e complexidade
-temporal, como a sequência "Jockey", onde a camada de aprimoramento
-se mostrou eficaz na preservação da qualidade virtual, com uma taxa de bits
-eficiente.
+Os resultados mostram que o \acrshort{LCEVC} se sai bem com vídeos de resoluções como Full HD (1080p) e 
+4k, mas não se saiu bem com vídeos com resoluções menores que isso. Dentro dos resultados onde o 
+\acrshort{LCEVC} superou os vídeos somente com o codificador base, alguns valores de configuração
+para o \acrshort{LCEVC} apareceram mais, demonstrando serem valores ideias para serem usados.
+Estes valores foram: \textbf{SW2 = 3250 com QP = 30}, \textbf{SW2 = 3250 com QP = 27} e \textbf{SW2 = 3250 com QP = 25}
+onde apareceram 10 vezes cada em pontos acima da curva de eficiência. Outros valores que também
+demonstraram eficiência foram \textbf{SW2 = 2750 com QP = 27} e \textbf{SW2 = 2750 com QP = 25}. Estes valores
+apareceram 9 e 8 vezes respectivamente. Esses pares de valores demonstraram ser os melhores candidatos a 
+uma codificação que resulte em um resultado melhor que uma codificação utilizando somente o codificador
+da camada base. 
 
-Em outras sequências como "Soccer" e "City" os resultados indicam que
-o isolado dos codecs foi mais eficiente. O uso do \acrshort{LCEVC} com
-uma baixa quantização (SW2) resultou em taxas de bits elevadas, sem ganhos
-de \acrshort{PSNR}.
-
-Os resultados indicam que a principal vantagem do \acrshort{LCEVC} está
-na sua flexibilidade de adaptação ao cenário. Quando ele é bem parametrizado,
-ele oferece uma relação qualidade e taxa de bits competitiva, tornando-o uma
-solução atrativa para ambientes com restrições de hardware, banda ou complexidade
-computacional, onde ele permite que seja alcançado níveis satisfatórios de qualidade
-mesmo quando não é viável utilizar codecs mais exigentes. Outro ponto forte é sua
-alta customização de parâmetros, que o torna uma tecnologia com alto nível de
-adaptação a vários cenários. 
-
-Porém, seu uso requer cuidado nas escolhas dos parâmetros, porém, seus ganhos em eficiência nem sempre
-são garantidos, principalmente quando se utiliza codecs modernos, como observado
-com o \acrshort{VVC}.
+Com isso, o \acrlong{LCEVC} mostrou ser capaz de ser mais eficiente que vídeos utilizando somente a camada
+base, e que é uma opção válida a ser usada junto dos codificadores atuais. Com estes resultados positivos,
+o \acrshort{LCEVC} se mostra uma ótima tecnologia a ser incorporada em aplicações como a TV 3.0, 
+onde o projeto original já demonstra sua viabilidade \cite{tv_25, tv_30}.
 
 \section{Trabalhos Futuros}
 
