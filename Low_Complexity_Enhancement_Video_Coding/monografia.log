@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  2 AUG 2025 19:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.25)  20 AUG 2025 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**monografia
+**monografia.tex
 (./monografia.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-19>
@@ -1592,7 +1592,7 @@ Here is how much of TeX's memory you used:
  53071 multiletter control sequences out of 15000+600000
  678711 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 105i,12n,107p,2491b,2017s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 105i,12n,107p,2495b,2017s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/tex
@@ -1604,7 +1604,7 @@ sr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/202
 5/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/
 texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on monografia.pdf (73 pages, 59005755 bytes).
+Output written on monografia.pdf (73 pages, 59005762 bytes).
 PDF statistics:
  2176 PDF objects out of 2487 (max. 8388607)
  2006 compressed objects within 21 object streams
