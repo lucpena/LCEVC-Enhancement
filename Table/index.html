@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+
+    <div class="container mx-auto p-8 max-w-4xl bg-gray-50 rounded-xl shadow-lg mt-4">
+        <div class="flex items-center mb-6">
+            <label for="csvFile" class="mr-4 text-lg font-medium text-gray-700">Upload CSV:</label>
+            <input type="file" id="csvFile" accept=".csv" class="block w-full max-w-xs px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+        <div id="tables"></div>
+    </div>
+    <script>
+    function parseCSV(text) {
+        const lines = text.trim().split('\n');
+        const headers = lines[0].split(',');
+        return lines.slice(1).map(line => {
+            const values = line.split(',');
+            const obj = {};
+            headers.forEach((h, i) => obj[h] = values[i]);
+            return obj;
+        });
+    }
+
+    function groupByQP(data) {
+        const groups = {};
+        data.forEach(row => {
+            if (!groups[row.qp]) groups[row.qp] = [];
+            groups[row.qp].push(row);
+        });
+        return groups;
+    }
+
+    function createTable(qp, rows) {
+        const reference = rows.find(r => r.sw2 === "264" || r.sw2 === "265");
+        if (!reference) return '';
+        const psnrFields = ["psnr_y", "psnr_u", "psnr_v", "psnr_avg"];
+
+        const videoName = rows[0].file.split('_')[0];
+
+        const otherRows = rows.filter(r => r !== reference).sort((a,b) => Number(a.sw2) - Number(b.sw2));
+
+        const tableRows = [
+            reference,
+            ...otherRows
+        ];
+
+        return `
+        <div class="mb-8">
+            <h2 class="text-xl font-bold mb-2">${videoName} - QP: ${qp}</h2>
+            <table class="min-w-full border border-gray-300 rounded-lg overflow-hidden shadow-md">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="px-2 py-1 border">SW2</th>
+                        <th class="px-2 py-1 border">Enhan. Ratio</th>
+                        <th class="px-2 py-1 border">Bitrate (kbps)</th>
+                        ${psnrFields.map(f => `<th class="px-2 py-1 border">${f.toUpperCase()}</th>`).join('')}
+                    </tr>
+                </thead>
+                <tbody>
+                    ${tableRows.map(row => {
+                        const fileName = row.file.split('_')[0];
+                        
+                        let baseCodec = '';
+                        if (row.sw2 === "264") {
+                            baseCodec = "AVC";
+                        } else if (row.sw2 === "265") {
+                            baseCodec = "VVC";
+                        } else {
+                            baseCodec = row.sw2;
+                        }
+
+                        if (row === reference) {
+                            return `<tr class="bg-blue-50 font-semibold">
+                                <td class="px-2 py-1 border">${baseCodec}</td>
+                                <td class="px-2 py-1 border">${row.enhancement_ratio}</td>
+                                <td class="px-2 py-1 border">${row.bitrate_kbps}</td>
+                                ${psnrFields.map(f => `<td class="px-2 py-1 border">${row[f]}</td>`).join('')}
+                            </tr>`;
+                        } else {
+                            return `<tr>
+                                <td class="px-2 py-1 border">${row.sw2}</td>
+                                <td class="px-2 py-1 border">${row.enhancement_ratio}</td>
+                                <td class="px-2 py-1 border">${row.bitrate_kbps}</td>
+                                ${psnrFields.map(f => {
+                                    const refVal = parseFloat(reference[f]);
+                                    const val = parseFloat(row[f]);
+                                    const percent = refVal ? (((val - refVal) / refVal) * 100).toFixed(2) : 'N/A';
+                                    return `<td class="px-2 py-1 border">${percent}%</td>`;
+                                }).join('')}
+                            </tr>`;
+                        }
+                    }).join('')}
+                </tbody>
+            </table>
+        </div>
+        `;
+    }
+
+    document.getElementById('csvFile').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+            const data = parseCSV(evt.target.result);
+            const groups = groupByQP(data);
+            const html = Object.entries(groups).map(([qp, rows]) => createTable(qp, rows)).join('');
+            document.getElementById('tables').innerHTML = html;
+        };
+        reader.readAsText(file);
+    });
+    </script>
+
+</body>
+</html>
