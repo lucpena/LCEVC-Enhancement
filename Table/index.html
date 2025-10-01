@@ -39,22 +39,37 @@
     }
 
     function createTable(qp, rows) {
-        const reference = rows.find(r => r.sw2 === "264" || r.sw2 === "265");
-        if (!reference) return '';
+        let reference = rows.find(r => r.sw2 === "264" || r.sw2 === "265");
+
+        // if (!reference) return '';
+
         const psnrFields = ["psnr_y", "psnr_u", "psnr_v", "psnr_avg"];
-
         const videoName = rows[0].file.split('_')[0];
-
         const otherRows = rows.filter(r => r !== reference).sort((a,b) => Number(a.sw2) - Number(b.sw2));
 
-        const tableRows = [
-            reference,
-            ...otherRows
-        ];
+        let tableRows = [];
+
+        if (!reference) {
+            reference = rows[0];
+            tableRows = [
+                ...otherRows
+            ];
+        } else {
+            tableRows = [
+                reference,
+                ...otherRows
+            ];
+        }
+
+        let referenceMsg = "";
+
+        if (reference.sw2 !== "264" && reference.sw2 !== "265") {
+            referenceMsg = "(No Reference Found)";
+        }
 
         return `
         <div class="mb-8">
-            <h2 class="text-xl font-bold mb-2">${videoName} - QP: ${qp}</h2>
+            <h2 class="text-xl font-bold mb-2">${videoName} - QP: ${qp} <span class="text-red-300">${referenceMsg}</span></h2>
             <table class="min-w-full border border-gray-300 rounded-lg overflow-hidden shadow-md">
                 <thead class="bg-gray-100">
                     <tr>
