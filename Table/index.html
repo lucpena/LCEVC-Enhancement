@@ -17,10 +17,12 @@
         </div>
         <div id="tables"></div>
     </div>
+
     <script>
     function parseCSV(text) {
         const lines = text.trim().split('\n');
         const headers = lines[0].split(',');
+
         return lines.slice(1).map(line => {
             const values = line.split(',');
             const obj = {};
@@ -31,6 +33,7 @@
 
     function groupByQP(data) {
         const groups = {};
+
         data.forEach(row => {
             if (!groups[row.qp]) groups[row.qp] = [];
             groups[row.qp].push(row);
@@ -49,6 +52,7 @@
 
         let tableRows = [];
 
+        // Chooses the first row as reference if no AVC or VVC found
         if (!reference) {
             reference = rows[0];
             tableRows = [
@@ -75,8 +79,11 @@
                     <tr>
                         <th class="px-2 py-1 border">SW2</th>
                         <th class="px-2 py-1 border">Enhan. Ratio</th>
-                        <th class="px-2 py-1 border">Bitrate (kbps)</th>
-                        ${psnrFields.map(f => `<th class="px-2 py-1 border">${f.toUpperCase()}</th>`).join('')}
+                        <th class="px-2 py-1 border">Bitrate</th>
+                        <th class="px-2 py-1 border">PSNR_Y</th>
+                        <th class="px-2 py-1 border">PSNR_Cb</th>
+                        <th class="px-2 py-1 border">PSNR_Cr</th>
+                        <th class="px-2 py-1 border">PSNR_YCbCr</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -129,6 +136,7 @@
             const html = Object.entries(groups).map(([qp, rows]) => createTable(qp, rows)).join('');
             document.getElementById('tables').innerHTML = html;
         };
+        
         reader.readAsText(file);
     });
     </script>
