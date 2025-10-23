@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Análise CSVs por Vídeo</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100">
+
+  <div class="container mx-auto p-8 max-w-6xl bg-white rounded-xl shadow-lg mt-8">
+    <h1 class="text-2xl font-bold mb-6 text-center">Análise de PSNR por Vídeo</h1>
+
+    <div class="flex gap-4 mb-6">
+      <div>
+        <label for="qpSelect" class="block mb-1 text-gray-700 font-medium">Selecionar QP:</label>
+        <select id="qpSelect" class="px-3 py-2 border border-gray-300 rounded-md w-40 focus:ring-2 focus:ring-blue-400"></select>
+      </div>
+      <div>
+        <label for="swSelect" class="block mb-1 text-gray-700 font-medium">Selecionar SW2:</label>
+        <select id="swSelect" class="px-3 py-2 border border-gray-300 rounded-md w-40 focus:ring-2 focus:ring-blue-400"></select>
+      </div>
+      <button id="analyzeBtn" class="self-end px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+        Gerar Tabelas
+      </button>
+    </div>
+
+    <div id="tables" class="space-y-8"></div>
+  </div>
+
+  <script>
+  async function loadCSVsFromFolder(folderPath) {
+    const response = await fetch(folderPath);
+    const text = await response.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, "text/html");
+    const links = Array.from(doc.querySelectorAll("a"))
+      .map(a => a.href)
+      .filter(h => h.endsWith(".csv"));
+
+    const filesData = [];
+    for (const link of links) {
+      const res = await fetch(link);
+      const csvText = await res.text();
+      filesData.push(...parseCSV(csvText));
+    }
+    return filesData;
+  }
+
+  function parseCSV(text) {
+    const lines = text.trim().split("\n");
+    const headers = lines[0].split(",");
+    return lines.slice(1).map(line => {
+      const values = line.split(",");
+      const obj = {};
+      headers.forEach((h, i) => obj[h.trim()] = values[i]?.trim());
+      return obj;
+    });
+  }
+
+  function uniqueValues(data, key) {
+    return [...new Set(data.map(d => d[key]))].sort((a, b) => Number(a) - Number(b));
+  }
+
+  function groupByVideo(data) {
+    const groups = {};
+    data.forEach(row => {
+      const video = row.file.split("_")[0];
+      if (!groups[video]) groups[video] = [];
+      groups[video].push(row);
+    });
+    return groups;
+  }
+
+  function generateTable(title, data, qp, sw2, refCodec) {
+    const psnrFields = ["psnr_y", "psnr_u", "psnr_v", "psnr_avg"];
+    const grouped = groupByVideo(data);
+    const rowsHTML = [];
+    const averages = { psnr_y: 0, psnr_u: 0, psnr_v: 0, psnr_avg: 0 };
+    let count = 0;
+
+    for (const [videoName, rows] of Object.entries(grouped)) {
+      const videoQP = rows.filter(r => r.qp === qp);
+      if (videoQP.length === 0) continue;
+
+      const reference = videoQP.find(r => r.sw2 === refCodec);
+      const target = videoQP.find(r => r.sw2 === sw2);
+
+      if (!reference || !target) continue;
+
+      const percents = {};
+      psnrFields.forEach(f => {
+        const refVal = parseFloat(reference[f]);
+        const val = parseFloat(target[f]);
+        const percent = ((val - refVal) / refVal) * 100;
+        percents[f] = percent;
+        averages[f] += percent;
+      });
+      count++;
+
+      rowsHTML.push(`
+        <tr>
+          <td class="px-2 py-1 border text-center">${videoName}</td>
+          ${psnrFields.map(f => `<td class="px-2 py-1 border text-center">${percents[f].toFixed(2)}%</td>`).join("")}
+        </tr>
+      `);
+    }
+
+    const avgRow = psnrFields.map(f => {
+      const mean = count > 0 ? averages[f] / count : 0;
+      return `<td class="px-2 py-1 border text-center font-semibold bg-gray-50">${mean.toFixed(2)}%</td>`;
+    }).join("");
+
+    return `
+      <div>
+        <h2 class="text-lg font-bold mb-2">${title} (QP ${qp}, SW2 ${sw2}, Ref ${refCodec})</h2>
+        <table class="min-w-full border border-gray-300 rounded-lg overflow-hidden shadow-md">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="px-2 py-1 border text-center">Vídeo</th>
+              ${psnrFields.map(f => `<th class="px-2 py-1 border text-center">${f.toUpperCase()}</th>`).join("")}
+            </tr>
+          </thead>
+          <tbody>
+            ${rowsHTML.join("")}
+            <tr class="bg-blue-100"><td class="px-2 py-1 border text-center font-bold">Média</td>${avgRow}</tr>
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  (async function init() {
+    const data = await loadCSVsFromFolder("./csv/");
+    const qpSelect = document.getElementById("qpSelect");
+    const swSelect = document.getElementById("swSelect");
+
+    uniqueValues(data, "qp").forEach(qp => {
+      const opt = document.createElement("option");
+      opt.value = qp;
+      opt.textContent = qp;
+      qpSelect.appendChild(opt);
+    });
+
+    uniqueValues(data, "sw2").forEach(sw => {
+      const opt = document.createElement("option");
+      opt.value = sw;
+      opt.textContent = sw;
+      swSelect.appendChild(opt);
+    });
+
+    document.getElementById("analyzeBtn").addEventListener("click", () => {
+      const qp = qpSelect.value;
+      const sw2 = swSelect.value;
+      const filtered = data.filter(r => r.qp === qp);
+
+      const htmlAVC = generateTable("Tabela AVC", filtered, qp, sw2, "264");
+      const htmlVVC = generateTable("Tabela VVC", filtered, qp, sw2, "265");
+
+      document.getElementById("tables").innerHTML = htmlAVC + htmlVVC;
+    });
+  })();
+  </script>
+</body>
+</html>
